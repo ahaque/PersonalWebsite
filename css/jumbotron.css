@@ -1,55 +1,17 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
- /* ------------------------------------------------
-    CUSTOM WEB FONTS
---------------------------------------------------*/
-@font-face {
-    font-family: 'MerriweatherRegular';
-    src: url('fonts/merriweather-regular-webfont.eot');
-    src: url('fonts/merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/merriweather-regular-webfont.woff') format('woff'),
-         url('fonts/merriweather-regular-webfont.ttf') format('truetype'),
-         url('fonts/merriweather-regular-webfont.svg#MerriweatherRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'MerriweatherBold';
-    src: url('fonts/merriweather-bold-webfont.eot');
-    src: url('fonts/merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/merriweather-bold-webfont.woff') format('woff'),
-         url('fonts/merriweather-bold-webfont.ttf') format('truetype'),
-         url('fonts/merriweather-bold-webfont.svg#MerriweatherBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 html {
     height: 100%;
 }
 body {
   padding-top: 50px;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   height: 100%;
   background-image: url(../img/nice_snow.png);
   background-repeat: repeat;
-
-
-}
-a.anchor-top{
-  display: block;
-  position: relative;
-  top: -100px;
-  visibility: hidden;
-}
-a.anchor {
-  display: block;
-  position: relative;
-  top: -65px;
-  visibility: hidden;
 }
 .jumbotron {
   padding: 30px;
-  height: 500px;
+  height: 100%;
   margin-bottom: 30px;
   color: white;
   background-image: url(../img/jumbo_tpp_dark2.png);
@@ -61,7 +23,7 @@ a.anchor {
 }
 .jumbotron .container {
   /* Jumbotron text vertical align */
-  margin-top: 90px; 
+  margin-top: 13%; 
 }
 .navbar-inverse {
   background-color: #000122;
@@ -81,6 +43,18 @@ a:hover,
 a:focus {
   color: #3790e8;
   text-decoration: none;
+}
+a.anchor-top{
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -65px;
+  visibility: hidden;
 }
 .about {
   font-size: 12pt;
