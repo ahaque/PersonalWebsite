@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Disable responsive layout
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="description" content="">
     <meta name="author" content="">
     <META NAME="robots" CONTENT="noindex, nofollow">
-    <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
 
-    <title>Home | Website</title>
+    <title>Albert Haque | Website</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
@@ -17,8 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="./css/jumbotron.css" rel="stylesheet">
     <script>window.jQuery || document.write('<script src="./js/jquery-1.6.1.min.js"><\/script>')</script>
-    <script src="./js/jquery.smoothscroll.js"></script>
-
+    
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -32,7 +31,8 @@
     </head>
 
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="home">
+    <a class="anchor" id="home"></a>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">John Doe</a>
+          <a class="navbar-brand">Albert Haque</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -53,11 +53,11 @@
             <li class="dropdown">
               <a href="" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="javascript&#58;;" onClick="window.open('./email.htm','Email','scrollbars=no,width=300,height=150');"><img src="./img/icons/email.png"> Email</a></li>
+                <li><a href="javascript&#58;;" onClick="window.open('./username_email.htm','Email','scrollbars=no,width=300,height=150');"><img src="./img/icons/email.png"> Email</a></li>
                 <li><a href="https://www.linkedin.com/in/alberthaque" target="_blank"><img src="./img/icons/linkedin.png"> LinkedIn</a></li>
                 <li><a href="https://github.com/ahaque" target="_blank"><img src="./img/icons/github.png"> Github</a></li>
                 <li><a href="https://plus.google.com/u/0/114988572416556820291/" target="_blank"><img src="./img/icons/google.png"> Google+</a></li>
-                <li><a href="http://myskype.info/albert.haque" target="_blank"><img src="./img/icons/skype.png"> Skype</a></li>
+                <li><a href="javascript&#58;;" onClick="window.open('./username_skype.htm','Email','scrollbars=no,width=300,height=150');"><img src="./img/icons/email.png"> Skype</a></li>
             </ul>
           </li>
           </ul>
@@ -73,38 +73,57 @@
       </div>
     </div>
 
+
+
     <div class="container">
-    <h1 id="education">Education</h1>
+
+    <div class="page-header">
+      <h1>About Me</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="about">I am a student at the <a href="http://www.utexas.edu" target="_blank">University of Texas at Austin</a> majoring in Computer Science and Finance. I'm an undergraduate research assistant for the <a href="http://ribs.csres.utexas.edu/" target="_blank">Department of Computer Science</a>. I am also a teaching assistant/proctor for the <a href="http://www.mccombs.utexas.edu/Centers/FTTC/About-the-FTTC.aspx" target="_blank">Department of Finance</a>.
+        </p>
+
+        <p class="about">I will be graduating in May 2014 with a B.S. and B.B.A. This summer I will be interning at <a href="http://www.microsoft.com" target="_blank">Microsoft</a> on their <a href="http://www.bing.com" target="_blank">Bing</a> Ad Relevance &amp; Revenue team. In the fall, I will be attending <a href="http://www.stanford.edu" target="_blank">Stanford University</a>.</p>
+      </div>
+      <div class="col-md-6">
+        <img align="right" src="./img/photos/photo2.png">
+      </div>
+    </div>
+
+    <div class="page-header">
+      <a class="anchor" id="education"></a>  
+      <h1>Education</h1>
+    </div>
+     
       <h2><a href="http://www.utexas.edu/" target="_blank">University of Texas at Austin</a></h2>
       <div class="row">
-        <table>
-            <tr>
-            <td width="170"><img src="./img/logo_texas.gif" width="100%" height="100%"></td>
-            <td width="15"></td>
-            <td>
-                <strong>Bachelor of Science (B.S.), Computer Science</strong><br>
-                <strong>Bachelor of Business Administration (B.B.A.), Finance</strong><br>
-                August 2010 - May 2014<br>
-            </td>
-            </tr>
-        </table>
-
-        <div class="col-md-12">
-          
-          <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-9">
-              
-              <ul class="list-no-margin">
-              </ul>
-            </div>
-          </div>
+        <div class="col-md-8">
+          <table>
+              <tr>
+              <td width="170"><img src="./img/logo_texas.gif" width="160"></td>
+              <td width="15"></td>
+              <td>
+                  <strong>Bachelor of Science (B.S.), Computer Science</strong><br>
+                  <strong>Bachelor of Business Administration (B.B.A.), Finance</strong><br>
+                  August 2010 - May 2014<br>
+                  <ul class="list-no-margin">
+                    <li>Honors Thesis: A MapReduce Approach to NoSQL RDF Databases</li>
+                    <li>Full tuition sourced from scholarships and research funding</li>
+                  </ul>
+              </td>
+              </tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <strong>Selected Courses</strong><br>
+          Statistical Learning &amp; Data Mining, Optimization, Graduate Databases, Stochastic Processes, Artificial Intelligence, Business Law, Corporate Strategy, Financial Accounting
         </div>
       </div>
 
       <div class="page-header">
-        <h1 id="work-experience">Work Experience</h1>
-        <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+        <h1>Work Experience</h1>
       </div>
 
       <div class="row">
@@ -128,7 +147,7 @@
       <hr>
 
       <footer>
-        <p>&copy; 2014</p>
+        <p>&copy; Albert Haque 2014</p>
       </footer>
     </div> <!-- /container -->
 
@@ -138,5 +157,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.smoothscroll.js"></script>
+
   </body>
 </html>

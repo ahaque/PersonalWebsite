@@ -238,6 +238,7 @@ th {
     page-break-after: avoid;
   }
   h2 a:hover, a:focus {
+    color: #fff;
     text-decoration: none;
   }
 
@@ -307,6 +308,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -453,7 +455,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 40px;
 }
 h2,
 .h2 {
@@ -573,9 +575,9 @@ a.bg-danger:hover {
   background-color: #e4b9b9;
 }
 .page-header {
-  padding-bottom: 9px;
+  padding-bottom: 5px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
 }
 ul,
 ol {
@@ -4093,7 +4095,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
   color: #fff;
-  background-color: #080808;
+  background-color: #003366;
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
@@ -4384,21 +4386,6 @@ a.list-group-item.active > .badge,
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
-
-.jumbotron {
-  padding: 30px;
-  height: 450px;
-  margin-bottom: 30px;
-  color: white;
-  background-image: url(../img/jumbo_tpp_dark2.png);
-  /*background-size: 100%;*/
-  background-repeat:no-repeat;
-  top:0;
-  left:0;
-  text-shadow: black 0.1em 0.1em 0.1em;
-  z-index: -1;
-}
-
 .jumbotron h1,
 .jumbotron .h1 {
   font-family: 'Crimson Text', serif;
