@@ -15,7 +15,7 @@ body {
   width: 100%;
   margin-bottom: 30px;
   color: white;
-  background-image: url(../img/jumbo_tpp_dark2.png);
+  background-image: url(../img/jumbo_tpp_dark2.jpg);
   background-repeat:no-repeat;
   top:0;
   left:0;
@@ -26,8 +26,9 @@ body {
   /* Jumbotron text vertical align */
   margin-top: 13%; 
 }
+/* Navbar background */
 .navbar-inverse {
-  background-color: #000122;
+  background-color: #001133;
   border-color: #080808;
 }
 .navbar-inverse .navbar-nav > .open > a,
@@ -36,8 +37,26 @@ body {
   color: #fff;
   background-color: #001155;
 }
+/* Navbar Text */
+.navbar-inverse .navbar-text {
+  color: #ddd;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #ddd;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #3790e8;
+  background-color: transparent;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #3790e8;
+  background-color: #080808;
+}
 a {
-  color: #003366;
+  color: #005588;
   text-decoration: none;
 }
 a:hover,
