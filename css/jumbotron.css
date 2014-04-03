@@ -3,8 +3,10 @@ html {
     height: 100%;
 }
 body {
+  /* Margin above jumbotron image - necessary for navbar*/
   padding-top: 50px;
-  padding-bottom: 20px;
+  /* Margin underneath jumbotron image */
+  padding-bottom: 10px;
   height: 100%;
   background-image: url(../img/nice_snow.png);
   background-repeat: repeat;
@@ -13,7 +15,7 @@ body {
   padding: 30px;
   height: 100%;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: -30px;
   color: white;
   background-image: url(../img/jumbo_tpp_dark2.jpg);
   background-repeat:no-repeat;
@@ -73,9 +75,19 @@ a.anchor-top{
 a.anchor {
   display: block;
   position: relative;
-  top: -65px;
+  padding-bottom: 55px;
   visibility: hidden;
 }
 .about {
   font-size: 12pt;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
