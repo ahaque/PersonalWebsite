@@ -36,24 +36,35 @@ body {
   background-repeat:no-repeat;
   background-position: left;
 }
-#section-education {
-  height: 900px;
-  top:0;
-  left:0;
-  z-index: 1;
-  margin-top: 20px;
-  color: black;
-  background-image: url(../img/stanford_background.jpg);
-  background-repeat:no-repeat;
-  background-position: top 100px;
-}
-#section-research-bg {
-  height: 60%;
+#section-education-bg1 {
+  height: 300px;
+  width: 100%;
   top:0;
   left:0;
   z-index: 1;
   margin-top: 50px;
-  color: black;
+  background-image: url(../img/stanford_background.jpg);
+  background-repeat:no-repeat;
+  background-position: top 100px;
+}
+#section-education-bg2 {
+  height: 300px;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 1;
+  margin-bottom: -70px;
+  margin-top: 50px;
+  background-image: url(../img/texas_stadium.jpg);
+  background-repeat:no-repeat;
+  background-position: top 100px;
+}
+#section-research-bg {
+  height: 50%;
+  top:0;
+  left:0;
+  z-index: 1;
+  margin-top: 50px;
   background-image: url(../img/dark_graph.png);
   background-repeat:no-repeat;
   background-position: top 100px;
@@ -113,10 +124,17 @@ a.anchor-top{
   top: -100px;
   visibility: hidden;
 }
+a.anchor-no-img {
+  display: block;
+  position: relative;
+  padding-bottom: 50px;
+  visibility: hidden;
+}
 a.anchor {
   display: block;
   position: relative;
-  padding-bottom: 55px;
+  padding-bottom: 75px;
+  top: 175px;
   visibility: hidden;
 }
 .about {
