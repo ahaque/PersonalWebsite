@@ -6,7 +6,7 @@ body {
   /* Margin above jumbotron image - necessary for navbar*/
   padding-top: 50px;
   /* Margin underneath jumbotron image */
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   height: 100%;
   background-image: url(../img/nice_snow.png);
   background-repeat: repeat;
@@ -16,18 +16,45 @@ body {
   min-height: 600px;
   height: 100%;
   width: 100%;
-  margin-bottom: -30px;
+  margin-bottom: -80px;
   color: white;
-  background-image: url(../img/jumbo_tpp_dark2.jpg);
-  background-repeat:no-repeat;
   top:0;
   left:0;
   text-shadow: black 0.1em 0.1em 0.1em;
   z-index: -1;
 }
+#section-home {
+  min-height: 600px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: -70px;
+  color: white;
+  top:0;
+  left:0;
+  z-index: -1;
+  background-image: url(../img/jumbo_tpp_dark2.jpg);
+  background-repeat:no-repeat;
+  background-position: left;
+}
+#section-education {
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 1;
+  margin-top: 20px;
+  color: black;
+  background-image: url(../img/stanford_background.jpg);
+  background-repeat:no-repeat;
+  background-position: top 100px;
+}
+.jumbotron-research h1,
+.jumbotron-research .h1 {
+  font-family: 'Crimson Text', serif;
+  color: inherit;
+}
 .jumbotron-research{
     width: 100%;
-    height: 50%;
+    height: 200px;
     background-image: url(../img/dark_graph.png);
     background-repeat:no-repeat;
     background-position: center;
@@ -37,7 +64,7 @@ body {
     margin:0px;
     margin-top: 100px;
     margin-bottom: -20px;
-    text-align: center;
+    text-align: left;
 }
 .jumbotron .container {
   /* Jumbotron text vertical align */
