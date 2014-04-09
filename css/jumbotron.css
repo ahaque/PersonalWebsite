@@ -11,6 +11,10 @@ body {
   background-image: url(../img/nice_snow.png);
   background-repeat: repeat;
 }
+.modal .modal-body {
+    max-height: 430px;
+    overflow-y: auto;
+}
 .jumbotron {
   padding: 30px;
   min-height: 600px;
@@ -122,6 +126,12 @@ a.anchor-top{
   display: block;
   position: relative;
   top: -100px;
+  visibility: hidden;
+}
+a.anchor-education {
+  display: block;
+  position: relative;
+  top: 270px;
   visibility: hidden;
 }
 a.anchor-no-img {
