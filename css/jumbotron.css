@@ -134,6 +134,12 @@ a.anchor-education {
   top: 270px;
   visibility: hidden;
 }
+a.anchor-research {
+  display: block;
+  position: relative;
+  top: 330px;
+  visibility: hidden;
+}
 a.anchor-no-img {
   display: block;
   position: relative;
@@ -154,9 +160,12 @@ a.anchor {
 h1,
 .h1,
 h2,
-.h2,
+.h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
 h3,
 .h3 {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 10px;
 }
