@@ -128,13 +128,6 @@ a.anchor-no-img {
   display: block;
   position: relative;
   padding-bottom: 50px;
-  top: 200px;
-  visibility: hidden;
-}
-a.anchor-no-img {
-  display: block;
-  position: relative;
-  padding-bottom: 50px;
   visibility: hidden;
 }
 a.anchor {
