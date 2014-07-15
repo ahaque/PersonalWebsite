@@ -10,6 +10,7 @@ body {
   height: 100%;
   background-image: url(../img/nice_snow.png);
   background-repeat: repeat;
+  font-family: 'Open Sans', sans-serif;
 }
 /* Popup modals/boxes */
 .modal .modal-body {
@@ -87,7 +88,8 @@ body {
 }
 
 .navbar-inverse {
-  background-color: #001133; /* Navbar background */
+  /* background-color: #001133; /* Navbar background OLD BG pre-7/14/2014 */
+  background-color: #3B5998;
   border-color: #080808;
 }
 .navbar-inverse .navbar-nav > .open > a,
