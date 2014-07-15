@@ -89,7 +89,7 @@ body {
 
 .navbar-inverse {
   /* background-color: #001133; /* Navbar background OLD BG pre-7/14/2014 */
-  background-color: #3B5998;
+  background-color: #162252;
   border-color: #080808;
 }
 .navbar-inverse .navbar-nav > .open > a,
@@ -184,12 +184,12 @@ h3,
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 36px;
+  height: 100px;
   color: #fff;
   margin-bottom: -30px;
   padding-top: -30px;
   vertical-align: middle;
-  background-color: #001133;
+  background-color: #162252;
 }
 
 #custom-nav {
