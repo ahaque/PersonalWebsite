@@ -369,7 +369,7 @@ i.service-icon:hover {
   margin-bottom: 0;
 }
 .service-col:hover {
-  background-color: rgba(65, 118, 48, 0.25);
+  background-color: rgba(38,105,199, 0.25);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -465,11 +465,11 @@ padding-top: 30px;
 	height:500px;
 }
 #testimonials{	
-	background-image: url(../img/1.jpg);
+	background-image: url(../img/texas_stadium.jpg);
 	height:500px;
 }
 #testimonials-3{	
-	background-image: url(../img/12.jpg);
+	background-image: url(../img/sf_skyline.jpg);
 	height:500px;
 }
 #testimonials-2{	
@@ -683,7 +683,7 @@ button[type="submit"].light:hover {
 .navbar {
 	line-height: 100px;
 	height: 100px;
-	background-color: rgba(5,42,2,0.4);
+	background-color: rgba(38,105,199,0.4);
 	display: block;
 	vertical-align: middle;
 	text-align: center;
@@ -1258,7 +1258,7 @@ padding: 10px 20px;
 font-size: 14px;
 }
 .box-bg h6,h4{
-font-family:'Open Sans', Arial, sans-serif;
+   font-family: "Raleway", Helvetica, Arial, sans-serif;
 	font-weight:700;
 	line-height:1.1em;
 	
@@ -1441,7 +1441,7 @@ nav#filter a {
 
 #contact-form input[type=text],#contact-form input[type=email], .contactForm textarea {
 	width: 100%;
-	background: rgba(227, 231, 228, 1);
+	background: rgba(38,105,199, 1);
 	font-family: 'Open Sans', sans serif;
 	border: 0;
 	font-size:14px;
@@ -1739,7 +1739,7 @@ Media queries
 @media (max-width: 767px) {
 
 	.navbar.navbar-fixed-top {
-		background-color:rgba(0,0,0,1);
+		background-color:rgba(38,105,199,1);
 	}
 	.navbar .navbar-collapse ul.nav {
 		background-color: #444;
