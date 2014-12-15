@@ -455,27 +455,33 @@ padding-top: 30px;
 /* ==========================
  --- Parallax ---
 ============================= */
-
-#parallax1{	
-	background-image: url(../img/parallax/4.jpg);
-	height:500px;
+#parallax-1{  
+  background-image: url(../img/company_hq.jpg);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  height:500px;
 }
-#parallax2{	
-	background-image: url(../img/parallax/2.jpg);
-	height:500px;
+#parallax-2{  
+  background-image: url(../img/stanford_palm.jpg);
+  background-repeat: no-repeat;
+  height:500px;
 }
-#testimonials{	
+#parallax-3{	
 	background-image: url(../img/texas_stadium.jpg);
+  background-repeat: no-repeat;
 	height:500px;
 }
-#testimonials-3{	
-	background-image: url(../img/sf_skyline.jpg);
+#parallax-4{  
+  background-image: url(../img/sf_skyline.jpg);
+  background-repeat: no-repeat;
+  height:500px;
+}
+#parallax-5{	
+	background-image: url(../img/parallax/2.jpg);
+  background-repeat: no-repeat;
 	height:500px;
 }
-#testimonials-2{	
-	background-image: url(../img/6.jpg);
-	height:500px;
-}
+
 
 /*===========================
 	---Pricing---
@@ -683,7 +689,7 @@ button[type="submit"].light:hover {
 .navbar {
 	line-height: 100px;
 	height: 100px;
-	background-color: rgba(38,105,199,0.4);
+	background-color: rgba(17,36,156,1);
 	display: block;
 	vertical-align: middle;
 	text-align: center;
@@ -699,16 +705,17 @@ button[type="submit"].light:hover {
 
 /*--Responsive--*/
 
-@media (max-width: 1199px){
+@media (max-width: 800px){
 .navbar .navbar-collapse {
 	margin-bottom: 0;
 	padding-bottom:0;
 	margin-left:-15px;
 	margin-top: -20px;
-	width:160px;
+	width:120px;
 }
 .navbar .navbar-nav > .active > a {
 	padding-bottom: 0px;
+  color: #11249C;
 }
 .row-slider{
 height: auto;
@@ -798,7 +805,7 @@ color:#fff;
 }
 section.featured img {
 height: 100%;
-	
+width: 100%;
 }
 
 section.featured h2.slogan {
@@ -1111,7 +1118,7 @@ About
 .team-member .profile-picture .profile-overlay {
   height: 94%;
   width: 94%;
-  background-color: #b4dba7;
+  background-color: #A7B1DB;
   position: absolute;
   top: 3%;
   left: 3%;
@@ -1716,6 +1723,7 @@ a.socialIcon:hover, .socialHoverClass {
 /* ========================================
 Media queries
 ========================================= */
+
 @media (min-width: 959px) and (max-width: 1199px) {
 	.navbar-nav {
 		margin-top: 20px;
@@ -1729,20 +1737,30 @@ Media queries
 	}
 }
 
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 800px) {
 
 	.navbar-nav {
 		margin-top: 20px;
 	}
 }
+
+
 @media (max-width: 767px) {
 
 	.navbar.navbar-fixed-top {
-		background-color:rgba(38,105,199,1);
+		background-color:rgba(1,9,64,.7);
+    height: 40px;
 	}
+  .navbar-brand {
+    line-height:45px;
+  }
+
+  .navbar-toggle {
+    margin-top:-25px;
+  }
+
 	.navbar .navbar-collapse ul.nav {
-		background-color: #444;
+		background-color: #424A7A;
 		width: 100%;
 		float: none;
 		margin:0;

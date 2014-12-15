@@ -22,16 +22,16 @@
 }
 .responsive-slider .slides ul li {
   display: inline-block;
-  max-width: 100%;
+  width: 100%;
 }
 .responsive-slider .slides ul li .slide-body {
   display: inline-block;
   position: relative;
-  max-width: 100%;
+  width: 100%;
   font-size: 14px;
 }
 .responsive-slider .slides ul li .slide-body img {
-  max-width: 100%;
+  width: 100%;
 }
 .responsive-slider .slides ul li .slide-body .caption {
   position: absolute;
@@ -45,13 +45,13 @@
 @media (max-width: 1199px){
 .responsive-slider .slides ul li .slide-body .caption.header {
   top: 45%;
-  left:15%;
+  margin-left: auto;
+  margin-right: auto;
 } 
 }
 .responsive-slider .slides ul li .slide-body .caption.header h1 {
   font-size: 50px;
   padding: 0 3px 0 3px;
-  
 }
 .responsive-slider .slides ul li .slide-body .caption.header h2 {
   font-size: 40px;
