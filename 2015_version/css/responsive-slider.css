@@ -45,11 +45,11 @@
 /* Center the jumbotron captions */
 @media (min-width: 767px) {
   #jumbotron-cs229 {
-    left: 30%;
+    left: 31%;
   }
 
   #jumbotron-twitch {
-    left: 24%;
+    left: 23%;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {

@@ -20,6 +20,10 @@ body {
   text-shadow: none;
 }
 
+ol li {
+  margin: 15px 0;
+}
+
 .clear {
   clear: both;
 }
@@ -488,7 +492,7 @@ padding-top: 30px;
   ---Pricing---
 ===========================*/
 .line-pricing-table {
-  margin: 50px 0 100px 0;
+  margin: 20px 0 25px 0;
 }
 .line-wrap {
   width: 1200px;
