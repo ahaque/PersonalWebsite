@@ -10,6 +10,7 @@
         <title>Albert | Website</title>
         <meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" type="text/css" href="./css/isotope.css" media="screen" />	
 		<link rel="stylesheet" href="./js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="./css/bootstrap.css">
@@ -26,7 +27,7 @@
 	<div class="header">
 	<section id="header" class="appear">
 		
-		<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,7,45,0.5);" data-300="line-height:60px; height:60px; background-color:rgba(0,7,45,.85);">
+		<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,7,45,0.6);" data-300="line-height:60px; height:60px; background-color:rgba(0,7,45,.9);">
 			
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -61,47 +62,32 @@
 					<li>
 						<div class="slide-body" data-group="slide">
 							<img src="./img/cs229_poster_session.jpg" alt="">
-							<div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+							<div id="jumbotron-cs229" class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
 								<h2>Deep learning for cardiac arrythmia</h2>
-								<div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><h4><span>Term project for CS 229 machine learning.</span></h4></div>
-								<div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3>Read the paper >></h3></div>
+								<div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><h4><span>Project for Andrew Ng's Machine Learning course</span></h4></div>
+								<div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h3><a href="https://github.com/ahaque/twitch-troll-detection" target="_blank" class="btn btn-default btn-lg" role="button">Read the paper »</a></h3></div>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="slide-body" data-group="slide">
 							<img src="./img/jumbo_tpp.jpg" alt="">
-							<div class="caption header" data-animate="slideAppearDownToUp" data-delay="500" data-length="300">
+							<div id="jumbotron-twitch" class="caption header" data-animate="slideAppearDownToUp" data-delay="500" data-length="300">
 								<h2>Twitch Plays Pokemon, Machine Learns Twitch</h2>
 								<div class="caption-sub" data-animate="slideAppearUpToDown" data-delay="800" data-length="300"><h4><span>Unsupervised learning using 34 million chat messages</span></h4></div>
-								<div class="caption-sub" data-animate="slideAppearRightToLeft" data-delay="1200" data-length="300"><h3>See it on Github >></h3></div>
+								<div class="caption-sub" data-animate="slideAppearRightToLeft" data-delay="1200" data-length="300"><a href="https://github.com/ahaque/twitch-troll-detection" target="_blank" class="btn btn-default btn-lg" role="button">Download the code and dataset »</a>
+								</div>
 							</div>
 						</div>
-					</li>
-  	    		<li>
-	              <div class="slide-body" data-group="slide">
-	                <img src="./img/6.jpg" alt="">
-	                <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
-	                  <h2>creative design Custom animations</h2>
-	                  <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4></div>
-					  <div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300"><h3><span>New style Slides!</span></h3></div>
-					</div>
-	                </div>
-  	    		</li>
-			
-  	    	</ul>
-		</div>
-        
-        <a class="slider-control left" href="#" data-jump="prev"><i class="fa fa-angle-left fa-2x"></i></a>
-        <a class="slider-control right" href="#" data-jump="next"><i class="fa fa-angle-right fa-2x"></i></a>
-        
-		
+					</li>			
+	  	    	</ul>
+			</div>
+	        <a class="slider-control left" href="#" data-jump="prev"><i class="fa fa-angle-left fa-2x"></i></a>
+	        <a class="slider-control right" href="#" data-jump="next"><i class="fa fa-angle-right fa-2x"></i></a>
     	</div>
-      <!-- Responsive slider - END -->
 	</div>
 </section>
 		
-	<!--about-->
 	<section id="section-about">
 		<div class="container">
 			<div class="about">
@@ -138,7 +124,7 @@
 						<div class="col-lg-6 ">
 							<div class="company mar-left10">
 								<h4>I'm currently a grad student at Stanford studying CS. I went to UT Austin for my undergrad and graduated in 2014. I'll be interning at Facebook in 2015.</h4>
-								<p>I'm a research assistant for the <a href="http://vision.stanford.edu/">Computer Vision Lab</a> (<a href="http://ai.stanford.edu/">SAIL)</a>. The team I work with focuses on <a href="http://vision.stanford.edu/pac/">AI-Assisted Healthcare</a>. I'm also a TA for <a href="http://web.stanford.edu/class/cs108/">CS 108</a> (Object Oriented Programming) during Autumn and Winter quarters. A summary of my technical interests and projects are below:</p>
+								<p>I'm a research assistant for the <a href="http://vision.stanford.edu/">Computer Vision Lab</a> (<a href="http://ai.stanford.edu/">SAIL)</a>. My team focuses on <a href="http://vision.stanford.edu/pac/">AI-Assisted Healthcare</a>. I'm also a TA for <a href="http://web.stanford.edu/class/cs108/">CS 108</a> (Object Oriented Programming) during Autumn and Winter quarters. A summary of my technical interests and projects are below:</p>
 							</div>
 							<div class="list-style">
 								<div class="row">
@@ -211,7 +197,7 @@
 									<div class="service-icon">
 										<figure><i class="fa fa-facebook-square"></i></figure>
 									</div>
-										<h2><a href="http://www.facebook.com/careers" target="_blank">Facebook</a></h2>
+										<h2><a href="http://www.facebook.com" target="_blank">Facebook</a></h2>
 										<h5>Summer 2015, Menlo Park, CA</h5>
 										<p>I will be interning as a Data Scientist on the Ads Optimization team focusing on ad engagement and relevance for Facebook display ads.</p>
 								</div>
@@ -360,95 +346,50 @@
 						<div class="section-header">
 							<div class="wow bounceIn">
 						
-								<h2 class="section-heading animated" data-animation="bounceInUp">Pricing Table</h2>
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
-						
+								<h2 class="section-heading animated" data-animation="bounceInUp">Research</h2>
+								<p>An overview of my research activities: presentations, publications, etc.</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="line-wrap">
+				<div class="col-md-4">
 					<div class="line-pricing-table">
-									<div class="pricing-table-wrap" data-scrollreveal="enter top over 0.5s after 0.3s">
-										<ul>
-											<li class="line-head-row">
-												Free
-											</li>
-											<li class="line-price-row">
-												<p>
-													<span class="symbol">$</span>
-													<span>0</span>
-												</p>
-												<small>Ideal for beginners</small>
-											</li>
-											<li>
-												1 theme included
-											</li>
-											<li>
-												1 year of theme updates
-											</li>
-											<li>
-												20% off future purchases
-											</li>
-											<li class="line-btn-row">
-												<a href="" class="line-btn light">Get Started</a>
-											</li>
-										</ul>
-									</div>
-									<div class="pricing-table-wrap" data-scrollreveal="enter top over 0.5s after 0.5s">
-										<ul class="line-highlight">
-											<li class="line-head-row">
-												Premium
-											</li>
-											<li class="line-price-row">
-												<p>
-													<span class="symbol">$</span>
-													<span>300</span>
-												</p>
-												<small>Per user / month</small>
-											</li>
-											<li>
-												24 themes included
-											</li>
-											<li>
-												Lifetime of premium support
-											</li>
-											<li>
-												Access all new themes
-											</li>
-											<li class="line-btn-row">
-												<a href="" class="line-btn green">Get Started</a>
-											</li>
-										</ul>
-									</div>
-									<div class="pricing-table-wrap" data-scrollreveal="enter top over 0.5s after 0.7s">
-										<ul>
-											<li class="line-head-row">
-												Standard
-											</li>
-											<li class="line-price-row">
-												<p>
-													<span class="symbol">$</span>
-													<span>150</span>
-												</p>
-												<small>Per user / month</small>
-											</li>
-											<li>
-												12 themes included
-											</li>
-											<li>
-												1 year of theme updates
-											</li>
-											<li>
-												Access all new themes
-											</li>
-											<li class="line-btn-row">
-												<a href="" class="line-btn light">Get Started</a>
-											</li>
-										</ul>
-									</div>
+						<div class="pricing-table-wrap" data-scrollreveal="enter top over 0.5s after 0.3s">
+							<ul>
+								<li class="line-head-row">
+									Current Project:<br><h3>RGB Depth Estimation with Bluetooth Signals</h3>
+								</li>
+								<li class="line-price-row">
+									<p>Stanford Vision Lab<br>Computer Science Department</p>
+								</li>
+								<li class="line-btn-row">
+								</li>
+								<li>
+									Using video cameras, wifi, and bluetooth signal strengths, the goal of this project is to accurately locate and track clinicans and staff in hospitals. This can be used to monitor and ensure hygienic policies are being followed thereby reducing medical complications and hospital expenditures.
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
+				<div class="col-md-8">
+						<div class="line-pricing-table">
+							<div class="pricing-table-wrap" data-scrollreveal="enter top over 0.5s after 0.3s">
+								<ul>
+									<li class="line-head-row">
+									</li>
+									<h3>Recent Publications</h3>
+
+									<li class="line-btn-row">
+									</li>
+									<ol align="left">
+										<li><strong>NoSQL Databases for RDF: An Empirical Evaluation.</strong> P. Cudre-Mauroux, I. Enchev, S. Fundatureanu, P. Groth, A. Haque, A. Harth, F. Keppmann, D. Miranker, J. Sequeda, and M. Wylot. Proceedings of the 12th International Semantic Web Conference (ISWC). LNCS, vol. 8219, pp. 310-325. Springer, 2013. DOI: <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-41338-4_20">10.1007/978-3-642-41338-4_20</a> <a class="btn btn-primary btn-xs" href="./downloads/NoSQLDatabasesForRDF.pdf" role="button">Paper »</a> <a class="btn btn-primary btn-xs" href="http://ribs.csres.utexas.edu/nosqlrdf" role="button">Website »</a></li>
+										<br>
+										<li><strong>A MapReduce Approach to NoSQL RDF Databases.</strong> A. Haque. The University of Texas at Austin, Department of Computer Science. Report# HR-13-13 (honors theses). Dec 2013. 81 pages. <a class="btn btn-primary btn-xs" href="./downloads/Haque-Thesis.pdf" role="button">Thesis (4 MB) »</a> <a class="btn btn-primary btn-xs" href="./downloads/Haque-Thesis-Presentation.pdf" role="button">Presentation (21 MB) »</a></li>
+									</ol>
+								</ul>
+							</div>
+						</div>
+					</div>
 			</div>
 		</section>
 		
