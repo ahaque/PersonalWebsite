@@ -455,31 +455,35 @@ padding-top: 30px;
 /* ==========================
  --- Parallax ---
 ============================= */
-#parallax-1{  
+#parallax-1 {  
   background-image: url(../img/company_hq.jpg);
-  /* background-size: cover; */
+  background-size: cover;
   background-repeat: no-repeat;
-  height:500px;
+  height:400px;
 }
 #parallax-2{  
   background-image: url(../img/stanford_palm.jpg);
   background-repeat: no-repeat;
-  height:500px;
+  height:400px;
+  background-size: cover;
 }
 #parallax-3{	
 	background-image: url(../img/texas_stadium.jpg);
   background-repeat: no-repeat;
-	height:500px;
+  background-size: cover;
+	height:400px;
 }
 #parallax-4{  
   background-image: url(../img/sf_skyline.jpg);
   background-repeat: no-repeat;
-  height:500px;
+  background-size: cover;
+  height:400px;
 }
 #parallax-5{	
 	background-image: url(../img/parallax/2.jpg);
   background-repeat: no-repeat;
-	height:500px;
+  background-size: cover;
+	height:400px;
 }
 
 
@@ -711,11 +715,11 @@ button[type="submit"].light:hover {
 	padding-bottom:0;
 	margin-left:-15px;
 	margin-top: -20px;
-	width:120px;
+	width:200px;
 }
 .navbar .navbar-nav > .active > a {
 	padding-bottom: 0px;
-  color: #11249C;
+  color: #26316E;
 }
 .row-slider{
 height: auto;

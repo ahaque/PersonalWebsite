@@ -3,22 +3,22 @@
 #2 = 417630
 */
 a {
-	color: #417630;
+	color: #A9C0F5;
 }
 a:hover {
-	color: #417630;
+	color: #A9C0F5;
 }
 
 /* menu */
 .nav>li>a:hover {
-	color: #54ee23;
+	color: #4AD8FF;
 }
 
 .navbar .navbar-nav > .active > a {
-	color: #54ee23;
+	color: #4AD8FF;
 }
 .navbar .navbar-brand:hover {
-	color: #54ee23;
+	color: #4AD8FF;
 }
 
 /* flexslider */
@@ -55,7 +55,7 @@ a:hover {
   background: #417630;
 }
 .btn-theme:hover,.btn-theme:focus,.btn-theme:active{
-  background: #417630;
+  background: #4AD8FF;
 }
 .btn-cta,.btn-cta.btn-lg {
   background: #417630;
@@ -77,5 +77,5 @@ a:hover {
 }
 
 a.scrollup{
-	background:#417630;
+	background:#090987;
 }
