@@ -1,6 +1,6 @@
 /*
-#1 = 417630
-#2 = 417630
+#1 = 4AD8FF
+#2 = 4AD8FF
 */
 a {
 	color: #003DAD;
@@ -24,57 +24,57 @@ a:hover {
 
 /* flexslider */
 .flex-control-paging li a {
-	background: #417630;
+	background: #4AD8FF;
 }
 
 .flex-direction-nav a:hover{
-	background-color:#417630;
+	background-color:#4AD8FF;
 }
 
 .testimonial span.author a {
-	color: #417630;
+	color: #4AD8FF;
 }
 
 /* --- icon box hover --- */
 .hi-icon-effect-5 .hi-icon {
-	color: #417630;
-	box-shadow: 0 0 0 4px #417630;
+	color: #003DAD;
+	box-shadow: 0 0 0 4px #003DAD;
 }
 .no-touch .hi-icon-effect-5 .hi-icon:hover {
-	background: #417630;
-	box-shadow: 0 0 0 8px  #417630;
+	background: #003DAD;
+	box-shadow: 0 0 0 8px  #003DAD;
 }
 
 
 /* portfolio */
 .portfolio-item .portfolio-desc {
-	background: #417630;
+	background: #003DAD;
 }
 
 /* btn */
 .btn-theme {
-  background: #417630;
+  background: #003DAD;
 }
 .btn-theme:hover,.btn-theme:focus,.btn-theme:active{
-  background: #4AD8FF;
+  background: #003DAD;
 }
 .btn-cta,.btn-cta.btn-lg {
-  background: #417630;
-  border-color: #417630;
+  background: #003DAD;
+  border-color: #003DAD;
 }
 
 .btn-cta:focus,.btn-cta:active{
-   border-color: #417630;
+   border-color: #003DAD;
 }
 
 /* contact */
 .validation {
-	color:#417630;
+	color:#003DAD;
 }
 
 /* footer */
 .social-circle li a {
-	background:#417630;
+	background:#003DAD;
 }
 
 a.scrollup{

@@ -1534,7 +1534,7 @@ div.cform-response-output {
 
 /* google map */
 #map {
-  height: 500px;
+  height: 350px;
 }
 
 
@@ -1619,7 +1619,7 @@ a.scrollup:hover{
   
 }
 .social-network a.icoFacebook:hover {
-  background-color:#3B5998;
+  background-color:#33ccff;
   
 }
 .social-network a.icoTwitter:hover {
