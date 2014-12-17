@@ -462,7 +462,7 @@ padding-top: 30px;
 #parallax1{  
   background-image: url(../img/company_hq.jpg);
   height: 450px;
-  background-size: cover;
+/*  background-size: cover; */
   background-repeat: no-repeat;
 }
 #parallax2{  
@@ -476,21 +476,11 @@ padding-top: 30px;
   background-repeat: no-repeat;
 }
 #parallax4{ 
-  background-image: url(../img/dark_graph.png);
+  background-image: url(../img/dark_graph.jpg);
   height: 450px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#parallax5{  
-  background-image: url(../img/6.jpg);
-  height: 450px;
-  background-size: cover;
   background-repeat: no-repeat;
 }
 
-/*===========================
-  ---Pricing---
-===========================*/
 .line-pricing-table {
   margin: 20px 0 25px 0;
 }

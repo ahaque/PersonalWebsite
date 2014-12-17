@@ -49,16 +49,16 @@
   }
 
   #jumbotron-twitch {
-    left: 23%;
+    left: 24%;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   #jumbotron-cs229 {
-    left: 22%;
+    left: 7%;
   }
 
   #jumbotron-twitch {
-    left: 12%;
+    left: 6%;
   }
 }
 @media (max-width: 480px) {
@@ -84,7 +84,6 @@
 .responsive-slider .slides ul li .slide-body .caption.header h2 {
   font-size: 40px;
   padding: 0 3px 0 3px;
-  
 }
 .responsive-slider .slides ul li .slide-body .caption.header h2 i {
   font-size: 35px;
@@ -95,10 +94,10 @@
   } 
 
   .responsive-slider .slides ul li .slide-body .caption.header h2 {
-    font-size: 25px;
+    font-size: 22px;
   }
   .responsive-slider .slides ul li .slide-body .caption.header h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (max-width: 480px) {
