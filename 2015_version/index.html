@@ -59,7 +59,7 @@
 			<div class="slides" data-group="slides">
 				<ul>
 					<li>
-						<div class="slide-body" data-group="slide">
+						<div class="slide-body" data-group="slide" data-length="400">
 							<img src="./img/arrhythmia_or.jpg" alt="">
 							<div id="jumbotron-cs229" class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
 								<h2>Deep learning for cardiac arrythmia</h2>
@@ -69,7 +69,7 @@
 						</div>
 					</li>
 					<li>
-						<div class="slide-body" data-group="slide">
+						<div class="slide-body" data-group="slide" data-length="100">
 							<img src="./img/jumbo_tpp.jpg" alt="">
 							<div id="jumbotron-twitch" class="caption header" data-animate="slideAppearDownToUp" data-delay="500" data-length="300">
 								<h2>Twitch Plays Pokemon, Machine Learns Twitch</h2>
@@ -94,16 +94,13 @@
 					<div class="col-md-offset-3 col-md-6">
 						<div class="title">
 							<div class="wow bounceIn">
-						
 							<h2 class="section-heading animated" data-animation="bounceInUp">About</h2>
-							
-						
+							<p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-			
 					<div class="row-slider">
 						<div class="col-lg-6 mar-bot30">
 							<div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
@@ -122,9 +119,9 @@
 					
 						<div class="col-lg-6 ">
 							<div class="company mar-left10">
-								<h4>I am a 1st year MS CS student at Stanford. I graduated from UT Austin in 2014 and will be interning as a Data Scientist at Facebook in 2015.
+								<h4>I am a 1st year MS CS student at Stanford. I graduated from UT Austin in 2014 and will be interning at Facebook in 2015.
 								</h4>
-								<p>I'm a research assistant for the <a href="http://vision.stanford.edu/">Computer Vision Lab</a> (<a href="http://ai.stanford.edu/">SAIL)</a>. My team focuses on <a href="http://vision.stanford.edu/pac/">AI-Assisted Healthcare</a>. I'm also a TA for <a href="http://web.stanford.edu/class/cs108/">CS 108</a> (Object Oriented Programming) during Autumn and Winter quarters. A summary of my technical interests are below:</p>
+								<p>I'm a research assistant for the <a href="http://vision.stanford.edu/">Computer Vision Lab</a> (<a href="http://ai.stanford.edu/">SAIL)</a>. My team focuses on <a href="http://vision.stanford.edu/pac/">AI-Assisted Healthcare</a>. I'm also a TA for <a href="http://web.stanford.edu/class/cs108/">CS 108</a> (Object Oriented Programming). A summary of my technical interests are below:</p>
 							</div>
 							<div class="list-style">
 								<div class="row">
@@ -139,12 +136,15 @@
 									<div class="col-lg-6 col-sm-6 col-xs-12">
 										<ul>
 											<li>Computer Vision</li>
-											<li>Deep Learning</li>
+											<li>Pattern Recognition</li>
 											<li>GPU &amp; Parallel Computing</li>
 											<li>Distributed Databases</li>
 										</ul>
 									</div>
 								</div>
+							</div>
+							<div class="company mar-left10">
+								<p>I enjoy <a href="http://en.wikipedia.org/wiki/Bouldering" target="_blank">bouldering</a>, traveling, practicing Japanese Jujitsu, and black diamond skiing.</p>
 							</div>
 						</div>
 					
@@ -232,26 +232,12 @@
 		</section>
 		
 		<section id="parallax2" class="section" data-stellar-background-ratio="0.5">
-		<div class="container">
-			<div class="row">				
-					<div class="col-lg-12">
-							<div class="align-center">
-										<div class="testimonial pad-top40 pad-bot40 clearfix">
-
-										</div>
-
-								</div>
-							</div>
-					</div>
-				
-			</div>	
-		
+			<div class="container"><div class="row"><div class="col-lg-12"><div class="align-center"><div class="testimonial pad-top40 pad-bot40 clearfix"></div></div></div></div></div>	
 		</section>
 			
 
 	<section id="education" class="team-section appear clearfix">
 		<div class="container">
-
 				<div class="row mar-bot10">
 					<div class="col-md-offset-3 col-md-6">
 						<div class="section-header">
@@ -314,7 +300,21 @@
 							</div>
 						</div>
 					</div>
-					
+
+				<div class="row mar-bot10">
+					<div class="col-md-offset-3 col-md-6">
+						<p>
+						<strong>AI-related coursework:</strong>
+						<a href="http://cs229.stanford.edu/" target="_blank">machine learning</a>,
+						<a href="http://vision.stanford.edu/teaching/cs231n/" target="_blank">convolutional neural networks</a>,
+						<a href="http://statweb.stanford.edu/~romano/stat200/" target="_blank">statistical inference</a>,
+						<a href="http://stanford.edu/class/ee364a/" target="_blank">convex optimization</a>,
+						<a href="http://web.stanford.edu/class/cs224n/" target="_blank">natural language processing</a>,
+						<a href="http://www.cs.utexas.edu/~pradeepr/courses/SLDM/" target="_blank">data mining</a>,
+						<a href="http://www.cs.utexas.edu/~pstone/Courses/343spring12/index.html" target="_blank">artificial intelligence</a>
+						</p>
+					</div>
+				</div>
 		</div>
 		</section>
 				
@@ -338,10 +338,10 @@
                   <nav id="filter" class="col-md-12 text-center">
                     <ul>
                       <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-                      <li><a href="#" class="btn-theme btn-small" data-filter=".ml" >Machine Learning</a></li>
-                      <li><a href="#" class="btn-theme btn-small" data-filter=".vision">Computer Vision</a></li>
-                      <li><a href="#" class="btn-theme btn-small" data-filter=".db">Databases</a></li>
-                      <li><a href="#" class="btn-theme btn-small" data-filter=".other">Other</a></li>
+                      <li><a href="#" class="btn-theme btn-small" data-filter=".ml" ><i class="fa fa-sort"></i> Machine Learning</a></li>
+                      <li><a href="#" class="btn-theme btn-small" data-filter=".vision"><i class="fa fa-sort"></i> Computer Vision</a></li>
+                      <li><a href="#" class="btn-theme btn-small" data-filter=".db"><i class="fa fa-sort"></i> Databases</a></li>
+                      <li><a href="#" class="btn-theme btn-small" data-filter=".other"><i class="fa fa-sort"></i> Other</a></li>
                     </ul>
                   </nav>
                   <div class="col-md-12">
@@ -357,6 +357,20 @@
 									<div class="folio-info">
 										<h5><a href="./dl/arrhythmia_poster.pdf" target="_blank" >Deep learning for detecting cardiac arrhythmia</a></h5>
 										<a href="./dl/arrhythmia_poster.pdf" target="_blank" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+									 </div>										   
+								 </div>
+							</div>
+                        </article>
+
+                        <article class="col-md-4 isotopeItem other">
+							<div class="portfolio-item">
+							<div class="wow rotateInDownRight">
+								<img src="img/projects/6.jpg" alt="" />
+							 </div>		
+								 <div class="portfolio-desc align-center">
+									<div class="folio-info">
+										<h5><a href="./dl/processor_scheduling_paper.pdf" target="_blank">Comparison of processor scheduling algorithms</a></h5>
+										<a href="./dl/processor_scheduling_paper.pdf" target="_blank" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
 									 </div>										   
 								 </div>
 							</div>
@@ -398,8 +412,8 @@
 							 </div>	
 								 <div class="portfolio-desc align-center">
 									<div class="folio-info">
-										<h5><a href="#" target="_blank">Identifying trolls using unsupervised learning</a></h5>
-										<a href="img/projects/4.jpg" target="_blank" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
+										<h5><a href="https://github.com/ahaque/twitch-troll-detection" target="_blank">Identifying trolls using unsupervised learning</a></h5>
+										<a href="https://github.com/ahaque/twitch-troll-detection" target="_blank" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
 									 </div>										   
 								 </div>
 							</div>
@@ -414,20 +428,6 @@
 									<div class="folio-info">
 										<h5><a href="https://github.com/ahaque/Doodle-Jump" target="_blank">Doodle Jump for PC</a></h5>
 										<a href="https://github.com/ahaque/Doodle-Jump" target="_blank"><i class="fa fa-external-link fa-2x"></i></a>
-									 </div>										   
-								 </div>
-							</div>
-                        </article>
-
-                        <article class="col-md-4 isotopeItem other">
-							<div class="portfolio-item">
-							<div class="wow rotateInDownRight">
-								<img src="img/projects/6.jpg" alt="" />
-							 </div>		
-								 <div class="portfolio-desc align-center">
-									<div class="folio-info">
-										<h5><a href="#" target="_blank">Comparison of processor scheduling algorithms</a></h5>
-										<a href="img/projects/6.jpg" target="_blank" class="fancybox"><i class="fa fa-external-link fa-2x"></i></a>
 									 </div>										   
 								 </div>
 							</div>
@@ -513,7 +513,7 @@
 								<br>
 								<h3>Application Areas</h3>
 								<p align="left">
-								Medical diagnosis, patient readmission prediction, bioinformatics, physical hospital environments
+								Medical diagnosis, patient readmission prediction, bioinformatics, hospital environment monitoring
 								</p>
 							</ul>
 						</div>
@@ -522,7 +522,7 @@
 						<div class="pricing-table-wrap" data-scrollreveal="enter top over 0.5s after 0.3s">
 							<ul>
 								<li class="line-head-row">
-									Current Project<br><h3>RGB Depth Estimation with Bluetooth Signals</h3>
+									Current Project<br><h3>Locating People Using Cameras and Cell Phone Wifi/Bluetooth Signals</h3>
 								</li>
 								<li class="line-price-row">
 									<p>Stanford Vision Lab<br>Computer Science Department</p>
@@ -559,19 +559,19 @@
 								<li class="line-btn-row">
 								</li>
 								<ol align="left">
-									<li>
-										<strong>NoSQL Databases for RDF: An Empirical Evaluation.</strong>
-										P. Cudre-Mauroux, I. Enchev, S. Fundatureanu, P. Groth, A. Haque, A. Harth, F. Keppmann, D. Miranker, J. Sequeda, and M. Wylot. Proceedings of the 12th International Semantic Web Conference (ISWC). LNCS, vol. 8219, pp. 310-325. Springer, 2013. DOI: <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-41338-4_20">10.1007/978-3-642-41338-4_20</a>
-										<a class="btn btn-primary btn-xs" href="./dl/nosql_rdf_paper.pdf" target="_blank" role="button">Paper »</a>
-										<a class="btn btn-warning btn-xs" href="http://ribs.csres.utexas.edu/nosqlrdf" target="_blank" role="button">Website »</a>
-									</li>
+<li>
+	<strong>NoSQL Databases for RDF: An Empirical Evaluation.</strong>
+	P. Cudre-Mauroux, I. Enchev, S. Fundatureanu, P. Groth, A. Haque, A. Harth, F. Keppmann, D. Miranker, J. Sequeda, and M. Wylot. Proceedings of the 12th International Semantic Web Conference (ISWC). LNCS, vol. 8219, pp. 310-325. Springer, 2013. DOI: <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-41338-4_20">10.1007/978-3-642-41338-4_20</a>
+		<a class="btn btn-warning btn-xs" href="http://ribs.csres.utexas.edu/nosqlrdf" target="_blank"><i class="fa fa-globe fa-lg"></i> Website &raquo;</a>
+	<a class="btn btn-primary btn-xs" href="./dl/nosql_rdf_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li>
 
-									<li>
-										<strong>A MapReduce Approach to NoSQL RDF Databases.</strong>
-										A. Haque. The University of Texas at Austin, Department of Computer Science. Report# HR-13-13 (honors theses). Dec 2013. 81 pages.
-										<a class="btn btn-danger btn-xs" href="./dl/Haque-Thesis.pdf" target="_blank" role="button">Thesis »</a>
-										<a class="btn btn-info btn-xs" href="./dl/Haque-Thesis-Presentation.pdf" target="_blank" role="button">Presentation (21 MB) »</a>
-									</li>
+<li>
+	<strong>A MapReduce Approach to NoSQL RDF Databases.</strong>
+	A. Haque. The University of Texas at Austin, Department of Computer Science. Report# HR-13-13 (honors theses). Dec 2013. 81 pages.
+	<a class="btn btn-danger btn-xs" href="./dl/Haque-Thesis.pdf" target="_blank"><i class="fa fa-star"></i> Thesis &raquo;</a>
+	<a class="btn btn-info btn-xs" href="./dl/Haque-Thesis-Presentation.pdf" target="_blank"><i class="fa fa-youtube-play fa-lg"></i> Presentation (21 MB) &raquo;</a>
+</li>
 								</ol>
 							</ul>
 						</div>
@@ -587,62 +587,64 @@
 								<li class="line-btn-row">
 								</li>
 								<ol id="ol-space" align="left">
-									<li>
-										<strong>Cardiac Dysrhythmia Detection With GPU-Accelerated Neural Networks</strong>.
-										A. Haque. Course Project for Machine Learning (CS 229), Stanford University. Dec 2014.
-										<a href="./dl/arrhythmia_poster.pdf" target="_blank" class="btn btn-success btn-xs" role="button">Poster &raquo;</a>
-										<a href="./dl/arrhythmia_paper.pdf" target="_blank" class="btn btn-primary btn-xs" role="button">Paper &raquo;</a>
-									</li> 
+<li>
+	<strong>Cardiac Dysrhythmia Detection With GPU-Accelerated Neural Networks</strong>.
+	A. Haque. Course Project for Machine Learning (CS 229), Stanford University. Dec 2014.
+	<a class="btn btn-warning btn-xs" href="https://github.com/ahaque/arrhythmia-nn" target="_blank"><i class="fa fa-github fa-lg"></i> Code &raquo;</a>
+	<a class="btn btn-success btn-xs" href="./dl/arrhythmia_poster.pdf" target="_blank"><i class="fa fa-list-alt fa-lg"></i> &nbsp;Poster &raquo;</a>
+	<a class="btn btn-primary btn-xs" href="./dl/arrhythmia_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li> 
 
-									<li>
-										<strong>Unsupervised Context-Aware Anomaly Detection for Identifying Trolls in Streaming Data</strong>.
-										A. Haque. Course Project for Data Mining (CS 363D), University of Texas at Austin. May 2014.
-										<a href="./dl/twitch_poster.pdf" target="_blank" class="btn btn-success btn-xs" role="button">Poster &raquo;</a>
-										<a href="./dl/twitch_paper.pdf" target="_blank" class="btn btn-primary btn-xs" role="button">Paper &raquo;</a>
-									</li>
+<li>
+	<strong>Unsupervised Context-Aware Anomaly Detection for Identifying Trolls in Streaming Data</strong>.
+	A. Haque. Course Project for Data Mining (CS 363D), University of Texas at Austin. May 2014.
+	<a class="btn btn-warning btn-xs" href="https://github.com/ahaque/twitch-troll-detection" target="_blank"><i class="fa fa-github fa-lg"></i> Code &raquo;</a>
+	<a class="btn btn-success btn-xs" href="./dl/twitch_poster.pdf" target="_blank"><i class="fa fa-list-alt fa-lg"></i> &nbsp;Poster &raquo;</a>
+	<a class="btn btn-primary btn-xs" href="./dl/twitch_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li>
 
-									<li>
-										<strong>A Comparison of MapReduce Join Algorithms for RDF</strong>.
-										D. Alves, A. Haque, University of Texas at Austin. Apr 2014.
-										<a class="btn btn-info btn-xs" href="./dl/rdf_joins_presentation_2014.pdf" target="_blank" role="button">Presentation (2014) &raquo;</a>
-										<a class="btn btn-info btn-xs" href="./dl/rdf_joins_presentation_2013.pdf" target="_blank" role="button">Presentation (2013) &raquo;</a>
-									</li>
+<li>
+	<strong>A Comparison of MapReduce Join Algorithms for RDF</strong>.
+	D. Alves, A. Haque, University of Texas at Austin. Apr 2014.
+	<a class="btn btn-info btn-xs" href="./dl/df_joins_presentation_2014.pdf" target="_blank"><i class="fa fa-youtube-play fa-lg"></i> Presentation &raquo;</a>
 
-									<li>
-										<strong>An Empirical Evaluation of Approximation Algorithms for the Metric Traveling Salesman Problem</strong>.
-										A Haque, J Shah, F Ejaz, JX Xu. Course Project for Algorithms (CS 331), University of Texas at Austin. Dec 2013.
-										<a class="btn btn-primary btn-xs" href="./dl/tsp_paper.pdf" target="_blank" role="button">Paper &raquo;</a>
-									</li>
+</li>
 
-									<li>
-										<strong>Selection Coefficients versus Omega for Codon Substitution Rates</strong>.
-										A. Haque. Oct 2013.
-										<a class="btn btn-info btn-xs" href="./dl/omega_presentation.pdf" target="_blank" role="button">Presentation &raquo;</a>
-									</li>
+<li>
+	<strong>An Empirical Evaluation of Approximation Algorithms for the Metric Traveling Salesman Problem</strong>.
+	A Haque, J Shah, F Ejaz, JX Xu. Course Project for Algorithms (CS 331), University of Texas at Austin. Dec 2013.
+	<a class="btn btn-primary btn-xs" href="./dl/tsp_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li>
 
-									<li>
-										<strong>HaLoop: Efficient Iterative Data Processing on Large Clusters</strong>.
-										Presentation for Cloud Databases (CS 395T). Mar 2013.
-										<a class="btn btn-info btn-xs" href="./dl/haloop_presentation.pdf" target="_blank" role="button">Presentation &raquo;</a>
-									</li>
+<li>
+	<strong>Selection Coefficients versus Omega for Codon Substitution Rates</strong>.
+	A. Haque. Oct 2013.
+	<a class="btn btn-info btn-xs" href="./dl/omega_presentation.pdf" target="_blank"><i class="fa fa-youtube-play fa-lg"></i> Presentation &raquo;</a>
+</li>
 
-									<li>
-										<strong>Distributed RDF Triple Store Using SPARQL, HBase, and Hive</strong>.
-										A Haque, L Perkins. Dec 2012.
-										<a class="btn btn-primary btn-xs" href="./dl/cloud_rdf_paper.pdf" target="_blank" role="button">Paper &raquo;</a>
-									</li>
+<li>
+	<strong>HaLoop: Efficient Iterative Data Processing on Large Clusters</strong>.
+	Presentation for Cloud Databases (CS 395T). Mar 2013.
+	<a class="btn btn-info btn-xs" href="./dl/haloop_presentation.pdf" target="_blank"><i class="fa fa-youtube-play fa-lg"></i> Presentation &raquo;</a>
+</li>
 
-									<li>
-										<strong>An Analysis and Comparison of Processor Scheduling Techniques</strong>.
-										A. Haque. Course Project for Operating Systems (CS 439H), University of Texas at Austin. Dec 2012.
-										<a class="btn btn-primary btn-xs" href="./dl/processor_scheduling_paper.pdf" target="_blank" role="button">Paper &raquo;</a>
-									</li>
+<li>
+	<strong>Distributed RDF Triple Store Using SPARQL, HBase, and Hive</strong>.
+	A Haque, L Perkins. Dec 2012.
+	<a class="btn btn-primary btn-xs" href="./dl/cloud_rdf_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li>
 
-									<li>
-										<strong>A Novel Approach to Cellular Tracking and Surveillance</strong>.
-										A Haque, A. Wang. May 2010.
-										<a class="btn btn-primary btn-xs" href="./dl/phone_tracking_paper.pdf" target="_blank" role="button">Paper &raquo;</a>
-									</li>
+<li>
+	<strong>An Analysis and Comparison of Processor Scheduling Techniques</strong>.
+	A. Haque. Course Project for Operating Systems (CS 439H), University of Texas at Austin. Dec 2012.
+	<a class="btn btn-primary btn-xs" href="./dl/processor_scheduling_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li>
+
+<li>
+	<strong>A Novel Approach to Cellular Tracking and Surveillance</strong>.
+	A Haque, A. Wang. May 2010.
+	<a class="btn btn-primary btn-xs" href="./dl/phone_tracking_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li>
 								</ol>
 							</ul>
 						</div>
@@ -680,24 +682,24 @@
 	</section>
 	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
 
-	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	<script src="js/jquery.js"></script>
+	<script src="./js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="./js/jquery.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
     <script src="js/main.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-	<script src="js/jquery.isotope.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
-	<script src="js/jquery.parallax-1.1.3.js" type="text/javascript" ></script>
-	<script src="js/skrollr.min.js"></script>		
-	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
-	<script src="js/jquery.localscroll-1.2.7-min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/responsive-slider.js"></script>
-	<script src="js/jquery.appear.js"></script>
-	<script src="js/validate.js"></script>
-	<script src="js/grid.js"></script>
-    <script src="js/main.js"></script>
+	<script src="./js/jquery.isotope.min.js"></script>
+	<script src="./js/jquery.nicescroll.min.js"></script>
+	<script src="./js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="./js/jquery.parallax-1.1.3.js" type="text/javascript" ></script>
+	<script src="./js/skrollr.min.js"></script>		
+	<script src="./js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="./js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="./js/stellar.js"></script>
+	<script src="./js/responsive-slider.js"></script>
+	<script src="./js/jquery.appear.js"></script>
+	<script src="./js/validate.js"></script>
+	<script src="./js/grid.js"></script>
+    <script src="./js/main.js"></script>
         <script type="text/javascript">
             // When the window has finished loading create our google map below
             google.maps.event.addDomListener(window, 'load', init);
@@ -706,23 +708,21 @@
                 // Basic options for a simple Google Map
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
                     zoom: 11,
-
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(37.4292, -122.1381), // New York
-
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [	{		featureType:"all",		elementType:"all",		stylers:[		{			invert_lightness:true		},		{			saturation:10		},		{			lightness:30		},		{			gamma:0.5		},		{			hue:"#4A89FF"		}		]	}	]
+                    center: new google.maps.LatLng(37.4292, -122.1381), 
+                    styles: [{
+                    	featureType:"all",
+                    	elementType:"all",
+                    	stylers:[
+                    	{ invert_lightness:true },
+                    	{ saturation:10	},
+                    	{ lightness:30 },
+                    	{ gamma:0.5	}, 
+                    	{ hue:"#4A89FF" }]
+                    }]
                 };
-
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
                 var mapElement = document.getElementById('map');
-
-                // Create the Google Map using out element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
+				var map = new google.maps.Map(mapElement, mapOptions);
             }
         </script>
 		 <script src="js/wow.min.js"></script>
