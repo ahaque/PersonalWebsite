@@ -32,7 +32,7 @@
 }
 .responsive-slider .slides ul li .slide-body img {
   width: 100%;
-  min-height: 300px;
+  min-height: 350px;
 }
 .responsive-slider .slides ul li .slide-body .caption {
   position: absolute;
@@ -47,9 +47,17 @@
 #jumbotron-twitch {
   width: 100%;
 }
-.responsive-slider .slides ul li .slide-body .caption.header {
-top: 45%;
-} 
+@media (max-width: 767px) {
+  .responsive-slider .slides ul li .slide-body .caption.header {
+  top: 38%;
+  } 
+}
+@media (min-width: 768px) {
+  .responsive-slider .slides ul li .slide-body .caption.header {
+  top: 42%;
+  } 
+}
+
 .responsive-slider .slides ul li .slide-body .caption.header h1 {
   font-size: 50px;
   padding: 0 3px 0 3px;
