@@ -1,15 +1,9 @@
-/* ==== Google font ==== */
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200,100,500,600,700,800,900);
-
-/* === fontawesome === */
 @import url('font-awesome.css');
-/* ==== overwrite bootstrap standard ==== */
 @import url('overwrite.css');
 @import url('animate.css');
-/*==========================================================================
-  General
-  ========================================================================== */
+
 body {
    font-family: "Titillium Web", Helvetica, Arial, sans-serif;
   color:#777;
@@ -92,9 +86,6 @@ a:hover {
   text-transform: uppercase;
 }
 
-/*==========================================================================
-  Misc & Adjust 
- ========================================================================== */
 .row {
   z-index: 9999;
 }
@@ -150,9 +141,6 @@ a:hover {
   padding-top: 25px;
 }
 
-
-
-/* --- float --- */
 .float-left {
   float: left;
 }
@@ -161,7 +149,6 @@ a:hover {
   float: right;
 }
 
-/* --- align --- */
 .align-left {
   text-align: left;
 }
@@ -186,8 +173,8 @@ cursor: pointer;
   transition: all 0.7s;
  
 }
-/* ---- padding ---- */
-/* top */
+
+
 .pad-top0 {
   padding-top: 0;
 }
@@ -250,8 +237,6 @@ cursor: pointer;
   padding-bottom: 40px;
 }
 
-
-/* ---- margin --- */
 .mar-left5 { margin-left: 5px; }
 .mar-left10 { margin-left: 10px; }
 .mar-left15 { margin-left: 15px; }
@@ -266,7 +251,6 @@ cursor: pointer;
 .mar-right25 { margin-right: 25px; }
 .mar-right30 { margin-right: 30px; }
 
-/* top */
 .mar-top0 {
   margin-top: 0;
 }
@@ -296,7 +280,7 @@ cursor: pointer;
 .mar-top40 {
   margin-top: 40px;
 }
-/*service*/
+
 i.service-icon {
   border: 1px solid #000;
   border-radius: 50%;
@@ -397,7 +381,6 @@ i.service-icon:hover {
   animation: serviceiconhover 0.5s ease-in-out;
 }
 
-/* bottom */
 .mar-bot0 {
   margin-bottom: 0;
 }
@@ -431,11 +414,6 @@ i.service-icon:hover {
   margin-bottom: 45px;
 }
 
-
-/*===========================
-  --- Sections ----
-=========================== */
-
 section.section {
   margin:0;
   padding: 80px 0 60px 0;
@@ -446,7 +424,6 @@ section.section {
   background-color: #fff;
 }
 
-/* --- section heading --- */
 .section-header {
   text-align: center;
 padding-top: 30px;
@@ -456,29 +433,32 @@ padding-top: 30px;
   font-weight: 700;
 }
 
-/* ==========================
- --- Parallax ---
-============================= */
-#parallax1{  
+/* Applies to all parallax on all screens */
+.section-parallax-format {
+  background-repeat: no-repeat;
+}
+#parallax-company{  
   background-image: url(../img/company_hq.jpg);
-  height: 450px;
-/*  background-size: cover; */
-  background-repeat: no-repeat;
 }
-#parallax2{  
+#parallax-stanford{  
   background-image: url(../img/stanford_palm.jpg);
-  height: 450px;
-  background-repeat: no-repeat;
 }
-#parallax3{ 
+#parallax-texas{ 
   background-image: url(../img/texas_stadium.jpg);
-  height: 450px;
-  background-repeat: no-repeat;
 }
-#parallax4{ 
+#parallax-graph{ 
   background-image: url(../img/dark_graph.jpg);
-  height: 450px;
-  background-repeat: no-repeat;
+}
+/* Applies to all parallax on certains screens */
+@media (max-width: 819x) {
+  .section-parallax-format {
+    height: 300px;
+  }
+}
+@media (min-width: 820px) {
+  .section-parallax-format {
+    height: 400px;
+  }
 }
 
 .line-pricing-table {
@@ -503,7 +483,6 @@ padding-top: 30px;
   display: table-cell;
   text-align: center;
 }
-
 
 .line-pricing-table .pricing-table-wrap ul {
   border: 2px solid #e6e6e6;
@@ -677,14 +656,10 @@ button[type="submit"].light:hover {
   background: #090068;
 }
 
-/*===========================
-  --- Header & menu ----
-=========================== */
-
 .navbar {
   line-height: 100px;
   height: 100px;
-  background-color: rgba(17,36,156,1);
+  background-color: rgba(0,7,45,.6);
   display: block;
   vertical-align: middle;
   text-align: center;
@@ -698,23 +673,20 @@ button[type="submit"].light:hover {
   margin-right:20px;
 }
 
-/*--Responsive--*/
-
-@media (max-width: 800px){
-.navbar .navbar-collapse {
-  margin-bottom: 0;
-  padding-bottom:0;
-  margin-left:-15px;
-  margin-top: -20px;
-  width:200px;
-}
-.navbar .navbar-nav > .active > a {
-  padding-bottom: 0px;
-  color: #26316E;
-}
-.row-slider{
-height: auto;
-}
+@media (max-width: 819px){
+  .navbar .navbar-collapse {
+    margin-bottom: 0;
+    padding-bottom:0;
+    margin-left: 60%;
+    width: 200px;
+  }
+  .navbar .navbar-nav > .active > a {
+    padding-bottom: 0px;
+    color: #26316E;
+  }
+  .row-slider{
+  height: auto;
+  }
 }
 
 .nav li {
@@ -783,12 +755,6 @@ h1 a.navbar-brand {
 .navbar-collapse.in {
   margin-top: -5px !important;
 }
-
-
-
-/*===========================
-  --- Featured section ----
-=========================== */
 
 section.featured {
 height: auto;
@@ -877,7 +843,6 @@ left:0%;
     top: -3px;
 }
 
-
 .circle{
 
   font-size: px;
@@ -888,9 +853,7 @@ left:0%;
   text-align: center;
   margin-top: 60px;
 }
-.circle:hover{
-
-  
+.circle:hover{  
   width: 140px;
   height: 140px;
   font-size: 20px;
@@ -900,12 +863,11 @@ left:0%;
   margin-top: 60px;
 }
   
- /* inner heading */
 section.featured.inner {
   background: #eee;
   padding: 150px 0 50px;
 }
-  /*id*/
+
 #header img {
 height: 600px;
 }
@@ -986,12 +948,9 @@ color:#090068;
   content: none !important;
 }
 
-/* removing default arrows */
 .flex-direction-nav a:before {
   content: none !important;
 }
-
-/* --- Revolution slider --- */
 
 .featured .fullwidthbanner ul {
   list-style: none;
@@ -1066,10 +1025,6 @@ color:#090068;
 .fullwidthbanner a.btn {
   color: #fff;
 }
-
-/*==========================
-About
-=========================== */
 
 .team-section {
   width: 100%;
@@ -1268,17 +1223,10 @@ font-size: 14px;
 
 }
 
-
-
 .box-bg{
 padding: 10px 20px;
 }
 
-
-
-/*===========================
-  Portfolio
-============================ */
 nav#filter a {
   background-color: #EEE;
   color:#555;
@@ -1287,8 +1235,6 @@ nav#filter a:hover, nav#filter a.current {
   background-color: #090068;
   color:#fff;
 }
-
-/* ------- */
 
 .isotopeWrapper article{
     margin-bottom: 30px;
@@ -1314,7 +1260,6 @@ nav#filter a {
   line-height: 20px;
   text-decoration: none;
 }
-
 
 .portfolio-items article img {width:100%;} 
 
@@ -1343,7 +1288,6 @@ nav#filter a {
   top: 0;
   color: rgba(220, 220, 220, 0.7);
 }
-
 
 .portfolio-item:hover .portfolio-desc {
   padding-top: 20%;
@@ -1375,8 +1319,6 @@ nav#filter a {
   top:-10px;
 }
 
-
-
 .portfolio-item .portfolio-desc .folio-info h5 {
   text-transform: uppercase;
 }
@@ -1385,10 +1327,6 @@ nav#filter a {
   font-size: 12px;
 }
 
-
-/*===========================
-  --- Testimonial ----
-=========================== */
 #testimonals {
   padding-top: 20px;
   padding-bottom:40px;
@@ -1411,126 +1349,11 @@ nav#filter a {
   line-height: 1.5em;
 } 
 
-/*===========================
-  --- Contact ----
-=========================== */
-
-.validation {
-  display:none;
-  margin: 0 0 20px;
-  font-weight:400;
-  font-size:13px;
-}
-
-#sendmessage {
-  border:1px solid #fff;
-  display:none;
-  text-align:center;
-  padding:15px 12px 15px;
-  margin:10px 0;
-  font-weight:600;
-  margin-bottom:30px;
-}
-
-#sendmessage.show,.show  {
-  display:block;
-}
-
-#contact-form {
-  position: relative;
-  z-index: 999;
-}
-
-#contact-form input[type=text],#contact-form input[type=email], .contactForm textarea {
-  width: 100%;
-  background: rgba(38,105,199, 1);
-  font-family: 'Open Sans', sans serif;
-  border: 0;
-  font-size:14px;
-  text-align: left;
-  vertical-align: middle;
-  padding:0 10px;
-}
-#contact-form input[type=text]:focus,#contact-form input[type=email]:focus, .contactForm textarea:focus {
-  background: rgba(101, 106, 100, 1);
-  color: #eff1ef;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  transition: background 0.25 ease-in;
-  -moz-transition: background 0.25 ease-in;
-  -webkit-transition: background 0.25 ease-in;
-}
-#contact-form input[type=text],#contact-form input[type=email] {
-  height: 60px;
-  margin-bottom:30px;
-}
-#contact-form input[type=submit] {
-  color: #fff;
-  width: 185px;
-  height: 60px;
-  text-shadow: none;
-  font-size: 14px;
-  padding:0.5em;
-  letter-spacing: 0.05em;
-  margin: 0 0 20px 0;
-  display: block;
-  border: 0;
-  text-transform: none;
-  border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-}
-#contact-form input[type=submit]:hover, #contact-form input[type=submit]:active {
-  background: #43413e !important;
-}
-#contact-form textarea {
-  padding-top: 1em;
-}
-
-textarea.form-control {
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
-}
-
-div.cform-response-output {
-  max-width: 60%;
-  text-align: center;
-  margin-left: 40% !important;
-  margin-top: 0.5em !important;
-  padding: 0.5em !important;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-.cform-not-valid-tip {
-  color: #888;
-  border: 1px dotted #ad3729 !important;
-  width: 100% !important;
-  left: 0 !important;
-  padding: 0.5em !important;
-  font-family: 'Open Sans', sans-serif;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-
 /* google map */
 #map {
   height: 350px;
 }
 
-
-/*====================
-  Clients
-==================== */
 #clients img {
   opacity: 0.7;
 }
@@ -1538,11 +1361,6 @@ div.cform-response-output {
 #clients img:hover {
   opacity: 1;
 }
-
-
-/*=========================
-  Footer
- ================= */
 
 section#footer {
   background: #242424;
@@ -1553,7 +1371,6 @@ section#footer .copyright {
   text-align: center;
 }
 
-/* footer social icons */
 ul.social-network {
   list-style: none;
   display: inline;
@@ -1565,7 +1382,6 @@ ul.social-network li {
   margin: 0 5px;
 }
 
-/* footer menu */
 ul.footer-menu {
   list-style: none;
   display: inline;
@@ -1599,37 +1415,36 @@ a.scrollup:hover{
   
 }
 
-/*===========================
-  --- Template Components ----
-=========================== */
-
-/* footer social icons */
-.social-network a.icoRss:hover {
-  background-color: #F56505;
+.social-network a.icoBitbucket:hover {
+  background-color: #205081;
   
 }
 .social-network a.icoFacebook:hover {
   background-color:#33ccff;
   
 }
-.social-network a.icoTwitter:hover {
-  background-color:#33ccff;
+.social-network a.icoGithub:hover {
+  background-color:#000000;
   
 }
 .social-network a.icoGoogle:hover {
-  background-color:#BD3518;
+  background-color:#F90101;
   
 }
-.social-network a.icoVimeo:hover {
-background-color:#0590B8;
+.social-network a.icoEmail:hover {
+background-color:#b9b300;
   
 }
 .social-network a.icoLinkedin:hover {
 background-color:#007bb7;
   
 }
-.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i, 
-.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+.social-network a.icoBitbucket:hover i,
+.social-network a.icoFacebook:hover i,
+.social-network a.icoGithub:hover i, 
+.social-network a.icoGoogle:hover i,
+.social-network a.icoEmail:hover i,
+.social-network a.icoLinkedin:hover i {
   color:#fff;
 }
 a.socialIcon:hover, .socialHoverClass {
@@ -1674,8 +1489,6 @@ a.socialIcon:hover, .socialHoverClass {
   transition: all 0.8s;
 }
 
-
-/* stats */
 .stats .icon {
   margin: 0 0 20px 0;
 }
@@ -1689,7 +1502,6 @@ a.socialIcon:hover, .socialHoverClass {
   font-size: 24px;
 }
 
-/* buttons */
 .btn {
   border: 0;
 }
@@ -1713,35 +1525,11 @@ a.socialIcon:hover, .socialHoverClass {
   border-bottom: 4px solid;
 }
 
-
-
-/* ========================================
-Media queries
-========================================= */
-
-@media (min-width: 959px) and (max-width: 1199px) {
-  .navbar-nav {
-    margin-top: 20px;
-  }
+.navbar-nav {
+  margin-top: 20px;
 }
 
-@media only screen and (min-device-width : 979px) and (max-device-width : 1024px)  {
-
-  .navbar-nav {
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 800px) {
-
-  .navbar-nav {
-    margin-top: 20px;
-  }
-}
-
-
-@media (max-width: 767px) {
-
+@media (max-width: 820px) {
   .navbar.navbar-fixed-top {
     background-color:rgba(1,9,64,.7);
     height: 40px;
@@ -1764,9 +1552,6 @@ Media queries
   .navbar .navbar-collapse ul.nav li {
     border-bottom: 1px solid #666;
   }
-  
-  
-  
   .team-member,.col-lg-4 {
     margin-bottom: 30px;
   }
@@ -1776,10 +1561,9 @@ Media queries
   }
 }
 
-
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+  min-height: 100%;  
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
