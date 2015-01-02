@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Data on CS Graduate Admissions</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="Albert Haque">
+		<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../css/isotope.css" media="screen" type="text/css"/>	
+		<link rel="stylesheet" href="../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/main-theme.css">
+		<link rel="stylesheet" href="../css/responsive-slider.css">
+		<link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="./blog_style.css">
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/skin.css">
+
+		<style>
+		/* Bar Plots */
+.bar {
+  fill: steelblue;
+}
+.bar:hover {
+  fill: turquoise;
+}
+
+.chart text {
+  font: 10px sans-serif;
+}
+.chart .title {
+  font: 15px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+/* Line plot */
+grid .tick {
+	stroke: lightgrey;
+	opacity: 0.7;
+	shape-rendering: crispEdges;
+}
+ 
+.grid path {
+	stroke-width: 0;
+}
+ 
+.axis path {
+	fill: none;
+	stroke: #bbb;
+	shape-rendering: crispEdges;
+}
+ 
+.axis text {
+	fill: #555;
+}
+ 
+.axis line {	
+	stroke: #e7e7e7;
+	shape-rendering: crispEdges;
+}
+ 
+.axis .axis-label {
+	font-size: 14px;
+}
+ 
+.line {
+	fill: none;
+	stroke-width: 1.5px;
+}
+ 
+.dot {
+	/* consider the stroke-with the mouse detect radius? */
+	stroke: transparent;
+	stroke-width: 10px;  
+	cursor: pointer;
+}
+ 
+.dot:hover {
+	stroke: rgba(68, 127, 255, 0.3);
+}
+
+		</style>
+    </head>
+
+    <body>
+	
+	<div class="header">
+	<section id="header" class="appear">
+		
+		<div class="navbar navbar-fixed-top" role="navigation">
+			
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+					<h1><a class="navbar-brand" href="http://albert.cm">Albert Haque
+					</a></h1>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="../#about">About</a></li>
+						<li><a href="../#work">Industry</a></li>
+						<li><a href="../#education">Education</a></li>
+						<li><a href="../#projects">Projects</a></li>
+						<li><a href="../#research">Research</a></li>
+						<li><a href="../blog/">Blog</a></li>
+					</ul>
+				</div>
+			</div>
+		
+		
+	</section>
+	</div>
+
+<section id="blog" class="section appear clearfix">
+	<div class="container pad-top30">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<h2><a href="./001-cs-grad.html">Data on CS Graduate School Admissions</a></h2>
+			January 1, 2015, 12:46 AM PST
+			
+			<h3>Introduction</h3>
+			<p>When I applied to graduate school, I wanted to know my chances of getting in. Many people wonder the same thing when they apply. I compiled data from official, public sources detailing the scores, ranges, and percentiles of applicants and accepted students to several top computer science schools. Using this data, hopefully you can gain a better understanding of where you stand and what is required to meet your goals.</p>
+			<p><strong><font color="red">Jan 1, 2015: This is still a work in progress and certain sections are incomplete.</font></strong></p>
+			
+			<h3>Outline</h3>
+			Although this post refers to the computer science admissions processes, it may be relevant for similar fields such as electrical engineering and computaitonal science. The rest of this post are organized into several sections:
+			<ol>
+				<li>Schools &amp; Data Sources</li>
+				<li>Number of Students</li>
+				<li>GRE Scores</li>
+				<li>GPA</li>
+				<li>Funding</li>
+			</ol>
+			Other important components of the application such as your letters of recommendation and your statement of purpose are not discussed. For guidance on those, refer to other sources online.
+
+			<h3>Schools &amp; Data Sources</h3>
+			Each school name contains a link to official data regarding number of applicants and/or average statistics concerning GPA, GRE scores, etc. Schools are ordered by their <a href="http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools/top-science-schools/computer-science-rankings" target="_blank">US News and World Report 2014 Ranking for Graduate Computer Science Schools</a>. Some schools may be missing from this list because: (i) I did not apply to that school, or (ii) I cannot find published data from that school.
+
+			<br /><br />
+		    <table class="table table-hover">
+		      <thead>
+		        <tr>
+		          <th>Rank</th>
+		          <th>School</th>
+		          <th>Abbreviation</th>
+		          <th>Department</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <th scope="row">1</th>
+		          <td><a href="./001/cmu.png" target="_blank">Carnegie Mellon University</a></td>
+		          <td>CMU</td>
+		          <td><a href="http://www.csd.cs.cmu.edu/" target="_blank">CSD</a></td>
+		        </tr>
+		        <tr>
+		          <th scope="row">1</th>
+		          <td>Stanford University</td>
+		          <td>-</td>
+		          <td><a href="http://www-cs.stanford.edu/" target="_blank">CS</a></td>
+		        </tr>
+		        <!--
+		        <tr>
+		          <th scope="row">1</th>
+		          <td><a href="http://grad.berkeley.edu/admissions/rankings-stats/">University of California, ​Berkeley</a></td>
+		          <td>Cal or Berkeley</td>
+		          <td><a href="http://www.eecs.berkeley.edu/" target="_blank">EECS</a></td>
+		        </tr>
+		        -->
+		        <tr>
+		          <th scope="row">6</th>
+		          <td><a href="https://www.cs.washington.edu/prospective_students/grad/application" target="_blank">University of Washington</a></td>
+		          <td>UW or Washington</td>
+		          <td><a href="https://www.cs.washington.edu/" target="_blank">CSE</a></td>
+		        </tr>
+		        <tr>
+		          <th scope="row">6</th>
+		          <td><a href="http://public.tableausoftware.com/views/Assessment-Selectivity/Selectivity?:showVizHome=no#1" target="_blank">Cornell University</a></td>
+		          <td>-</td>
+		          <td><a href="http://www.cs.cornell.edu/" target="_blank">CS</a></td>
+		        </tr>
+		        <tr>
+		          <th scope="row">8</th>
+		          <td><a href="http://www.princeton.edu/pub/profile/admission/graduate/" target="_blank">Princeton University</a></td>
+		          <td>-</td>
+		          <td><a href="https://www.cs.princeton.edu/" target="_blank">CS</a></td>
+		        </tr>
+		        <tr>
+		          <th scope="row">9</th>
+		          <td><a href="http://www.utexas.edu/ogs/prospective/stats/" target="_blank">University of Texas at Austin</a></td>
+		          <td>UT or Texas</td>
+		          <td><a href="https://www.cs.utexas.edu/" target="_blank">CS</a></td>
+		        </tr>
+				<tr>
+		          <th scope="row">19</th>
+		          <td><a href="http://www.cis.upenn.edu/prospective-students/graduate/applying-stats.php" target="_blank">University of Pennsylvania</a></td>
+		          <td>Penn</td>
+		          <td><a href="http://www.cis.upenn.edu/index.php" target="_blank">CIS</a></td>
+		        </tr>
+		        <tr>
+		          <th scope="row">28</th>
+		          <td><a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">Johns Hopkins University</a></td>
+		          <td>JHU</td>
+		          <td><a href="http://www.cs.jhu.edu/" target="_blank">CS</a></td>
+		        </tr>
+		      </tbody>
+		    </table>
+
+			<h3>Number of Students</h3>
+			Data below is for admitted students entering during fall 2012, 2013, and 2014. Some schools do not report most recent statistics. For some schools (e.g. CMU, JHU), I reported the number of students present during in-person interviews, admitted student visit days, or statistics sent out via acceptance emails.
+
+			<h4>Accepted Students (PhD)</h4>
+			<center>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<svg class="chart1"></svg>
+
+		  <script type="text/javascript">
+		var data = [
+		  {name: "Stanford",    value:  40},
+		  {name: "CMU",     value: 79},
+		  {name: "Cornell", value: 78},
+		  {name: "Penn",     value: 50},
+		  {name: "Texas", value: 46},
+		  {name: "Washington", value: 75},
+		  {name: "JHU¹", value: 30}
+		];
+
+		var margin = {top: 20, right: 30, bottom: 40, left: 40},
+		    width = 650 - margin.left - margin.right,
+		    height = 350 - margin.top - margin.bottom;
+
+		var x = d3.scale.ordinal()
+		    .domain(data.map(function(d) { return d.name; }))
+		    .rangeRoundBands([0, width], .1);
+
+		var y = d3.scale.linear()
+		    .domain([0, d3.max(data, function(d) { return d.value; })+0.1*d3.max(data, function(d) { return d.value; })])
+		    .range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+		    .scale(x)
+		    .orient("bottom");
+
+		var yAxis = d3.svg.axis()
+		    .scale(y)
+		    .orient("left");
+
+		var chart = d3.select(".chart1")
+		    .attr("width", width + margin.left + margin.right)
+		    .attr("height", height + margin.top + margin.bottom)
+		  .append("g")
+		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		// Add data
+		chart.selectAll(".bar")
+		      .data(data)
+		      .enter()
+		      .append("rect")
+		      .attr("class", "bar")
+		      .attr("x", function(d) { return x(d.name); })
+		      .attr("y", function(d) { return y(d.value); })
+		      .attr("height", function(d) { return height - y(d.value); })
+		      .attr("width", x.rangeBand());
+
+		// y axis and label
+		chart.append("g")
+		    .attr("class", "y axis")
+		    .call(yAxis)
+		  .append("text")
+		    .attr("transform", "rotate(-90)")
+		    .attr("x", -height/2)
+		    .attr("y", -margin.bottom)
+		    .attr("dy", ".71em")
+		    .style("text-anchor", "end");
+		// x axis and label
+		chart.append("g")
+		    .attr("class", "x axis")
+		    .attr("transform", "translate(0," + height + ")")
+		    .call(xAxis)
+		  .append("text")
+		    .attr("x", width / 2)
+		    .attr("y", margin.bottom - 10)
+		    .attr("dy", ".71em")
+		    .style("text-anchor", "end");
+		  </script>
+		  </center>
+
+		  Notes for Accepted Students (PhD) data:
+		  <ul>
+		  <li><sup>1</sup> JHU includes the <a href="http://www.clsp.jhu.edu/" target="_blank">Center for Language and Speech Processing</a>.</li>
+		  </ul>
+
+		  <h4>Accepted Students (Masters)</h4>
+			<center>
+		<svg class="chart2"></svg>
+
+		  <script type="text/javascript">
+		var data = [
+		  {name: "Stanford¹",    value:  110},
+		  {name: "CMU²", value: 81},
+		  {name: "Cornell", value: 172},
+		  {name: "Penn³", value: 135}
+		];
+
+		var margin = {top: 20, right: 30, bottom: 40, left: 40},
+		    width = 650 - margin.left - margin.right,
+		    height = 350 - margin.top - margin.bottom;
+
+		var x = d3.scale.ordinal()
+		    .domain(data.map(function(d) { return d.name; }))
+		    .rangeRoundBands([0, width], .1);
+
+		var y = d3.scale.linear()
+		    .domain([0, d3.max(data, function(d) { return d.value; })])
+		    .range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+		    .scale(x)
+		    .orient("bottom");
+
+		var yAxis = d3.svg.axis()
+		    .scale(y)
+		    .orient("left");
+
+		var chart = d3.select(".chart2")
+		    .attr("width", width + margin.left + margin.right)
+		    .attr("height", height + margin.top + margin.bottom)
+		  .append("g")
+		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		// Add data
+		chart.selectAll(".bar")
+		      .data(data)
+		      .enter()
+		      .append("rect")
+		      .attr("class", "bar")
+		      .attr("x", function(d) { return x(d.name); })
+		      .attr("y", function(d) { return y(d.value); })
+		      .attr("height", function(d) { return height - y(d.value); })
+		      .attr("width", x.rangeBand());
+
+		// y axis and label
+		chart.append("g")
+		    .attr("class", "y axis")
+		    .call(yAxis)
+		  .append("text")
+		    .attr("transform", "rotate(-90)")
+		    .attr("x", -height/2)
+		    .attr("y", -margin.bottom)
+		    .attr("dy", ".71em")
+		    .style("text-anchor", "end");
+		// x axis and label
+		chart.append("g")
+		    .attr("class", "x axis")
+		    .attr("transform", "translate(0," + height + ")")
+		    .call(xAxis)
+		  .append("text")
+		    .attr("x", width / 2)
+		    .attr("y", margin.bottom - 10)
+		    .attr("dy", ".71em")
+		    .style("text-anchor", "end");
+		  </script>
+		  </center>
+		  Notes for Accepted Students (Masters) data:
+		  <ul>
+		  <li><sup>1</sup> Stanford is for full time, non-SCPD students</li>
+		  <li><sup>2</sup> CMU is for the MS in CS program</li>
+		  <li><sup>3</sup> Penn is for the MSE in CS program</li>
+		  </ul>
+
+		  <h3>GRE Scores</h3>
+		  Before we look at data on a per-school basis, it is important to know how many students score X on each section. It turns out nearly 5% of computer science applicants and 6% of electrical engineers get a perfect 170 on the quant section. The plot below shows the distribution of GRE scores by major. Source: <a href="https://www.ets.org/s/gre/pdf/gre_guide_table4.pdf" target="_blank">ETS Test Score Distribution by Field</a>.
+		  <br /><br />
+		  Green denotes the verbal score and blue is for the quantitative score.
+
+		<div id="chart3"></div>
+<script>
+
+//************************************************************
+// Data notice the structure
+//************************************************************
+var data = 	[
+	[{'x':130,'y':0},{'x':134,'y':0.008},{'x':139,'y':0.037},{'x':144,'y':0.062},{'x':149,'y':0.104},{'x':154,'y':0.15},{'x':159,'y':0.212},{'x':164,'y':0.222},{'x':169,'y':0.158},{'x':170,'y':0.047}],
+	[{'x':130,'y':0},{'x':134,'y':0.07},{'x':139,'y':0.161},{'x':144,'y':0.206},{'x':149,'y':0.173},{'x':154,'y':0.148},{'x':159,'y':0.115},{'x':164,'y':0.08},{'x':169,'y':0.039},{'x':170,'y':0.007}],
+	[{'x':130,'y':2},{'x':135,'y':7},{'x':140,'y':12},{'x':145,'y':2},{'x':150,'y':8},{'x':155,'y':13},{'x':160,'y':7},{'x':165,'y':2},{'x':170,'y':4},{'x':171,'y':7}],
+	[{'x':1,'y':3},{'x':2,'y':8},{'x':3,'y':13},{'x':4,'y':3},{'x':5,'y':9},{'x':6,'y':14},{'x':7,'y':6},{'x':8,'y':1},{'x':9,'y':7},{'x':10,'y':9}],
+	[{'x':1,'y':4},{'x':2,'y':9},{'x':3,'y':14},{'x':4,'y':4},{'x':5,'y':10},{'x':6,'y':15},{'x':7,'y':5},{'x':8,'y':0},{'x':9,'y':8},{'x':10,'y':5}]
+];
+ 
+var colors = [
+	'steelblue',
+	'green',
+	'red',
+	'purple'
+]
+ 
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 700 - margin.left - margin.right,
+    height = 350 - margin.top - margin.bottom;
+	
+var x = d3.scale.linear()
+    .domain([129, 171])
+    .range([0, width]);
+ 
+var y = d3.scale.linear()
+    .domain([0, 0.31])
+    .range([height, 0]);
+	
+var xAxis = d3.svg.axis()
+    .scale(x)
+	.tickSize(-height)
+	.tickPadding(10)	
+	.tickSubdivide(true)	
+    .orient("bottom");	
+	
+var yAxis = d3.svg.axis()
+    .scale(y)
+	.tickPadding(10)
+	.tickSize(-width)
+	.tickSubdivide(true)	
+    .orient("left");
+	
+var zoom = d3.behavior.zoom()
+    .x(x)
+    .y(y)
+    .scaleExtent([1, 10])
+    .on("zoom", zoomed);	
+	
+	
+//************************************************************
+// Generate our SVG object
+//************************************************************	
+var svg = d3.select("#chart3").append("svg")
+	.call(zoom)
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+ 
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+ 
+svg.append("g")
+	.attr("class", "y axis")
+	.append("text")
+	.attr("class", "axis-label")
+	.attr("transform", "rotate(-90)")
+	.attr("y", (-margin.left) + 10)
+	.attr("x", -height/2)
+ 
+svg.append("clipPath")
+	.attr("id", "clip")
+	.append("rect")
+	.attr("width", width)
+	.attr("height", height);
+
+var line = d3.svg.line()
+    .interpolate("linear")	
+    .x(function(d) { return x(d.x); })
+    .y(function(d) { return y(d.y); });		
+	
+svg.selectAll('.line')
+	.data(data)
+	.enter()
+	.append("path")
+    .attr("class", "line")
+	.attr("clip-path", "url(#clip)")
+	.attr('stroke', function(d,i){ 			
+		return colors[i%colors.length];
+	})
+    .attr("d", line);		
+	
+var points = svg.selectAll('.dots')
+	.data(data)
+	.enter()
+	.append("g")
+    .attr("class", "dots")
+	.attr("clip-path", "url(#clip)");	
+ 
+points.selectAll('.dot')
+	.data(function(d, index){ 		
+		var a = [];
+		d.forEach(function(point,i){
+			a.push({'index': index, 'point': point});
+		});		
+		return a;
+	})
+	.enter()
+	.append('circle')
+	.attr('class','dot')
+	.attr("r", 2.5)
+	.attr('fill', function(d,i){ 	
+		return colors[d.index%colors.length];
+	})	
+	.attr("transform", function(d) { 
+		return "translate(" + x(d.point.x) + "," + y(d.point.y) + ")"; }
+	);
+
+function zoomed() {
+	svg.select(".x.axis").call(xAxis);
+	svg.select(".y.axis").call(yAxis);   
+	svg.selectAll('path.line').attr('d', line);  
+ 
+	points.selectAll('circle').attr("transform", function(d) { 
+		return "translate(" + x(d.point.x) + "," + y(d.point.y) + ")"; }
+	);  
+}
+    </script>
+
+</script>
+
+		  <h4>Scores of Admitted Students</h4>
+		  The table below shows the average GRE scores of <strong>accepted</strong> students at each school. Each school name contains a link to score guidelines and averages for each school. Data includes both accepted PhD and MS students unless otherwise specified.
+		  <br /><br />
+		  <table class="table table-hover">
+		      <thead>
+		        <tr>
+		          <th>School</th>
+		          <th>Quantitative (Q)</th>
+		          <th>Verbal (V)</th>
+		          <th>Analytical Writing (AW)</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+		          <td><a href="http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools/top-engineering-schools/stanford-university-02020">Stanford<sup>1</sup></a></td>
+		          <td>166</td>
+		          <td>161</td>
+		          <td>5.0</td>
+		        </tr>
+		        <tr>
+		          <td><a href="https://www.cs.washington.edu/prospective_students/grad/application" target="_blank">Washington (PhD)<sup>2</sup></a></td>
+		          <td>165 (91%)</td>
+		          <td>160 (85%)</td>
+		          <td>4.0 (64%)</td>
+		        </tr>
+		        <tr>
+		          <td><a href="https://www.cs.washington.edu/prospective_students/pmp/prerequisites" target="_blank">Washington (MS-PMP)<sup>2</sup></a></td>
+		          <td>164 (88%)</td>
+		          <td>156 (70%)</td>
+		          <td>4.5</td>
+		        </tr>
+		        <tr>
+		          <td><a href="http://www.cs.cornell.edu/phd/faq" target="_new">Cornell (PhD)<sup>3</sup></a></td>
+		          <td>159</td>
+		          <td>153</td>
+		          <td>5.0</td>
+		        </tr>
+		        <tr>
+		          <td><a href="http://www.princeton.edu/pub/profile/admission/graduate/" target="_blank">Princeton<sup>4</sup></a></td>
+		          <td>162</td>
+		          <td>161</td>
+		          <td>4.5</td>
+		        </tr>
+		        <tr>
+		          <td><a href="http://www.utexas.edu/ogs/prospective/stats/pdf/avg-gpa-gre-2012.pdf" target="_blank">Texas (PhD)</a></td>
+		          <td>165</td>
+		          <td>160</td>
+		          <td>4.0</td>
+		        </tr>
+		        <tr>
+		          <td><a href="http://www.utexas.edu/ogs/prospective/stats/pdf/avg-gpa-gre-2012.pdf" target="_blank">Texas (MS)</a></td>
+		          <td>162</td>
+		          <td>158</td>
+		          <td>4.0</td>
+		        </tr>
+		        <tr>
+		          <td><a href="http://www.cis.upenn.edu/prospective-students/graduate/applying-stats.php" target="_blank">University of Pennsylvania (PhD)</a></td>
+		          <td>167</td>
+		          <td>163</td>
+		          <td>4.5</td>
+		        </tr>
+		        <tr>
+		          <td><a href="http://www.cis.upenn.edu/prospective-students/graduate/applying-stats.php" target="_blank">University of Pennsylvania (MSE)</a></td>
+		          <td>166</td>
+		          <td>158</td>
+		          <td>4.0</td>
+		        </tr>
+		        <tr>
+		          <td><a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">Johns Hopkins</a></td>
+		          <td>160</td>
+		          <td>153</td>
+		          <td>-</td>
+		        </tr>
+		      </tbody>
+		    </table>
+
+		    Notes for Scores of Admitted Students:
+		    <ul>
+		    <li><sup>1</sup> Stanford data was taken from the US News and World Report <a href="http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools/top-engineering-schools/stanford-university-02020" target="_blank">School Compass Access</a> and is partially made public by <a href="http://magoosh.com/gre/2013/stanford-gre-scores/" target="_blank">Magoosh</a>.</li>
+		    <li><sup>2</sup> Washington provides average percentile data. These were converted to a 130-170 score using the <a href="http://www.ets.org/s/gre/pdf/gre_guide_table1a.pdf" target="_blank">ETS percentile guide</a>.</li>
+		    <li><sup>3</sup> Cornell provides GRE data based on the old scoring system (200-800). These were converted to the new (130-170) scale using the <a href="https://www.ets.org/s/gre/pdf/concordance_information.pdf" target="_blank">ETS Concordance Table</a>.</li>
+		    <li><sup>4</sup> Princeton data is for all engineering disciplines.</li>
+		    </ul>
+
+		  <h3>GPA</h3>
+
+		  <h3>Funding</h3>
+
+		  <h3>Comments</h3>
+
+		  <div id="disqus_thread"></div>
+			<script type="text/javascript">
+			  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			  var disqus_shortname = 'albertcm'; // required: replace example with your forum shortname
+			  var disqus_identifier = "/001/";
+
+			  /* * * DON'T EDIT BELOW THIS LINE * * */
+			  (function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			  })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+		</div>
+	</div>
+</section>
+
+
+	<section id="footer" class="section footer appear clearfix">
+		<div class="container">
+		<center><p><h2>Contact</h2>Ways to contact me and links to social media</p></center>
+			<div class="row animated opacity mar-bot0" data-andown="fadeIn" data-animation="animation">
+				<div class="col-sm-12 align-center">
+                    <ul class="social-network social-circle">
+                        <li><a href="https://github.com/ahaque" class="icoGithub" title="Github"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://bitbucket.org/ahaque" class="icoBitbucket" title="Bitbucket"><i class="fa fa-bitbucket"></i></a></li>
+                        <li><a href="http://scholar.google.com/citations?user=013GPHcAAAAJ" class="icoGoogle" title="Google Scholar"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/alberthaque" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="mailto:albert.haque@gmail.com" class="icoEmail" title="Email"><i class="fa fa-envelope"></i></a></li>
+                    </ul>				
+				</div>
+			</div>
+
+			<div class="row align-center copyright">
+					<div class="col-sm-12"><p id="lastUpdated"></p></div>
+			</div>
+		</div>
+	</section>
+	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+
+	<script src="../js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/main.min.js"></script>
+	<script src="../js/jquery.isotope.min.js"></script>
+	<script src="../js/jquery.nicescroll.min.js"></script>
+	<script src="../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="../js/jquery.parallax-1.1.3.js" type="text/javascript" ></script>
+	<script src="../js/skrollr.min.js"></script>		
+	<script src="../js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="../js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="../js/jquery.appear.js"></script>
+	<script src="../js/validate.js"></script>
+	<script src="../js/grid.js"></script>
+	<script src="../js/parallax.js"></script>
+    <script src="../js/main.js"></script>
+	<script src="../js/wow.min.js"></script>
+	<script>
+	 wow = new WOW(
+	 {
+	
+		}	) 
+		.init();
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-36983866-5', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	<body onload="getLastUpdated();">
+	<script>
+		function getLastUpdated() {
+		    var today = new Date();
+			x = "Last Updated: " + today.toUTCString();
+		    document.getElementById("lastUpdated").innerHTML = x;
+		}
+	</script>
+	</body>
+</html>
