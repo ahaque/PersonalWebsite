@@ -97,6 +97,7 @@ grid .tick {
 }
 
 		</style>
+
     </head>
 
     <body>
@@ -229,7 +230,7 @@ grid .tick {
 
 			<h4>Accepted Students (PhD)</h4>
 			<center>
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="../js/d3.v3.min.js" charset="utf-8"></script>
 		<svg class="chart1"></svg>
 
 		  <script type="text/javascript">
@@ -239,13 +240,13 @@ grid .tick {
 		  {name: "Cornell", value: 78},
 		  {name: "Penn",     value: 50},
 		  {name: "Texas", value: 46},
-		  {name: "Washington", value: 75},
+		  {name: "UW", value: 75},
 		  {name: "JHU¹", value: 30}
 		];
 
 		var margin = {top: 20, right: 30, bottom: 40, left: 40},
-		    width = 650 - margin.left - margin.right,
-		    height = 350 - margin.top - margin.bottom;
+		    width = 500 - margin.left - margin.right,
+		    height = 275 - margin.top - margin.bottom;
 
 		var x = d3.scale.ordinal()
 		    .domain(data.map(function(d) { return d.name; }))
@@ -321,8 +322,8 @@ grid .tick {
 		];
 
 		var margin = {top: 20, right: 30, bottom: 40, left: 40},
-		    width = 650 - margin.left - margin.right,
-		    height = 350 - margin.top - margin.bottom;
+		    width = 500 - margin.left - margin.right,
+		    height = 275 - margin.top - margin.bottom;
 
 		var x = d3.scale.ordinal()
 		    .domain(data.map(function(d) { return d.name; }))
@@ -387,151 +388,268 @@ grid .tick {
 		  </ul>
 
 		  <h3>GRE Scores</h3>
-		  Before we look at data on a per-school basis, it is important to know how many students score X on each section. It turns out nearly 5% of computer science applicants and 6% of electrical engineers get a perfect 170 on the quant section. The plot below shows the distribution of GRE scores by major. Source: <a href="https://www.ets.org/s/gre/pdf/gre_guide_table4.pdf" target="_blank">ETS Test Score Distribution by Field</a>.
+		  Before we look at data on a per-school basis, it is important to know how many students score X on each section. It turns out nearly 5% of computer science applicants and 6% of electrical engineers get a perfect 170 on the quant section. The plots below show the distribution of GRE scores by major. Source: <a href="https://www.ets.org/s/gre/pdf/gre_guide_table4.pdf" target="_blank">ETS Test Score Distribution by Major Field of Study</a>.
 		  <br /><br />
-		  Green denotes the verbal score and blue is for the quantitative score.
+		 
+		 <h4>GRE Quant Score Distribution</h4>
+			<center><div id="chart3"></div></center>
+			<script>
+			      var margin = {top: 20, right: 55, bottom: 30, left: 40},
+			          width  = 500 - margin.left - margin.right,
+			          height = 250  - margin.top  - margin.bottom;
 
-		<div id="chart3"></div>
-<script>
+			      var x = d3.scale.ordinal()
+			          .rangeRoundBands([0, width], .1);
 
-//************************************************************
-// Data notice the structure
-//************************************************************
-var data = 	[
-	[{'x':130,'y':0},{'x':134,'y':0.008},{'x':139,'y':0.037},{'x':144,'y':0.062},{'x':149,'y':0.104},{'x':154,'y':0.15},{'x':159,'y':0.212},{'x':164,'y':0.222},{'x':169,'y':0.158},{'x':170,'y':0.047}],
-	[{'x':130,'y':0},{'x':134,'y':0.07},{'x':139,'y':0.161},{'x':144,'y':0.206},{'x':149,'y':0.173},{'x':154,'y':0.148},{'x':159,'y':0.115},{'x':164,'y':0.08},{'x':169,'y':0.039},{'x':170,'y':0.007}],
-	[{'x':130,'y':2},{'x':135,'y':7},{'x':140,'y':12},{'x':145,'y':2},{'x':150,'y':8},{'x':155,'y':13},{'x':160,'y':7},{'x':165,'y':2},{'x':170,'y':4},{'x':171,'y':7}],
-	[{'x':1,'y':3},{'x':2,'y':8},{'x':3,'y':13},{'x':4,'y':3},{'x':5,'y':9},{'x':6,'y':14},{'x':7,'y':6},{'x':8,'y':1},{'x':9,'y':7},{'x':10,'y':9}],
-	[{'x':1,'y':4},{'x':2,'y':9},{'x':3,'y':14},{'x':4,'y':4},{'x':5,'y':10},{'x':6,'y':15},{'x':7,'y':5},{'x':8,'y':0},{'x':9,'y':8},{'x':10,'y':5}]
-];
- 
-var colors = [
-	'steelblue',
-	'green',
-	'red',
-	'purple'
-]
- 
-var margin = {top: 20, right: 30, bottom: 30, left: 50},
-    width = 700 - margin.left - margin.right,
-    height = 350 - margin.top - margin.bottom;
-	
-var x = d3.scale.linear()
-    .domain([129, 171])
-    .range([0, width]);
- 
-var y = d3.scale.linear()
-    .domain([0, 0.31])
-    .range([height, 0]);
-	
-var xAxis = d3.svg.axis()
-    .scale(x)
-	.tickSize(-height)
-	.tickPadding(10)	
-	.tickSubdivide(true)	
-    .orient("bottom");	
-	
-var yAxis = d3.svg.axis()
-    .scale(y)
-	.tickPadding(10)
-	.tickSize(-width)
-	.tickSubdivide(true)	
-    .orient("left");
-	
-var zoom = d3.behavior.zoom()
-    .x(x)
-    .y(y)
-    .scaleExtent([1, 10])
-    .on("zoom", zoomed);	
-	
-	
-//************************************************************
-// Generate our SVG object
-//************************************************************	
-var svg = d3.select("#chart3").append("svg")
-	.call(zoom)
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-	.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
- 
-svg.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
-    .call(xAxis);
- 
-svg.append("g")
-    .attr("class", "y axis")
-    .call(yAxis);
- 
-svg.append("g")
-	.attr("class", "y axis")
-	.append("text")
-	.attr("class", "axis-label")
-	.attr("transform", "rotate(-90)")
-	.attr("y", (-margin.left) + 10)
-	.attr("x", -height/2)
- 
-svg.append("clipPath")
-	.attr("id", "clip")
-	.append("rect")
-	.attr("width", width)
-	.attr("height", height);
+			      var y = d3.scale.linear()
+			          .rangeRound([height, 0]);
 
-var line = d3.svg.line()
-    .interpolate("linear")	
-    .x(function(d) { return x(d.x); })
-    .y(function(d) { return y(d.y); });		
-	
-svg.selectAll('.line')
-	.data(data)
-	.enter()
-	.append("path")
-    .attr("class", "line")
-	.attr("clip-path", "url(#clip)")
-	.attr('stroke', function(d,i){ 			
-		return colors[i%colors.length];
-	})
-    .attr("d", line);		
-	
-var points = svg.selectAll('.dots')
-	.data(data)
-	.enter()
-	.append("g")
-    .attr("class", "dots")
-	.attr("clip-path", "url(#clip)");	
- 
-points.selectAll('.dot')
-	.data(function(d, index){ 		
-		var a = [];
-		d.forEach(function(point,i){
-			a.push({'index': index, 'point': point});
-		});		
-		return a;
-	})
-	.enter()
-	.append('circle')
-	.attr('class','dot')
-	.attr("r", 2.5)
-	.attr('fill', function(d,i){ 	
-		return colors[d.index%colors.length];
-	})	
-	.attr("transform", function(d) { 
-		return "translate(" + x(d.point.x) + "," + y(d.point.y) + ")"; }
-	);
+			      var xAxis = d3.svg.axis()
+			          .scale(x)
+			          .orient("bottom");
 
-function zoomed() {
-	svg.select(".x.axis").call(xAxis);
-	svg.select(".y.axis").call(yAxis);   
-	svg.selectAll('path.line').attr('d', line);  
- 
-	points.selectAll('circle').attr("transform", function(d) { 
-		return "translate(" + x(d.point.x) + "," + y(d.point.y) + ")"; }
-	);  
-}
-    </script>
+			      var yAxis = d3.svg.axis()
+			          .scale(y)
+			          .orient("left");
 
-</script>
+			      var line = d3.svg.line()
+			          .interpolate("cardinal")
+			          .x(function (d) { return x(d.label) + x.rangeBand() / 2; })
+			          .y(function (d) { return y(d.value); });
+
+			      var color = d3.scale.ordinal()
+			          .range(["#1F7A7A","#0066FF","#000066"]);
+
+			      var svgQ = d3.select("#chart3").append("svg")
+			          .attr("width",  width  + margin.left + margin.right)
+			          .attr("height", height + margin.top  + margin.bottom)
+			          .attr("id","greQ")
+			        .append("g")
+			          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+			      d3.csv("./data/gre_quant.csv", function (error, data) {
+
+			        var labelVar = 'score';
+			        var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
+			        color.domain(varNames);
+
+			        var seriesData = varNames.map(function (name) {
+			          return {
+			            name: name,
+			            values: data.map(function (d) {
+			              return {name: name, label: d[labelVar], value: +d[name]};
+			            })
+			          };
+			        });
+
+			        x.domain(data.map(function (d) { return d.score; }));
+			        y.domain([
+			          d3.min(seriesData, function (c) { 
+			            return d3.min(c.values, function (d) { return d.value; });
+			          }),
+			          d3.max(seriesData, function (c) { 
+			            return d3.max(c.values, function (d) { return d.value; });
+			          })
+			        ]);
+
+			        svgQ.append("g")
+			            .attr("class", "x axis")
+			            .attr("transform", "translate(0," + height + ")")
+			            .call(xAxis);
+
+			        svgQ.append("g")
+			            .attr("class", "y axis")
+			            .call(yAxis)
+			          .append("text")
+			            .attr("transform", "rotate(-90)")
+			            .attr("y", 6)
+			            .attr("dy", ".71em")
+			            .style("text-anchor", "end")
+			            .text("Fraction of Students");
+
+			        var series = svgQ.selectAll(".series")
+			            .data(seriesData)
+			          .enter().append("g")
+			            .attr("class", "series");
+
+			        series.append("path")
+			          .attr("class", "line")
+			          .attr("d", function (d) { return line(d.values); })
+			          .style("stroke", function (d) { return color(d.name); })
+			          .style("stroke-width", "4px")
+			          .style("fill", "none")
+
+			        series.selectAll(".point")
+			          .data(function (d) { return d.values; })
+			          .enter().append("circle")
+			           .attr("class", "point")
+			           .attr("cx", function (d) { return x(d.label) + x.rangeBand()/2; })
+			           .attr("cy", function (d) { return y(d.value); })
+			           .attr("r", "5px")
+			           .style("fill", function (d) { return color(d.name); })
+			           .style("stroke", "grey")
+			           .style("stroke-width", "2px")
+			           .on("mouseover", function (d) { showPopover.call(this, d); })
+			           .on("mouseout",  function (d) { removePopovers(); })
+
+			        var legend = svgQ.selectAll(".legend")
+			            .data(varNames.slice().reverse())
+			          .enter().append("g")
+			            .attr("class", "legend")
+			            .attr("transform", function (d, i) { return "translate(-200," + i * 20 + ")"; });
+
+			        legend.append("rect")
+			            .attr("x", width - 10)
+			            .attr("width", 10)
+			            .attr("height", 10)
+			            .style("fill", color)
+			            .style("stroke", "grey");
+
+			        legend.append("text")
+			            .attr("x", width - 12)
+			            .attr("y", 6)
+			            .attr("dy", ".35em")
+			            .style("text-anchor", "end")
+			            .text(function (d) { return d; });
+
+			        function removePopovers () {
+			          $('.popover').each(function() {
+			            $(this).remove();
+			          }); 
+			        }
+
+			        function showPopover (d) {
+			          $(this).popover({
+			            title: d.name,
+			            placement: 'auto top',
+			            container: 'body',
+			            trigger: 'manual',
+			            html : true,
+			            content: function() { 
+			              return "Quant Score: " + d.label + 
+			                     "<br/>Value: " + d3.format(",")(d.value ? d.value: d.y1 - d.y0); }
+			          });
+			          $(this).popover('show')
+			        }
+			      });
+			    </script>
+
+			<h4>GRE Verbal Score Distribution</h4>
+			<center><div id="chart4"></div></center>
+			<script>
+			     var svgV = d3.select("#chart4").append("svg")
+			      	  .attr("id","greV")
+			          .attr("width",  width  + margin.left + margin.right)
+			          .attr("height", height + margin.top  + margin.bottom)
+			        .append("g")
+			          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+			      d3.csv("./data/gre_verbal.csv", function (error, data) {
+
+			        var labelVar = 'score';
+			        var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
+			        color.domain(varNames);
+
+			        var seriesData = varNames.map(function (name) {
+			          return {
+			            name: name,
+			            values: data.map(function (d) {
+			              return {name: name, label: d[labelVar], value: +d[name]};
+			            })
+			          };
+			        });
+
+			        x.domain(data.map(function (d) { return d.score; }));
+			        y.domain([
+			          d3.min(seriesData, function (c) { 
+			            return d3.min(c.values, function (d) { return d.value; });
+			          }),
+			          d3.max(seriesData, function (c) { 
+			            return d3.max(c.values, function (d) { return d.value; });
+			          })
+			        ]);
+
+			        svgV.append("g")
+			            .attr("class", "x axis")
+			            .attr("transform", "translate(0," + height + ")")
+			            .call(xAxis);
+
+			        svgV.append("g")
+			            .attr("class", "y axis")
+			            .call(yAxis)
+			          .append("text")
+			            .attr("transform", "rotate(-90)")
+			            .attr("y", 6)
+			            .attr("dy", ".71em")
+			            .style("text-anchor", "end")
+			            .text("Fraction of Students");
+
+			        var series = svgV.selectAll(".series")
+			            .data(seriesData)
+			          .enter().append("g")
+			            .attr("class", "series");
+
+			        series.append("path")
+			          .attr("class", "line")
+			          .attr("d", function (d) { return line(d.values); })
+			          .style("stroke", function (d) { return color(d.name); })
+			          .style("stroke-width", "4px")
+			          .style("fill", "none")
+
+			        series.selectAll(".point")
+			          .data(function (d) { return d.values; })
+			          .enter().append("circle")
+			           .attr("class", "point")
+			           .attr("cx", function (d) { return x(d.label) + x.rangeBand()/2; })
+			           .attr("cy", function (d) { return y(d.value); })
+			           .attr("r", "5px")
+			           .style("fill", function (d) { return color(d.name); })
+			           .style("stroke", "grey")
+			           .style("stroke-width", "2px")
+			           .on("mouseover", function (d) { showPopover.call(this, d); })
+			           .on("mouseout",  function (d) { removePopovers(); })
+
+			        var legend = svgV.selectAll(".legend")
+			            .data(varNames.slice().reverse())
+			          .enter().append("g")
+			            .attr("class", "legend")
+			            .attr("transform", function (d, i) { return "translate(-115," + (140+(i * 20)) + ")"; });
+
+			        legend.append("rect")
+			            .attr("x", width - 10)
+			            .attr("width", 10)
+			            .attr("height", 10)
+			            .style("fill", color)
+			            .style("stroke", "grey");
+
+			        legend.append("text")
+			            .attr("x", width - 12)
+			            .attr("y", 6)
+			            .attr("dy", ".35em")
+			            .style("text-anchor", "end")
+			            .text(function (d) { return d; });
+
+			        function removePopovers () {
+			          $('.popover').each(function() {
+			            $(this).remove();
+			          }); 
+			        }
+
+			        function showPopover (d) {
+			          $(this).popover({
+			            title: d.name,
+			            placement: 'auto top',
+			            container: 'body',
+			            trigger: 'manual',
+			            html : true,
+			            content: function() { 
+			              return "Verbal Score: " + d.label + 
+			                     "<br/>Value: " + d3.format(",")(d.value ? d.value: d.y1 - d.y0); }
+			          });
+			          $(this).popover('show')
+			        }
+			      });
+			    </script>
 
 		  <h4>Scores of Admitted Students</h4>
 		  The table below shows the average GRE scores of <strong>accepted</strong> students at each school. Each school name contains a link to score guidelines and averages for each school. Data includes both accepted PhD and MS students unless otherwise specified.
@@ -672,8 +790,7 @@ function zoomed() {
 	<script src="../js/jquery.isotope.min.js"></script>
 	<script src="../js/jquery.nicescroll.min.js"></script>
 	<script src="../js/fancybox/jquery.fancybox.pack.js"></script>
-	<script src="../js/jquery.parallax-1.1.3.js" type="text/javascript" ></script>
-	<script src="../js/skrollr.min.js"></script>		
+=	<script src="../js/skrollr.min.js"></script>		
 	<script src="../js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="../js/jquery.localscroll-1.2.7-min.js"></script>
 	<script src="../js/jquery.appear.js"></script>
