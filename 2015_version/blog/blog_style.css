@@ -33,11 +33,11 @@ h1,h2,h3,h4,h5,h6 {
   font-style: normal;
   margin: 0 0 20px 0;
 }
-h1 { font-size: 32px; marign-top: 0px; }
+h1 { font-size: 32px; margin-top: 0px; }
 h2 { font-size: 32px; margin-bottom: 0px}
 h3 { font-size: 24px; margin-top: 25px;}
-h4 { font-size: 18px; margin-top: 20px;}
-h5 { font-size: 18px; }
+h4 { font-size: 18px; margin-top: 25px;}
+h5 { font-size: 18px; margin-top: 25px;}
 .txt-light { font-weight: 300; }
 .txt-regular { font-weight: 400; }
 .txt-bold { font-weight: 700; }

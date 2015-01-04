@@ -137,25 +137,30 @@ grid .tick {
 			<h2><a href="./001-cs-grad.html">Data on CS Graduate School Admissions</a></h2>
 			January 1, 2015, 12:46 AM PST
 			
-			<h3>Introduction</h3>
-			<p>When I applied to graduate school, I wanted to know my chances of getting in. Many people wonder the same thing when they apply. I compiled data from official, public sources detailing the scores, ranges, and percentiles of applicants and accepted students to several top computer science schools. Using this data, hopefully you can gain a better understanding of where you stand and what is required to meet your goals.</p>
-			<p><strong><font color="red">Jan 1, 2015: This is still a work in progress and certain sections are incomplete.</font></strong></p>
-			
+			<h3>Disclaimer(s)</h3>
+			<p>It is important to note that GPA and GRE scores are not the most important components of your application. In my opinion, your letters of recommendation, research, and industry experience are far more important. GPA and GRE are often used as a filter by admissions committees. Once you're above a certain threshold, these scores don't really matter.</p>
+
+			<p>With that said: Then how do you compare yourself with others? Tt is difficult to quantify and compare essays and resumes. Comparisons are easiest when you have quantitative data. Unfortunately, the only quantiative things in your application are GPA and GRE scores (and publication count, but that's not covered here). For guidance on recommendation letters, personal statements, and work or internship experience, please refer to other sources online.</p>
+
+		    <p><strong>Note: Data older than 2012 may not reflect the current state of the applicant pool. Interest in computer science is at a record high. This will cause the admissions process to become far more competitive than in previous years.</strong></p>
+
+			<p><strong><font color="red">Jan 4, 2015: This is a work in progress. Some sections may be incomplete.</font></strong></p>
+			<p>
 			<h3>Outline</h3>
-			Although this post refers to the computer science admissions processes, it may be relevant for similar fields such as electrical engineering and computaitonal science. The rest of this post are organized into several sections:
+			Although this post refers to the computer science admissions processes, it may be relevant for similar fields such as electrical engineering and computation-heavy disciplines. The rest of this post are organized into several sections:
 			<ol>
 				<li>Schools &amp; Data Sources</li>
-				<li>Number of Students</li>
+				<li>Applicant &amp; Admit Numbers</li>
 				<li>GRE Scores</li>
 				<li>GPA</li>
-				<li>Funding</li>
 			</ol>
-			Other important components of the application such as your letters of recommendation and your statement of purpose are not discussed. For guidance on those, refer to other sources online.
+			At the end of each section or subsection, there will be a collection of footnotes with external links to additional data sources. Occasionally there will be directions on how to obtain the data.
 
-			<h3>Schools &amp; Data Sources</h3>
-			Each school name contains a link to official data regarding number of applicants and/or average statistics concerning GPA, GRE scores, etc. Schools are ordered by their <a href="http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools/top-science-schools/computer-science-rankings" target="_blank">US News and World Report 2014 Ranking for Graduate Computer Science Schools</a>. Some schools may be missing from this list because: (i) I did not apply to that school, or (ii) I cannot find published data from that school.
+			<h3>1. Schools &amp; Data Sources</h3>
+			Schools may be missing from this list because: (i) I did not apply to that school, or (ii) I cannot find published data from that school. Clicking on each school will take you to the source of the data for that particular statistic (except Figure 1). Schools are ranked by <a href="http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools/top-science-schools/computer-science-rankings" target="_blank">US News and World Report 2014</a>.
 
 			<br /><br />
+			<center><h5>Table 1: List of Schools Included in this Study</h5></center>
 		    <table class="table table-hover">
 		      <thead>
 		        <tr>
@@ -168,7 +173,7 @@ grid .tick {
 		      <tbody>
 		        <tr>
 		          <th scope="row">1</th>
-		          <td><a href="./001/cmu.png" target="_blank">Carnegie Mellon University</a></td>
+		          <td>Carnegie Mellon University</td>
 		          <td>CMU</td>
 		          <td><a href="http://www.csd.cs.cmu.edu/" target="_blank">CSD</a></td>
 		        </tr>
@@ -178,364 +183,498 @@ grid .tick {
 		          <td>-</td>
 		          <td><a href="http://www-cs.stanford.edu/" target="_blank">CS</a></td>
 		        </tr>
-		        <!--
 		        <tr>
-		          <th scope="row">1</th>
-		          <td><a href="http://grad.berkeley.edu/admissions/rankings-stats/">University of California, ​Berkeley</a></td>
-		          <td>Cal or Berkeley</td>
-		          <td><a href="http://www.eecs.berkeley.edu/" target="_blank">EECS</a></td>
+		          <th scope="row">5</th>
+		          <td>University of Illinois, Urbana-Champaign</td>
+		          <td>UIUC or Illinois</td>
+		          <td><a href="http://cs.illinois.edu/" target="_blank">CS</a></td>
 		        </tr>
-		        -->
 		        <tr>
 		          <th scope="row">6</th>
-		          <td><a href="https://www.cs.washington.edu/prospective_students/grad/application" target="_blank">University of Washington</a></td>
+		          <td>University of Washington</td>
 		          <td>UW or Washington</td>
 		          <td><a href="https://www.cs.washington.edu/" target="_blank">CSE</a></td>
 		        </tr>
 		        <tr>
 		          <th scope="row">6</th>
-		          <td><a href="http://public.tableausoftware.com/views/Assessment-Selectivity/Selectivity?:showVizHome=no#1" target="_blank">Cornell University</a></td>
+		          <td>Cornell University</td>
 		          <td>-</td>
 		          <td><a href="http://www.cs.cornell.edu/" target="_blank">CS</a></td>
 		        </tr>
 		        <tr>
 		          <th scope="row">8</th>
-		          <td><a href="http://www.princeton.edu/pub/profile/admission/graduate/" target="_blank">Princeton University</a></td>
+		          <td>Princeton University</td>
 		          <td>-</td>
 		          <td><a href="https://www.cs.princeton.edu/" target="_blank">CS</a></td>
 		        </tr>
 		        <tr>
 		          <th scope="row">9</th>
-		          <td><a href="http://www.utexas.edu/ogs/prospective/stats/" target="_blank">University of Texas at Austin</a></td>
+		          <td>University of Texas at Austin</td>
 		          <td>UT or Texas</td>
 		          <td><a href="https://www.cs.utexas.edu/" target="_blank">CS</a></td>
 		        </tr>
 				<tr>
 		          <th scope="row">19</th>
-		          <td><a href="http://www.cis.upenn.edu/prospective-students/graduate/applying-stats.php" target="_blank">University of Pennsylvania</a></td>
+		          <td>University of Pennsylvania</td>
 		          <td>Penn</td>
 		          <td><a href="http://www.cis.upenn.edu/index.php" target="_blank">CIS</a></td>
 		        </tr>
 		        <tr>
 		          <th scope="row">28</th>
-		          <td><a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">Johns Hopkins University</a></td>
+		          <td>Johns Hopkins University</td>
 		          <td>JHU</td>
 		          <td><a href="http://www.cs.jhu.edu/" target="_blank">CS</a></td>
 		        </tr>
 		      </tbody>
 		    </table>
 
-			<h3>Number of Students</h3>
-			Data below is for admitted students entering during fall 2012, 2013, and 2014. Some schools do not report most recent statistics. For some schools (e.g. CMU, JHU), I reported the number of students present during in-person interviews, admitted student visit days, or statistics sent out via acceptance emails.
-
-			<h4>Accepted Students (PhD)</h4>
+			<h3>2. Applicant &amp; Admit Numbers</h3>
+			<p>Some schools do not report most recent statistics. For some schools (e.g. CMU, JHU), I reported the number of students present during in-person interviews, admitted student visit days, or statistics sent out via acceptance emails.</p>
+			
+			<center><h5>Figure 1: Admit Rates (PhD)</h5></center>
 			<center>
 		<script src="../js/d3.v3.min.js" charset="utf-8"></script>
 		<svg class="chart1"></svg>
 
-		  <script type="text/javascript">
-		var data = [
-		  {name: "Stanford",    value:  40},
-		  {name: "CMU",     value: 79},
-		  {name: "Cornell", value: 78},
-		  {name: "Penn",     value: 50},
-		  {name: "Texas", value: 46},
-		  {name: "UW", value: 75},
-		  {name: "JHU¹", value: 30}
-		];
+		<script type="text/javascript">
+			var data = [
+			  {name: "Stanford",    value:  0.102},
+			  {name: "JHU", value: 0.10},
+			  {name: "UW", value: 0.096},
+			  {name: "Cornell",     value: 0.117},
+			  {name: "Texas", value: 0.119},
+			  {name: "Penn", value: 0.112},
+			  {name: "UIUC",     value: 0.219},
+			];
 
-		var margin = {top: 20, right: 30, bottom: 40, left: 40},
-		    width = 500 - margin.left - margin.right,
-		    height = 275 - margin.top - margin.bottom;
+			var margin = {top: 20, right: 30, bottom: 40, left: 40},
+			    width = 500 - margin.left - margin.right,
+			    height = 275 - margin.top - margin.bottom;
 
-		var x = d3.scale.ordinal()
-		    .domain(data.map(function(d) { return d.name; }))
-		    .rangeRoundBands([0, width], .1);
+			var x = d3.scale.ordinal()
+			    .domain(data.map(function(d) { return d.name; }))
+			    .rangeRoundBands([0, width], .1);
 
-		var y = d3.scale.linear()
-		    .domain([0, d3.max(data, function(d) { return d.value; })+0.1*d3.max(data, function(d) { return d.value; })])
-		    .range([height, 0]);
+			var y = d3.scale.linear()
+			    .domain([0, .22])
+			    .range([height, 0]);
 
-		var xAxis = d3.svg.axis()
-		    .scale(x)
-		    .orient("bottom");
+			var xAxis = d3.svg.axis()
+			    .scale(x)
+			    .orient("bottom");
 
-		var yAxis = d3.svg.axis()
-		    .scale(y)
-		    .orient("left");
+			var yAxis = d3.svg.axis()
+			    .scale(y)
+			    .orient("left");
 
-		var chart = d3.select(".chart1")
-		    .attr("width", width + margin.left + margin.right)
-		    .attr("height", height + margin.top + margin.bottom)
-		  .append("g")
-		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+			var chart = d3.select(".chart1")
+			    .attr("width", width + margin.left + margin.right)
+			    .attr("height", height + margin.top + margin.bottom)
+			  .append("g")
+			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-		// Add data
-		chart.selectAll(".bar")
-		      .data(data)
-		      .enter()
-		      .append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.name); })
-		      .attr("y", function(d) { return y(d.value); })
-		      .attr("height", function(d) { return height - y(d.value); })
-		      .attr("width", x.rangeBand());
+			// Add data
+			chart.selectAll(".bar")
+			      .data(data)
+			      .enter()
+			      .append("rect")
+			      .attr("class", "bar")
+			      .attr("x", function(d) { return x(d.name); })
+			      .attr("y", function(d) { return y(d.value); })
+			      .attr("height", function(d) { return height - y(d.value); })
+			      .attr("width", x.rangeBand());
 
-		// y axis and label
-		chart.append("g")
-		    .attr("class", "y axis")
-		    .call(yAxis)
-		  .append("text")
-		    .attr("transform", "rotate(-90)")
-		    .attr("x", -height/2)
-		    .attr("y", -margin.bottom)
-		    .attr("dy", ".71em")
-		    .style("text-anchor", "end");
-		// x axis and label
-		chart.append("g")
-		    .attr("class", "x axis")
-		    .attr("transform", "translate(0," + height + ")")
-		    .call(xAxis)
-		  .append("text")
-		    .attr("x", width / 2)
-		    .attr("y", margin.bottom - 10)
-		    .attr("dy", ".71em")
-		    .style("text-anchor", "end");
-		  </script>
-		  </center>
+			// y axis and label
+			chart.append("g")
+			    .attr("class", "y axis")
+			    .call(yAxis)
+			  .append("text")
+			    .attr("transform", "rotate(-90)")
+			    .attr("x", -height/2)
+			    .attr("y", -margin.bottom)
+			    .attr("dy", ".71em")
+			    .style("text-anchor", "end");
+			// x axis and label
+			chart.append("g")
+			    .attr("class", "x axis")
+			    .attr("transform", "translate(0," + height + ")")
+			    .call(xAxis)
+			  .append("text")
+			    .attr("x", width / 2)
+			    .attr("y", margin.bottom - 10)
+			    .attr("dy", ".71em")
+			    .style("text-anchor", "end");
+		</script>
+		</center>
 
-		  Notes for Accepted Students (PhD) data:
-		  <ul>
-		  <li><sup>1</sup> JHU includes the <a href="http://www.clsp.jhu.edu/" target="_blank">Center for Language and Speech Processing</a>.</li>
-		  </ul>
+		<center><h5>Table 2: Applied, Admitted, and Enrolled (PhD)</h5></center>
+		<table class="table table-hover">
+		  <thead>
+		    <tr>
+		      <th>School</th>
+		      <th>Applied</th>
+		      <th>Admitted (Rate)</th>
+		      <th>Enrolled (Rate)</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<tr>
+		      <td><a href="http://cs.stanford.edu/newsletter/past-newsletters/2011" target="_blank">Stanford (2011)<sup>1</sup></a></td>
+		      <td>692</td>
+		      <td>71 (10.2%)</td>
+		      <td>50 (70.4%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.dmi.illinois.edu/cp/" target="_new">Illinois (2014)<sup>2</sup></a></td>
+		      <td>750</td>
+		      <td>164 (21.9%)</td>
+		      <td>74 (14.1%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://grad.washington.edu/about/statistics/summaries/2009/rptGsisAnnual_department.pdf" target="_new">Washington (2010)</a></td>
+		      <td>1210</td>
+		      <td>116 (9.6%)</td>
+		      <td>76 (65.5%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://public.tableausoftware.com/views/Assessment-Selectivity/Selectivity?:showVizHome=no#1" target="_new">Cornell (2013)</a></td>
+		      <td>665</td>
+		      <td>78 (11.7%)</td>
+		      <td>11 (14.1%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.utexas.edu/ogs/prospective/stats/pdf/counts-by-major2012.pdf" target="_blank">Texas (PhD+MS) (2012)</a></td>
+		      <td>1345</td>
+		      <td>160 (11.9%)</td>
+		      <td>46 (28.8%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.cis.upenn.edu/prospective-students/graduate/applying-stats.php" target="_blank">Penn (2014)</a></td>
+		      <td>448</td>
+		      <td>50 (11.2%)</td>
+		      <td>14 (28.0%)</td>
+		    </tr>
+			<tr>
+		      <td><a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">Johns Hopkins<sup>34</sup></a></td>
+		      <td>300</td>
+		      <td>30 (10.0%)</td>
+		      <td>-</td>
+		    </tr>
+		  </tbody>
+		</table>
 
-		  <h4>Accepted Students (Masters)</h4>
-			<center>
-		<svg class="chart2"></svg>
+		Notes for Accepted Students (PhD) data:
+		<ul>
+		<li><sup>1</sup> On the <a href="http://cs.stanford.edu/newsletter/past-newsletters/2011" target="_blank">Stanford 2011 Newsletter</a>, search for: <strong>Admissions Statistics</strong>
+		<li><sup>2</sup> UIUC data can be found in their <a href="http://www.dmi.illinois.edu/cp/">Campus Profile</a>. Search the page for <strong>4160</strong> then click on the total number of graduate applications and select the engineering college.
+		<li><sup>3</sup> JHU includes the <a href="http://www.clsp.jhu.edu/" target="_blank">Center for Language and Speech Processing</a>.</li>
+		<li><sup>4</sup> On the <a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">JHU FAQ</a> page, expand: <strong>Can I include extra information with my application?</strong>.</li>
+		</ul>
 
-		  <script type="text/javascript">
-		var data = [
-		  {name: "Stanford¹",    value:  110},
-		  {name: "CMU²", value: 81},
-		  {name: "Cornell", value: 172},
-		  {name: "Penn³", value: 135}
-		];
+		<h5><center>Figure 3: Admit Rate (Masters)</center></h5>
+		<center>
+			<svg class="chart2"></svg>
+			<script type="text/javascript">
+				var data = [
+				  {name: "Stanford",    value:  .184},
+				  {name: "CMU", value: .08},
+				  {name: "Cornell", value: .248},
+				  {name: "Penn", value: .179},
+				  {name: "UI (MS)", value: .117},
+				  {name: "UI (MCS)", value: .324}
+				];
 
-		var margin = {top: 20, right: 30, bottom: 40, left: 40},
-		    width = 500 - margin.left - margin.right,
-		    height = 275 - margin.top - margin.bottom;
+				var margin = {top: 20, right: 30, bottom: 40, left: 40},
+				    width = 500 - margin.left - margin.right,
+				    height = 275 - margin.top - margin.bottom;
 
-		var x = d3.scale.ordinal()
-		    .domain(data.map(function(d) { return d.name; }))
-		    .rangeRoundBands([0, width], .1);
+				var x = d3.scale.ordinal()
+				    .domain(data.map(function(d) { return d.name; }))
+				    .rangeRoundBands([0, width], .1);
 
-		var y = d3.scale.linear()
-		    .domain([0, d3.max(data, function(d) { return d.value; })])
-		    .range([height, 0]);
+				var y = d3.scale.linear()
+				    .domain([0, d3.max(data, function(d) { return d.value; })])
+				    .range([height, 0]);
 
-		var xAxis = d3.svg.axis()
-		    .scale(x)
-		    .orient("bottom");
+				var xAxis = d3.svg.axis()
+				    .scale(x)
+				    .orient("bottom");
 
-		var yAxis = d3.svg.axis()
-		    .scale(y)
-		    .orient("left");
+				var yAxis = d3.svg.axis()
+				    .scale(y)
+				    .orient("left");
 
-		var chart = d3.select(".chart2")
-		    .attr("width", width + margin.left + margin.right)
-		    .attr("height", height + margin.top + margin.bottom)
-		  .append("g")
-		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				var chart = d3.select(".chart2")
+				    .attr("width", width + margin.left + margin.right)
+				    .attr("height", height + margin.top + margin.bottom)
+				  .append("g")
+				    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-		// Add data
-		chart.selectAll(".bar")
-		      .data(data)
-		      .enter()
-		      .append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.name); })
-		      .attr("y", function(d) { return y(d.value); })
-		      .attr("height", function(d) { return height - y(d.value); })
-		      .attr("width", x.rangeBand());
+				// Add data
+				chart.selectAll(".bar")
+				      .data(data)
+				      .enter()
+				      .append("rect")
+				      .attr("class", "bar")
+				      .attr("x", function(d) { return x(d.name); })
+				      .attr("y", function(d) { return y(d.value); })
+				      .attr("height", function(d) { return height - y(d.value); })
+				      .attr("width", x.rangeBand());
 
-		// y axis and label
-		chart.append("g")
-		    .attr("class", "y axis")
-		    .call(yAxis)
-		  .append("text")
-		    .attr("transform", "rotate(-90)")
-		    .attr("x", -height/2)
-		    .attr("y", -margin.bottom)
-		    .attr("dy", ".71em")
-		    .style("text-anchor", "end");
-		// x axis and label
-		chart.append("g")
-		    .attr("class", "x axis")
-		    .attr("transform", "translate(0," + height + ")")
-		    .call(xAxis)
-		  .append("text")
-		    .attr("x", width / 2)
-		    .attr("y", margin.bottom - 10)
-		    .attr("dy", ".71em")
-		    .style("text-anchor", "end");
-		  </script>
-		  </center>
-		  Notes for Accepted Students (Masters) data:
-		  <ul>
-		  <li><sup>1</sup> Stanford is for full time, non-SCPD students</li>
-		  <li><sup>2</sup> CMU is for the MS in CS program</li>
-		  <li><sup>3</sup> Penn is for the MSE in CS program</li>
-		  </ul>
+				// y axis and label
+				chart.append("g")
+				    .attr("class", "y axis")
+				    .call(yAxis)
+				  .append("text")
+				    .attr("transform", "rotate(-90)")
+				    .attr("x", -height/2)
+				    .attr("y", -margin.bottom)
+				    .attr("dy", ".71em")
+				    .style("text-anchor", "end");
+				// x axis and label
+				chart.append("g")
+				    .attr("class", "x axis")
+				    .attr("transform", "translate(0," + height + ")")
+				    .call(xAxis)
+				  .append("text")
+				    .attr("x", width / 2)
+				    .attr("y", margin.bottom - 10)
+				    .attr("dy", ".71em")
+				    .style("text-anchor", "end");
+			</script>
+		</center>
 
-		  <h3>GRE Scores</h3>
-		  Before we look at data on a per-school basis, it is important to know how many students score X on each section. It turns out nearly 5% of computer science applicants and 6% of electrical engineers get a perfect 170 on the quant section. The plots below show the distribution of GRE scores by major. Source: <a href="https://www.ets.org/s/gre/pdf/gre_guide_table4.pdf" target="_blank">ETS Test Score Distribution by Major Field of Study</a>.
-		  <br /><br />
+		<center><h5>Table 3: Applied, Admitted, and Enrolled (Masters)</h5></center>
+		<table class="table table-hover">
+		  <thead>
+		    <tr>
+		      <th>School</th>
+		      <th>Applied</th>
+		      <th>Admitted (Rate)</th>
+		      <th>Enrolled (Rate)</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td><a href="http://cs.stanford.edu/newsletter/past-newsletters/2011" target="_blank">Stanford (2011)<sup>1</sup></a></td>
+		      <td>667</td>
+		      <td>123 (18.4%)</td>
+		      <td>92 (74.8%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="./001/cmu_ms_email.png" target="_blank">CMU (2014)<sup>2</sup></td>
+		      <td>1000</td>
+		      <td>80 (8.0%)</td>
+		      <td>-</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.cis.upenn.edu/prospective-students/graduate/applying-stats.php" target="_blank">Penn (2014)<sup>3</sup></a></td>
+		      <td>752</td>
+		      <td>135 (17.9%)</td>
+		      <td>57 (42.2%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.dmi.illinois.edu/cp/" target="_new">Illinois (MS) (2014)<sup>4</sup></a></td>
+		      <td>767</td>
+		      <td>67 (11.7%)</td>
+		      <td>38 (45.1%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.dmi.illinois.edu/cp/" target="_new">Illinois (MCS) (2014)<sup>4</sup></a></td>
+		      <td>228</td>
+		      <td>74 (32.4%)</td>
+		      <td>33 (44.6%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://public.tableausoftware.com/views/Assessment-Selectivity/Selectivity?:showVizHome=no#1" target="_new">Cornell (2013)</a></td>
+		      <td>692</td>
+		      <td>172 (24.8%)</td>
+		      <td>86 (50.0%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.utexas.edu/ogs/prospective/stats/pdf/counts-by-major2012.pdf" target="_blank">Texas (PhD+MS) (2012)</a></td>
+		      <td>1345</td>
+		      <td>160 (11.9%)</td>
+		      <td>46 (28.8%)</td>
+		    </tr>
+		    <tr>
+		      <td><a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">Johns Hopkins<sup>5</sup></a></td>
+		      <td>300</td>
+		      <td>-</td>
+		      <td>-</td>
+		    </tr>
+		  </tbody>
+		</table>
+
+		Notes for Accepted Students (Masters) data:
+		<ul>
+		<li><sup>1</sup> Stanford is for full time, non-SCPD students</li>
+		<li><sup>2</sup> CMU is for the MS in CS program</li>
+		<li><sup>3</sup> Penn is for the MSE in CS program</li>
+		<li><sup>4</sup> UIUC data can be found in their <a href="http://www.dmi.illinois.edu/cp/">Campus Profile</a>. Search the page for <strong>4160</strong> then click on the total number of graduate applications and select the engineering college.
+		  <li><sup>5</sup> On the <a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">JHU FAQ</a> page, expand: <strong>Can I include extra information with my application?</strong>.</li>
+		</ul>
+
+		<h3>3. GRE Scores</h3>
+		<p>Before we look at data on a per-school basis, it is important to know how many students score X on each section. It turns out nearly 5% of computer science applicants and 6% of electrical engineers get a perfect 170 on the quant section.</p>
+		<p>The plots below show the distribution of GRE scores by major. Source: <a href="https://www.ets.org/s/gre/pdf/gre_guide_table4.pdf" target="_blank">ETS Test Score Distribution by Major Field of Study</a>. The number of students in each plot are as follows:  </p>
+		<ul>
+			<li>Computer Science: 30,170</li>
+			<li>Electrical Engineering: 33,342</li>
+			<li>Mathematical Sciences: 15,556</li>
+		</ul>
+		<strong>GRE Score Distribution data is from August 2011 to April 2014</strong>.
 		 
-		 <h4>GRE Quant Score Distribution</h4>
-			<center><div id="chart3"></div></center>
+			<center>
+				<h5>Figure 4: GRE Quant Score Distribution</h5>
+				<div id="chart3"></div>
+			</center>
 			<script>
-			      var margin = {top: 20, right: 55, bottom: 30, left: 40},
-			          width  = 500 - margin.left - margin.right,
-			          height = 250  - margin.top  - margin.bottom;
+			  var margin = {top: 20, right: 55, bottom: 30, left: 40},
+			      width  = 500 - margin.left - margin.right,
+			      height = 250  - margin.top  - margin.bottom;
 
-			      var x = d3.scale.ordinal()
-			          .rangeRoundBands([0, width], .1);
+			  var x = d3.scale.ordinal()
+			      .rangeRoundBands([0, width], .1);
 
-			      var y = d3.scale.linear()
-			          .rangeRound([height, 0]);
+			  var y = d3.scale.linear()
+			      .rangeRound([height, 0]);
 
-			      var xAxis = d3.svg.axis()
-			          .scale(x)
-			          .orient("bottom");
+			  var xAxis = d3.svg.axis()
+			      .scale(x)
+			      .orient("bottom");
 
-			      var yAxis = d3.svg.axis()
-			          .scale(y)
-			          .orient("left");
+			  var yAxis = d3.svg.axis()
+			      .scale(y)
+			      .orient("left");
 
-			      var line = d3.svg.line()
-			          .interpolate("cardinal")
-			          .x(function (d) { return x(d.label) + x.rangeBand() / 2; })
-			          .y(function (d) { return y(d.value); });
+			  var line = d3.svg.line()
+			      .interpolate("cardinal")
+			      .x(function (d) { return x(d.label) + x.rangeBand() / 2; })
+			      .y(function (d) { return y(d.value); });
 
-			      var color = d3.scale.ordinal()
-			          .range(["#1F7A7A","#0066FF","#000066"]);
+			  var color = d3.scale.ordinal()
+			      .range(["#1F7A7A","#0066FF","#000066"]);
 
-			      var svgQ = d3.select("#chart3").append("svg")
-			          .attr("width",  width  + margin.left + margin.right)
-			          .attr("height", height + margin.top  + margin.bottom)
-			          .attr("id","greQ")
-			        .append("g")
-			          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+			  var svgQ = d3.select("#chart3").append("svg")
+			      .attr("width",  width  + margin.left + margin.right)
+			      .attr("height", height + margin.top  + margin.bottom)
+			      .attr("id","greQ")
+			    .append("g")
+			      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			      d3.csv("./data/gre_quant.csv", function (error, data) {
+			  d3.csv("./data/gre_quant.csv", function (error, data) {
 
-			        var labelVar = 'score';
-			        var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
-			        color.domain(varNames);
+			    var labelVar = 'score';
+			    var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
+			    color.domain(varNames);
 
-			        var seriesData = varNames.map(function (name) {
-			          return {
-			            name: name,
-			            values: data.map(function (d) {
-			              return {name: name, label: d[labelVar], value: +d[name]};
-			            })
-			          };
-			        });
+			    var seriesData = varNames.map(function (name) {
+			      return {
+			        name: name,
+			        values: data.map(function (d) {
+			          return {name: name, label: d[labelVar], value: +d[name]};
+			        })
+			      };
+			    });
 
-			        x.domain(data.map(function (d) { return d.score; }));
-			        y.domain([
-			          d3.min(seriesData, function (c) { 
-			            return d3.min(c.values, function (d) { return d.value; });
-			          }),
-			          d3.max(seriesData, function (c) { 
-			            return d3.max(c.values, function (d) { return d.value; });
-			          })
-			        ]);
+			    x.domain(data.map(function (d) { return d.score; }));
+			    y.domain([
+			      d3.min(seriesData, function (c) { 
+			        return d3.min(c.values, function (d) { return d.value; });
+			      }),
+			      d3.max(seriesData, function (c) { 
+			        return d3.max(c.values, function (d) { return d.value; });
+			      })
+			    ]);
 
-			        svgQ.append("g")
-			            .attr("class", "x axis")
-			            .attr("transform", "translate(0," + height + ")")
-			            .call(xAxis);
+			    svgQ.append("g")
+			        .attr("class", "x axis")
+			        .attr("transform", "translate(0," + height + ")")
+			        .call(xAxis);
 
-			        svgQ.append("g")
-			            .attr("class", "y axis")
-			            .call(yAxis)
-			          .append("text")
-			            .attr("transform", "rotate(-90)")
-			            .attr("y", 6)
-			            .attr("dy", ".71em")
-			            .style("text-anchor", "end")
-			            .text("Fraction of Students");
+			    svgQ.append("g")
+			        .attr("class", "y axis")
+			        .call(yAxis)
+			      .append("text")
+			        .attr("transform", "rotate(-90)")
+			        .attr("y", 6)
+			        .attr("dy", ".71em")
+			        .style("text-anchor", "end")
+			        .text("Fraction of Students");
 
-			        var series = svgQ.selectAll(".series")
-			            .data(seriesData)
-			          .enter().append("g")
-			            .attr("class", "series");
+			    var series = svgQ.selectAll(".series")
+			        .data(seriesData)
+			      .enter().append("g")
+			        .attr("class", "series");
 
-			        series.append("path")
-			          .attr("class", "line")
-			          .attr("d", function (d) { return line(d.values); })
-			          .style("stroke", function (d) { return color(d.name); })
-			          .style("stroke-width", "4px")
-			          .style("fill", "none")
+			    series.append("path")
+			      .attr("class", "line")
+			      .attr("d", function (d) { return line(d.values); })
+			      .style("stroke", function (d) { return color(d.name); })
+			      .style("stroke-width", "4px")
+			      .style("fill", "none")
 
-			        series.selectAll(".point")
-			          .data(function (d) { return d.values; })
-			          .enter().append("circle")
-			           .attr("class", "point")
-			           .attr("cx", function (d) { return x(d.label) + x.rangeBand()/2; })
-			           .attr("cy", function (d) { return y(d.value); })
-			           .attr("r", "5px")
-			           .style("fill", function (d) { return color(d.name); })
-			           .style("stroke", "grey")
-			           .style("stroke-width", "2px")
-			           .on("mouseover", function (d) { showPopover.call(this, d); })
-			           .on("mouseout",  function (d) { removePopovers(); })
+			    series.selectAll(".point")
+			      .data(function (d) { return d.values; })
+			      .enter().append("circle")
+			       .attr("class", "point")
+			       .attr("cx", function (d) { return x(d.label) + x.rangeBand()/2; })
+			       .attr("cy", function (d) { return y(d.value); })
+			       .attr("r", "5px")
+			       .style("fill", function (d) { return color(d.name); })
+			       .style("stroke", "grey")
+			       .style("stroke-width", "2px")
+			       .on("mouseover", function (d) { showPopover.call(this, d); })
+			       .on("mouseout",  function (d) { removePopovers(); })
 
-			        var legend = svgQ.selectAll(".legend")
-			            .data(varNames.slice().reverse())
-			          .enter().append("g")
-			            .attr("class", "legend")
-			            .attr("transform", function (d, i) { return "translate(-200," + i * 20 + ")"; });
+			    var legend = svgQ.selectAll(".legend")
+			        .data(varNames.slice().reverse())
+			      .enter().append("g")
+			        .attr("class", "legend")
+			        .attr("transform", function (d, i) { return "translate(-190," + i * 20 + ")"; });
 
-			        legend.append("rect")
-			            .attr("x", width - 10)
-			            .attr("width", 10)
-			            .attr("height", 10)
-			            .style("fill", color)
-			            .style("stroke", "grey");
+			    legend.append("rect")
+			        .attr("x", width - 10)
+			        .attr("width", 10)
+			        .attr("height", 10)
+			        .style("fill", color)
+			        .style("stroke", "grey");
 
-			        legend.append("text")
-			            .attr("x", width - 12)
-			            .attr("y", 6)
-			            .attr("dy", ".35em")
-			            .style("text-anchor", "end")
-			            .text(function (d) { return d; });
+			    legend.append("text")
+			        .attr("x", width - 12)
+			        .attr("y", 6)
+			        .attr("dy", ".35em")
+			        .style("text-anchor", "end")
+			        .text(function (d) { return d; });
 
-			        function removePopovers () {
-			          $('.popover').each(function() {
-			            $(this).remove();
-			          }); 
-			        }
+			    function removePopovers () {
+			      $('.popover').each(function() {
+			        $(this).remove();
+			      }); 
+			    }
 
-			        function showPopover (d) {
-			          $(this).popover({
-			            title: d.name,
-			            placement: 'auto top',
-			            container: 'body',
-			            trigger: 'manual',
-			            html : true,
-			            content: function() { 
-			              return "Quant Score: " + d.label + 
-			                     "<br/>Value: " + d3.format(",")(d.value ? d.value: d.y1 - d.y0); }
-			          });
-			          $(this).popover('show')
-			        }
+			    function showPopover (d) {
+			      $(this).popover({
+			        title: d.name,
+			        placement: 'auto top',
+			        container: 'body',
+			        trigger: 'manual',
+			        html : true,
+			        content: function() { 
+			          return "Q Score: " + d.label + 
+			                 "<br/>Value: " + d3.format(",")(d.value ? d.value: d.y1 - d.y0); }
 			      });
-			    </script>
+			      $(this).popover('show')
+			    }
+			  });
+			</script>
 
-			<h4>GRE Verbal Score Distribution</h4>
-			<center><div id="chart4"></div></center>
+			<br />
+			<center>
+				<h5>Figure 5: GRE Verbal Score Distribution</h5>
+				<div id="chart4"></div>
+			</center>
 			<script>
 			     var svgV = d3.select("#chart4").append("svg")
 			      	  .attr("id","greV")
@@ -613,7 +752,7 @@ grid .tick {
 			            .data(varNames.slice().reverse())
 			          .enter().append("g")
 			            .attr("class", "legend")
-			            .attr("transform", function (d, i) { return "translate(-115," + (140+(i * 20)) + ")"; });
+			            .attr("transform", function (d, i) { return "translate(-20," + (i * 20) + ")"; });
 
 			        legend.append("rect")
 			            .attr("x", width - 10)
@@ -643,7 +782,7 @@ grid .tick {
 			            trigger: 'manual',
 			            html : true,
 			            content: function() { 
-			              return "Verbal Score: " + d.label + 
+			              return "V Score: " + d.label + 
 			                     "<br/>Value: " + d3.format(",")(d.value ? d.value: d.y1 - d.y0); }
 			          });
 			          $(this).popover('show')
@@ -651,9 +790,155 @@ grid .tick {
 			      });
 			    </script>
 
-		  <h4>Scores of Admitted Students</h4>
-		  The table below shows the average GRE scores of <strong>accepted</strong> students at each school. Each school name contains a link to score guidelines and averages for each school. Data includes both accepted PhD and MS students unless otherwise specified.
+			<br />
+			<center>
+				<h5>Figure 6: GRE Analytical Writing Score Distribution</h5>
+				<div id="chart5"></div>
+			</center>
+			<script>
+			 	  var margin = {top: 20, right: 55, bottom: 30, left: 40},
+			          width  = 500 - margin.left - margin.right,
+			          height = 250  - margin.top  - margin.bottom;
+
+			      var xW = d3.scale.ordinal()
+			          .rangeRoundBands([0, width], .1);
+
+			      var yW = d3.scale.linear()
+			          .rangeRound([height, 0]);
+
+			      var xAxisW = d3.svg.axis()
+			          .scale(xW)
+			          .orient("bottom");
+
+			      var yAxisW = d3.svg.axis()
+			          .scale(yW)
+			          .orient("left");
+
+			      var lineW = d3.svg.line()
+			          .interpolate("cardinal")
+			          .x(function (d) { return xW(d.label) + xW.rangeBand() / 2; })
+			          .y(function (d) { return yW(d.value); });
+
+			      var color = d3.scale.ordinal()
+			          .range(["#1F7A7A","#0066FF","#000066"]);
+			     var svgW = d3.select("#chart5").append("svg")
+			      	  .attr("id","greV")
+			          .attr("width",  width  + margin.left + margin.right)
+			          .attr("height", height + margin.top  + margin.bottom)
+			        .append("g")
+			          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+			      d3.csv("./data/gre_writing.csv", function (error, data) {
+
+			        var labelVar = 'score';
+			        var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
+			        color.domain(varNames);
+
+			        var seriesDataW = varNames.map(function (name) {
+			          return {
+			            name: name,
+			            values: data.map(function (d) {
+			              return {name: name, label: d[labelVar], value: +d[name]};
+			            })
+			          };
+			        });
+
+			        xW.domain(data.map(function (d) { return d.score; }));
+			        yW.domain([
+			          d3.min(seriesDataW, function (c) { 
+			            return d3.min(c.values, function (d) { return d.value; });
+			          }),
+			          d3.max(seriesDataW, function (c) { 
+			            return d3.max(c.values, function (d) { return d.value; });
+			          })
+			        ]);
+
+			        svgW.append("g")
+			            .attr("class", "x axis")
+			            .attr("transform", "translate(0," + height + ")")
+			            .call(xAxisW);
+
+			        svgW.append("g")
+			            .attr("class", "y axis")
+			            .call(yAxisW)
+			          .append("text")
+			            .attr("transform", "rotate(-90)")
+			            .attr("y", 6)
+			            .attr("dy", ".71em")
+			            .style("text-anchor", "end")
+			            .text("Fraction of Students");
+
+			        var series = svgW.selectAll(".series")
+			            .data(seriesDataW)
+			          .enter().append("g")
+			            .attr("class", "series");
+
+			        series.append("path")
+			          .attr("class", "line")
+			          .attr("d", function (d) { return lineW(d.values); })
+			          .style("stroke", function (d) { return color(d.name); })
+			          .style("stroke-width", "4px")
+			          .style("fill", "none")
+
+			        series.selectAll(".point")
+			          .data(function (d) { return d.values; })
+			          .enter().append("circle")
+			           .attr("class", "point")
+			           .attr("cx", function (d) { return xW(d.label) + xW.rangeBand()/2; })
+			           .attr("cy", function (d) { return yW(d.value); })
+			           .attr("r", "5px")
+			           .style("fill", function (d) { return color(d.name); })
+			           .style("stroke", "grey")
+			           .style("stroke-width", "2px")
+			           .on("mouseover", function (d) { showPopover.call(this, d); })
+			           .on("mouseout",  function (d) { removePopovers(); })
+
+			        var legend = svgW.selectAll(".legend")
+			            .data(varNames.slice().reverse())
+			          .enter().append("g")
+			            .attr("class", "legend")
+			            .attr("transform", function (d, i) { return "translate(-20," + (i * 20) + ")"; });
+
+			        legend.append("rect")
+			            .attr("x", width - 10)
+			            .attr("width", 10)
+			            .attr("height", 10)
+			            .style("fill", color)
+			            .style("stroke", "grey");
+
+			        legend.append("text")
+			            .attr("x", width - 12)
+			            .attr("y", 6)
+			            .attr("dy", ".35em")
+			            .style("text-anchor", "end")
+			            .text(function (d) { return d; });
+
+			        function removePopovers () {
+			          $('.popover').each(function() {
+			            $(this).remove();
+			          }); 
+			        }
+
+			        function showPopover (d) {
+			          $(this).popover({
+			            title: d.name,
+			            placement: 'auto top',
+			            container: 'body',
+			            trigger: 'manual',
+			            html : true,
+			            content: function() { 
+			              return "AW Score: " + d.label + 
+			                     "<br/>Value: " + d3.format(",")(d.value ? d.value: d.y1 - d.y0); }
+			          });
+			          $(this).popover('show')
+			        }
+			      });
+			    </script>
+
+		  <h4>GRE Scores of Admitted Students</h4>
+		  Table 4 below shows the average GRE scores of <strong>accepted</strong> students at each school. Each school name contains a link to score guidelines and/or published averages for each school. Data includes both accepted PhD and MS students unless otherwise specified.
 		  <br /><br />
+		  <center><h5>Table 4: GRE Scores of Accepted Students</h5></center>
 		  <table class="table table-hover">
 		      <thead>
 		        <tr>
@@ -719,7 +1004,7 @@ grid .tick {
 		          <td>4.0</td>
 		        </tr>
 		        <tr>
-		          <td><a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">Johns Hopkins</a></td>
+		          <td><a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">Johns Hopkins<sup>5</sup></a></td>
 		          <td>160</td>
 		          <td>153</td>
 		          <td>-</td>
@@ -733,11 +1018,29 @@ grid .tick {
 		    <li><sup>2</sup> Washington provides average percentile data. These were converted to a 130-170 score using the <a href="http://www.ets.org/s/gre/pdf/gre_guide_table1a.pdf" target="_blank">ETS percentile guide</a>.</li>
 		    <li><sup>3</sup> Cornell provides GRE data based on the old scoring system (200-800). These were converted to the new (130-170) scale using the <a href="https://www.ets.org/s/gre/pdf/concordance_information.pdf" target="_blank">ETS Concordance Table</a>.</li>
 		    <li><sup>4</sup> Princeton data is for all engineering disciplines.</li>
+		    <li><sup>5</sup> On the JHU FAQ page, expand: <strong>What are the departmental requirements for the GRE exams?</strong>
 		    </ul>
 
-		  <h3>GPA</h3>
-
-		  <h3>Funding</h3>
+			<h3>4. GPA</h3>
+			<center><h5>Table 5: GPA of Accepted Students</h5></center>
+				<table class="table table-hover">
+			  <thead>
+			    <tr>
+			      <th>School</th>
+			      <th>Average GPA</th>
+			      <th>Undergrad GPA</th>
+			      <th>Graduate GPA</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td><a href="http://grad.washington.edu/about/statistics/summaries/2009/rptGsisAnnual_department.pdf">Washington (PhD)</a></td>
+			      <td>3.72</td>
+			      <td>-</td>
+			      <td>-</td>
+			    </tr>
+			  </tbody>
+			</table>
 
 		  <h3>Comments</h3>
 
