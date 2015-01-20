@@ -137,22 +137,23 @@ grid .tick {
 			January 1, 2015, 12:46 AM PST
 			
 			<h3>Disclaimer(s)</h3>
-			<p>It is important to note that GPA and GRE scores are not the most important components of your application. In my opinion, your letters of recommendation, research, and industry experience are far more important. GPA and GRE are often used as a filter by admissions committees. Once you're above a certain threshold, these scores don't really matter.</p>
+			<p>It is important to note that GPA and GRE scores are not the most important components of your application. In my opinion, your letters of recommendation, research, and industry experience are far more important. GPA and GRE are often used as a filter by admissions committees. Once you're above a certain threshold, these scores don't really matter. Other than publication and internship counts, GPA and GRE scores are other ways to objectively compare yourself to others.</p>
 
 		    <p><strong>Note: Data older than 2012 may not reflect the current state of the applicant pool. Interest in computer science is at a record high. This will cause the admissions process to become far more competitive than in previous years.</strong></p>
 
-			<p><strong><font color="red">Jan 4, 2015: This is a work in progress. Some sections may be incomplete.</font></strong></p>
-			<p>
+			<!-- <p><strong><font color="red">Jan 4, 2015: This is a work in progress. Some sections may be incomplete.</font></strong></p> -->
+
 			<h3>Outline</h3>
 			Although this post refers to the computer science admissions processes, it may be relevant for similar fields such as electrical engineering and computation-heavy disciplines. The rest of this post are organized into several sections:
 			<ol>
-				<li>Schools &amp; Data Sources</li>
-				<li>Applicant &amp; Admit Numbers</li>
-				<li>GRE Scores</li>
-				<li>GPA</li>
+				<li><a href="#schools">Schools &amp; Data Sources</a></li>
+				<li><a href="#admit">Applicant &amp; Admit Numbers</a></li>
+				<li><a href="#gre">GRE Scores</a></li>
+				<li><a href="#gpa">GPA</a></li>
 			</ol>
 			At the end of each section or subsection, there will be a collection of footnotes with external links to additional data sources. Occasionally there will be directions on how to obtain the data.
 
+			<a name="schools" class="anchor"></a>
 			<h3>1. Schools &amp; Data Sources</h3>
 			Schools may be missing from this list because: (i) I did not apply to that school, or (ii) I cannot find published data from that school. Clicking on each school will take you to the source of the data for that particular statistic (except Figure 1). Schools are ranked by <a href="http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools/top-science-schools/computer-science-rankings" target="_blank">US News and World Report 2014</a>.
 
@@ -225,6 +226,7 @@ grid .tick {
 		      </tbody>
 		    </table>
 
+		    <a name="admit" class="anchor"></a>
 			<h3>2. Applicant &amp; Admit Numbers</h3>
 			<p>Some schools do not report most recent statistics. For some schools (e.g. CMU, JHU), I reported the number of students present during in-person interviews, admitted student visit days, or statistics sent out via acceptance emails.</p>
 			
@@ -512,6 +514,7 @@ grid .tick {
 		  <li><sup>5</sup> On the <a href="http://www.cs.jhu.edu/graduate-studies/graduate-admissions-information/graduate-admissions-faq/" target="_blank">JHU FAQ</a> page, expand: <strong>Can I include extra information with my application?</strong>.</li>
 		</ul>
 
+		<a name="gre" class="anchor"></a>
 		<h3>3. GRE Scores</h3>
 		<p>Before we look at data on a per-school basis, it is important to know how many students score X on each section. It turns out nearly 5% of computer science applicants and 6% of electrical engineers get a perfect 170 on the quant section.</p>
 		<p>The plots below show the distribution of GRE scores by major. Source: <a href="https://www.ets.org/s/gre/pdf/gre_guide_table4.pdf" target="_blank">ETS Test Score Distribution by Major Field of Study</a>. The number of students in each plot are as follows:  </p>
@@ -1018,7 +1021,12 @@ grid .tick {
 		    <li><sup>5</sup> On the JHU FAQ page, expand: <strong>What are the departmental requirements for the GRE exams?</strong>
 		    </ul>
 
+		    <a name="gpa" class="anchor"></a>
 			<h3>4. GPA</h3>
+			<p>In this section, I will assume the GPA is out of a 4.0 scale.</p>
+
+			<p>For top applicants, GPA is not a good metric to use for comparisons. Some students take graduate courses (and usually get As due to grade inflation in graduate courses) while some students take difficult, non-required undergraduate courses (e.g. real analysis) and hurt their GPA. Because of this, schools tend to use GPA as a filter. If your GPA is above 3.7 for example, spending tens (or hundreds?) of hours trying to improve this to a 3.75 or 3.8 will not help you in a significant manner. This becomes more true as your GPA approaches 3.9+.</p>
+
 			<center><h5>Table 5: GPA of Accepted Students</h5></center>
 				<table class="table table-hover">
 			  <thead>
@@ -1038,6 +1046,8 @@ grid .tick {
 			    </tr>
 			  </tbody>
 			</table>
+
+			<p>If you read testimonials online, you will find students accepted to top schools with GPAs as low as 3.0. I would like to emphasize that this is not the norm. Most students have GPAs above 3.5.</p>
 
 		  <h3>Comments</h3>
 
@@ -1077,7 +1087,7 @@ grid .tick {
 			</div>
 
 			<div class="row align-center copyright">
-					<div class="col-sm-12"><p id="lastUpdated"></p></div>
+				<div class="col-sm-12">	Last Updated: Tue, 20 Jan 2015 00:45:10 UTC+0000</div>
 			</div>
 		</div>
 	</section>
@@ -1090,7 +1100,7 @@ grid .tick {
 	<script src="../js/jquery.isotope.min.js"></script>
 	<script src="../js/jquery.nicescroll.min.js"></script>
 	<script src="../js/fancybox/jquery.fancybox.pack.js"></script>
-=	<script src="../js/skrollr.min.js"></script>		
+	<script src="../js/skrollr.min.js"></script>		
 	<script src="../js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="../js/jquery.localscroll-1.2.7-min.js"></script>
 	<script src="../js/jquery.appear.js"></script>
@@ -1115,14 +1125,6 @@ grid .tick {
 	  ga('create', 'UA-36983866-5', 'auto');
 	  ga('send', 'pageview');
 
-	</script>
-	<body onload="getLastUpdated();">
-	<script>
-		function getLastUpdated() {
-		    var today = new Date();
-			x = "Last Updated: " + today.toUTCString();
-		    document.getElementById("lastUpdated").innerHTML = x;
-		}
 	</script>
 	</body>
 </html>
