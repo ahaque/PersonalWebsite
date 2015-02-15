@@ -1,0 +1,35 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font: 15px Open Sans;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/fb_world.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.2em 0.2em 0.2em;
+}
+
+#gotop {        Cursor: pointer;
+                position: relative;
+                float:right;
+                right:20px;
+                /*top:0px;*/
+    }
+
+a.anchor-top{
+  display: block;
+  position: relative;
+  top: -500px;
+  visibility: hidden;
+}
+
+th {
+    background-color: black;
+    color: white;
+} 
