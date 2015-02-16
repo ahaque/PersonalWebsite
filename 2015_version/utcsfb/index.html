@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8"/ >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Comments and like data for the UTCS Facebook Group are summarized below. You can view how many people liked your comments and see the most popular posters." />
+    <meta name="author" content="Albert Haque" />
+    <meta property="og:title" content="UTCS Likes Leaderboard"/>
+    <meta property="og:image" content="http://albert.cm/utcsfb/img/demo.jpg"/>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css' />
 
 
     <title>UTCS Likes Leaderboard</title>
-
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/jumbotron.css" rel="stylesheet">
     <link href="./css/bootstrap-table.min.css" rel="stylesheet">
 
     <!--[if lt IE 9]><script src="./assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./js/ie-emulation-modes-warning.js"></script>
-
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,10 +54,9 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="https://www.facebook.com/groups/155607091223285/" target="_blank">Facebook Group</a></li>
+            <li><a href="https://www.facebook.com/groups/155607091223285/" target="_blank">UTCS Facebook Group</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Last Updated: February 14, 2015</a></li>
           </ul>
         </div>
       </div>
@@ -73,10 +72,7 @@
     <div class="container">
 
     <div class="row">
-      <div class="col-md-12"><br>
-      <p>Clicking a column header will sort the data on that column. It may take a few seconds to update.</p>
-      <p>Per week metrics are computed using the first post date.</p>
-
+      <div class="col-md-12">
       <table data-toggle="table"
               data-url="likes.json"
               data-cache="false"
@@ -84,7 +80,6 @@
               data-height="600"
               data-search="true"
              data-show-refresh="true"
-             data-show-toggle="true"
              data-show-columns="true">
           <thead>
               <tr>
@@ -96,11 +91,11 @@
                   <th data-field="commentsPerWeek" data-formatter="decimalTruncate" data-sortable="true" data-align="right">Comments/Week</th>
                   <th data-field="likesPerComment" data-formatter="decimalTruncate" data-sortable="true" data-align="right">Likes/Comment</th>
                   <th data-field="posts" data-sortable="true" data-align="right">Posts</th>
-                  <th data-field="firstPost" data-sortable="true" data-align="left">First Post</th>
+                  <th data-field="firstPost" data-sortable="true" data-align="left">First Activity</th>
               </tr>
           </thead>
       </table>
-
+      <p>Clicking a column header will sort the data on that column. It may take a few seconds to update. Per week metrics are computed using the first activity date.<br>Last Updated: February 15, 2015, 7:30 PM Central Time</p>
 
       </div>
     </div>
@@ -110,17 +105,13 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/jquery.smoothscroll.js"></script>
     <script src="./js/bootstrap-table.min.js"></script>
-    <script src="./js/jquery.gototop.js"></script>
     <script src='./js/moment.min.js'></script>
-    <script src='./js/bootstrap-sortable.js'></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-36983866-5', 'auto');
       ga('send', 'pageview');
     </script>

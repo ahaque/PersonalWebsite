@@ -17,7 +17,7 @@ appeared = dict()
 # Access token can be obtained by doing the following:
 # - Log into facebook
 # - Go to this url: https://developers.facebook.com/tools/explorer
-fb_API_access_token = "CAACEdEose0cBANr94J8hpbniHZCoSYrlIYy73oj5knPx2nOpxG12AdYljs3dz7By7mPECZCEIqmQHI9K5t4UGDfZCh7G65df2YhGI0WFp7Fnlok15ESXYZAvyG0eHctsr10ntFqTVFivUUrDZCLRXzhErT9XqahwqwkKqPHHMZBZCZBWS9OZBCWMxJ2Kbo35pNpXIaC7TR5RnekCCWuPvPdYSw4ibT0GpKZCYZD"
+fb_API_access_token = "CAACEdEose0cBAG2QbVYggBrl9JrZBd0MZB7qzjTLp2wfeA0ebSN4jIQGpPswHo26TMdpvzU9er8OC9q8GmsHqKMepE2FotzOZCeYLwLgEPFRZCCMrVDXqIBMz44ZAPbLND4S2viTabQdaZC2B9GVq3QTTwW8HYpZCpPaIXtgZBtKDNn0BiZCwQOUc5RZALl8BAU35wRfEGPhiytqNEYfUTmE8uuwUJ8SiIiDoZD"
 
 # Junk method used for testing
 def test():
