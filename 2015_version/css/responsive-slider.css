@@ -43,10 +43,17 @@
 #jumbotron-cs229 {
   width: 100%;
 }
-
+/* Center the jumbotron captions */
+#jumbotron-faces {
+  width: 100%;
+}
 #jumbotron-twitch {
   width: 100%;
 }
+.caption.header1 {
+  top: 27%;
+} 
+
 @media (max-width: 767px) {
   .responsive-slider .slides ul li .slide-body .caption.header {
   top: 38%;
