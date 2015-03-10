@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Deep Learning for Personality Inference</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Albert Haque">
+		<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../css/isotope.css" media="screen" type="text/css"/>	
+		<link rel="stylesheet" href="../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/main-theme.css">
+		<link rel="stylesheet" href="../css/responsive-slider.css">
+		<link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="./blog_style.css">
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/skin.css">
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+    </head>
+	 
+    <body>
+	
+	<div class="header">
+	<section id="header" class="appear">
+		
+		<div class="navbar navbar-fixed-top" role="navigation">
+			
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+					<h1><a class="navbar-brand" herf="#">Deep Learning for Personality Inference</a></h1>
+				</div>
+			</div>
+		
+		
+	</section>
+	</div>
+
+<section id="blog" class="section appear clearfix">
+	<div class="row mar-top5">
+		<div class="col-md-offset-3 col-md-6">
+			<div class="section-header">
+			<div class="wow bounceIn"data-animation-delay="7.8s">
+			
+				<h2 class="section-heading animated"><a href="#">Deep Learning for Personality Inference</a></h2>
+				<p>Deep Convolutional Networks for Psychological Inference from Unconstrained Facebook Photos<br>Albert Haque, Janice Lan, David McLaren<br>March 2015</p>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="container pad-top30">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<center><iframe width="560" height="315" src="https://www.youtube.com/embed/AH19YPU4C44?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></center>
+			<br>
+			<h1><b>Summary</b></h1>
+			<p>Convolutional networks have been successful at analyzing human faces in both constrained and unconstrained image settings. Inference based on limited data such as facial information is used by humans to guide their decision making process on a day-to-day basis.
+In this paper, we propose a deep convolutional network to predict demographic and psychological traits from 4 million Facebook profile photos labeled with demographic information and standardized personality scores.</p>
+<p>
+Our model makes extensive use of image processing techniques to localize, extract, and frontalize each human face.
+After forward propagating each image through an ensemble of convolutional networks, we compute a set of demographic and psychological predictions.
+We leverage GPUs, parallel processing tools, and cloud infrastructure to accelerate model training and improve model performance. Our results show we are in fact able to predict personality from faces.</p>
+
+	<h1><b>1. Introduction</b></h1>
+	<p>Convolutional networks are rapidly advancing computer vision in all its sub-domains. Due to the compounding effect of non-linearities, convolutional networks are able to capture complex information present in image and video data. Furthermore, advances in parallel computing have made convolutional networks both economically and computationally feasible for large datasets. This naturally makes convolutional networks a good candidate for facial recognition and analysis.
+	<br><br>
+	<center><img src="./figure1.png" width="80%"></center>
+	<p><b>Figure 1: Our approach. Faces are localized in the image and undergo a frontalization process. These images are fed into an ensemble of convolutional networks to generate predictions for multiple attributes.</b></p>
+	<br>
+	<p>In recent years, social media, photo sharing apps, and surveillance systems have collected a large amount of facial images ranging from constrained ``head-shots" to unconstrained images with multiple subjects. We pose the following research questions: First, what are the limits of what deep learning on images? Second, how can we construct a model that makes accurate predictions? 
+
+<p>The implications of these questions touch upon several important aspects of society. Today, humans rely on visual cues from digital images to gain information and make judgements about a person. For example, on the professional social networking website, LinkedIn, people try to infer the personality of others based on textual information and profile photos. Although this may not be done consciously, it does have an effect on the viewer's thought process. Humans do this on a day-to-day basis, outside of social media, using solely visual information. 
+
+<p>It has been shown that there is a relationship between psychological traits and facial features <b><a href="#ref17">[17]</a></b>. In this paper, we aim to quantify and model this relationship. Our key contributions are as follows:</p>
+<ol>
+<li>We propose a convolutional network and measure it's ability to objectively quantify personality traits. This will be used to aid human decision making where facial inference is required (e.g. social media and government surveillance).</li>
+<li>We analyze common errors made by our model and propose solutions to mitigate these errors. The results of this study will improve current facial analysis algorithms and improve personality matching software.</li>
+</ol>
+
+<h1><b>2. Related Work</b></h1>
+<p>Both convolutional and classical neural networks have been applied to face detection <b><a href="#ref6">[6]</a></b>, facial alignment and landmark extraction <b><a href="#ref22">[22</a>, <a href="#ref12">12]</a></b>, facial recognition <b><a href="#ref5">[5]</a></b>, and facial expression analysis <b><a href="#ref5">[5</a>, <a href="#ref4">4</a>,<a href="#ref11">11</a>,<a href="#ref13">13</a>,<a href="#ref3">3]</a></b>.</p>
+
+<p>
+<b>Face Detection</b>. The Viola-Jones object detection framework <b><a href="#ref25">[25]</a></b> is an early breakthrough in face detection that is still commonly used today. Color-based face detection schemes as in <b><a href="#ref20">[20]</a></b> are another popular technique. More recently, deep learning has been used <b><a href="#ref23">[23]</a></b>. 
+</p>
+<p>
+<b>Facial Reconstruction &amp; Frontalization</b>. Built on pose and landmark detection, face frontalization is an image correction technique that eliminates variances in facial orientation and pose in both constrained and unconstrained images. Frontalization has been shown to improve performance for image-based classifiers. Sagonas et al. have proposed an optimization technique to solve the landmark localization and facial reconstruction problem in <b><a href="#ref18">[18]</a></b>. Using frontalization, the authors in <b><a href="#ref24">[24]</a></b> do not need a frontal view to successfully perform facial recognition.
+</p>
+<p>
+<b>Expression Analysis</b>. Most attempts at facial expression analysis use 2D (RGB) image data, Savran et al.  explore the use of the 3D modality and provide a comparative study in <b><a href="#ref19">[19]</a></b>.
+</p>
+
+<h1><b>3. Face Representation</b></h1>
+<p>This section describes our representation and reformulation of the unconstrained image. This is performed in two steps: face detection (Section 3.1) and frontalization (Section 3.2).</p>
+
+<p><b>3.1 Face Detection</b></p>
+<p>
+We applied the Viola-Jones object detection framework using Haar-based features as implemented in OpenCV to detect frontal faces in images. The detected faces are not rotated, but saved directly to images which constitute the input for the next stage of our pipeline.
+</p>
+
+	<br><a id="#fig2"></a>
+	<center><img src="./face_detection.jpg" width="80%"></center>
+	<p><b>Figure 2: Face detection on Facebook profile photos. The detector can identify several faces in a single image.</b></p>
+	<br>
+<p>
+Several face detections from Facebook profile photos are shown within bounding boxes in <a href="#fig2"><b>Figure 2</b></a>. While often successful, face detection encounters a number of difficulties which which will manifest themselves as noise in the input for the neural network:
+</p>
+<ol>
+	<li> Not all images contain a face.</li>
+	<li> Not all faces in an image are detected.</li>
+	<li> Non-facial regions may be detected within images which are not faces.</li>
+	<li> An image may contain multiple detected faces, but we only have a demographic label for a single person in that image.</li>
+</ol>
+<p>
+We will investigate further strategies, including other algorithms, for mitigating these issues and improving the accuracy of face detection as needed. Photos with no detections are easily omitted from the input for later stages; photos with multiple detections can potentially be omitted as well. A tricky situation arises when multiple faces are present in an image, and the only detected face does not correspond to the demographic data available for that image. One possibility for reducing the frequency of this issue is to run multiple detectors on each image, and only include photos where all detectors recognize a single face in a similar region. Finally, the case where objects are falsely recognized as faces is rare and less impactful on the quality of our input.
+</p>
+
+<p><b>3.2 Frontalization</b></p>
+
+<p>We use the methods described in <b><a href="#ref18">[18]</a></b> for facial frontalization. To further standardize the facial images, we perform in-plane alignment of each image <b><a href="#ref2">[2</a>,<a href="#ref8">8]</a></b>. At the time of writing the project milestone, face detection and in-place alignment is complete and took 3 days to process all 3.1 million images. We used Python and OpenCV.</p>
+
+<h1><b>4. Experiments</b></h1>
+<p>Our dataset is described in Section 4.1. Section 4.2 outlines our data augmentation strategy. In Section 4.3, we describe our convolutional network architecture including kernel size and dropout parameters. To aid in reproducibility, hardware and software configurations are detailed in Section 4.4.</p>
+
+<p><b>4.1 Dataset</b></p>
+<p>
+Our full dataset consists of 4 million Facebook profile
+pictures with corresponding labels of several demographic
+and psychological attributes of the users and was obtained
+from  <b><a href="#ref10">[10]</a></b>. The psychological attributes were calculated
+based on the users’ answers to a questionnaire. Demographic
+data and profile pictures were scraped from Facebook.
+</p><p>
+Attributes of interest include age, gender, satisfaction with life, and Big Five personality traits. The satisfaction with life is a scale developed by Diener <b><a href="#ref19">[19]</a></b> that measures long-term overall life satisfaction among the general population. The values used in our data are real numbers between 1 and 7. The Big Five personality traits consist of the following factors: openness, conscientiousness, extroversion, agreeableness, and neuroticism. Each of these are real numbers between 1 and 5, with scores obtained from the IPIP-NEO (International Personality Item Pool - Neuroticism, Extraversion &amp; Openness) questionnaire.
+</p>
+
+<p><b>4.2 Data Augmentation</b></p>
+The training set consists of approximately 3 million labeled
+images ranging from 40 to 400 pixels in width/height.
+We resize each image (while preserving aspect ratio) to
+$256 \times 256$ pixels. The data then undergoes several affine
+transformations.
+<ol>
+	<li> Rotation: random between $-30^{\circ}$ and $+30^{\circ}$ </li>
+	<li> Translation: random shift between -20 and +20 pixels in the $x$ and $y$ direction </li>
+	<li> Scaling: random scale factor between $1/1.25$ and $1.25$ </li>
+	<li> Flip: Bernoulli trial for a horizontal flip </li>
+</ol>
+
+
+	<br><a id="#fig3"></a>
+	<center><img src="./augmentation.jpg" width="80%"></center>
+	<p><b>Figure 3: We perform various affine transformations in real-time to augment the input data. The network never sees the same image twice.</b></p>
+	<br>
+Because faces are not fully spatially invariant, we do not perform a vertical flip. For each point $p\in P$ in the original image, we transform the point to $p' \in P'$ where $P'$ is the transformed image. Let $t_x, t_y$ denote the translation amount, $s_x, s_y$ denote the scale factor, $\theta$ the angle of rotation, and $x,y$ the point in the original image.
+
+$$
+P' =
+\left[\begin{array}{ccc}
+\cos\theta & -\sin\theta & t_x \\
+\sin\theta & \cos\theta & t_y \\ 
+0 & 0 & 1
+\end{array}\right]
+\left[\begin{array}{ccc}
+s_x & 0 & 0 \\
+0 & s_y & 0 \\
+0 & 0 & 1 \\
+\end{array}\right]
+\left[\begin{array}{c}
+x \\ y \\ 1
+\end{array}\right]
+$$
+
+<p>Unless otherwise specified, random refers to a uniform distribution. Affine transformations were done using a single transformation with scikit-learn <b><a href="#ref16">[16]</a></b>. Because these data augmentations can be done in a single step (see Equation above), we perform the transformations in real-time during training. Before the network forward propagates a new input, the transformations are applied. This also reduces overfitting due to the diversity of input images (i.e. the same image is never seen twice). We will show a plot comparing the training accuracies of before and after data augmentation to support our “reduction in overfitting” claim.
+</p>
+
+<p><b>4.3. Convolutional Network Architecture</b></p>
+
+<p>We train several convolutional networks (see Table 1)
+and evaluate their performance on our dataset. To improve
+model generalization, some layers are designated as dropout
+layers <b><a href="#ref21">[21]</a></b> and utilize DropConnect <b><a href="#ref26">[26]</a></b>.</p>
+
+<center>
+<b>Table 1: Convolutional Network Architecture</b>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-ls8f{font-family:Georgia, serif !important;}
+.tg .tg-jrsh{font-family:Georgia, serif !important;;text-align:center}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-ls8f">conv11-96</th>
+    <th class="tg-ls8f">conv11-256</th>
+    <th class="tg-ls8f">conv13-96</th>
+    <th class="tg-ls8f">conv13-256</th>
+  </tr>
+  <tr>
+    <td class="tg-jrsh" colspan="4">maxpool-2</td>
+  </tr>
+  <tr>
+    <td class="tg-ls8f">conv5-256</td>
+    <td class="tg-ls8f">conv5-256</td>
+    <td class="tg-ls8f">conv5-256</td>
+    <td class="tg-ls8f">conv5-256</td>
+  </tr>
+  <tr>
+    <td class="tg-jrsh" colspan="4">maxpool-2</td>
+  </tr>
+  <tr>
+    <td class="tg-ls8f">conv3-384</td>
+    <td class="tg-ls8f">conv3-384</td>
+    <td class="tg-ls8f">conv3-384</td>
+    <td class="tg-ls8f">conv3-384</td>
+  </tr>
+  <tr>
+    <td class="tg-ls8f">conv3-256</td>
+    <td class="tg-ls8f">conv3-256</td>
+    <td class="tg-ls8f">conv3-256</td>
+    <td class="tg-ls8f">conv3-256</td>
+  </tr>
+  <tr>
+    <td class="tg-ls8f">conv3-128</td>
+    <td class="tg-ls8f">conv3-128</td>
+    <td class="tg-ls8f">conv3-128</td>
+    <td class="tg-ls8f">conv3-128</td>
+  </tr>
+  <tr>
+    <td class="tg-jrsh" colspan="4">maxpool-2</td>
+  </tr>
+  <tr>
+    <td class="tg-jrsh" colspan="4">FC-4096</td>
+  </tr>
+  <tr>
+    <td class="tg-jrsh" colspan="4">dropout(0.5)</td>
+  </tr>
+  <tr>
+    <td class="tg-jrsh" colspan="4">FC-1</td>
+  </tr>
+  <tr>
+    <td class="tg-jrsh" colspan="4">euclidean-loss</td>
+  </tr>
+</table>
+</center>
+<br>
+<p><b>Leaky Rectifiedd linear Units (LReLU)</b></p>
+
+<p>Leaky Rectified Linear Units (LReLU) The sigmoid function has been the canonical neural network activation function for many years. However, recent studies have shown that a new activation function, called a rectified linear unit (ReLU) is more biologically plausible <b><a href="#ref7">[7]</a></b> and has shown to improve neural network performance <b><a href="#ref15">[15]</a></b>. The ReLU function is defined as $f(x) = max(0; x)$. One must be careful when using ReLUs due to their ability to "kill" the gradient. Because the subderivative is zero when $x < 0$, this may prevent the flow of backpropagation updates throughout the network. Because of this, it was suggested to have a small, but non-zero derivative when $x < 0$. This "leaky" ReLU is shown below:
+</p>
+
+$$
+f(x) = \left\{\begin{array}{ll} x & \textrm{if } x > 0 \\ 0.01x & \textrm{otherwise} \end{array} \right. 
+$$
+
+Evaluated in <b><a href="#ref14">[14]</a></b>, the leaky ReLU outperforms the
+ReLU activation function. In our convolutional networks,
+we use 0:01 as the coefficient when $x < 0$.
+<br><br>
+<p><b>4.4. Hardware and Software Specifications</b></p>
+<p>
+The software is written in Python using NumPy for numerical
+computations.</p>
+<p>
+We use Caffe <b><a href="#ref9">[9]</a></b> and NVIDIA’s cuDNN engine <b><a href="#ref1">[1]</a></b> for
+our convolutional network implementation. We train our
+models on two machines: one workstation equipped with a
+single GTX 750 Ti GPU (2 GiB GDDR5) and one Amazon
+EC2 g2.2xlarge instance equipped with a single NVIDIA
+GRID K520 (GK104, 8 GiB GDDR5).
+</p>
+
+<h1><b>5. Results &amp; Discussion</b></h1>
+<p>This section coming soon. Please see the video above.</p>
+
+<h1><b>6. Conclusion</b></h1>
+<p>This section coming soon. Please see the video above.</p>
+
+
+<h1><b>References</b></h1>
+<ol>
+<li><a id="ref1"></a>S. Chetlur, C. Woolley, P. Vandermersch, J. Cohen, J. Tran,
+B. Catanzaro, and E. Shelhamer. <b>cudnn: Efficient primitives
+for deep learning.</b> CoRR, abs/1410.0759, 2014.</li>
+<li><a id="ref2"></a> E. Eidinger, R. Enbar, and T. Hassner. <b>Age and gender estimation
+of unfiltered faces.</b> 2013.</li>
+<li><a id="ref3"></a> B. Fasel. <b>Head-pose invariant facial expression recognition
+using convolutional neural networks.</b> In Multimodal Interfaces,
+2002. Proceedings. Fourth IEEE International Conference
+on, pages 529–534. IEEE, 2002.</li>
+<li><a id="ref4"></a> B. Fasel. <b>Mutliscale facial expression recognition using convolutional
+neural networks.</b> Technical report, IDIAP, 2002.</li>
+<li><a id="ref5"></a> B. Fasel. <b>Robust face analysis using convolutional neural
+networks.</b> In Pattern Recognition, 2002. Proceedings. 16th
+International Conference on, volume 2, pages 40–43. IEEE,
+2002.</li>
+<li><a id="ref6"></a> C. Garcia and M. Delakis. <b>Convolutional face finder: A neural
+architecture for fast and robust face detection.</b> Pattern
+Analysis and Machine Intelligence, IEEE Transactions on,
+26(11):1408–1423, 2004.</li>
+<li><a id="ref7"></a> X. Glorot, A. Bordes, and Y. Bengio. <b>Deep sparse rectifier
+networks.</b> In Proceedings of the 14th International Conference
+on Artificial Intelligence and Statistics. JMLR W&amp;CP
+Volume, volume 15, pages 315–323, 2011.</li>
+<li><a id="ref8"></a> T. Hassner, S. Harel, E. Paz, and R. Enbar. <b>Effective
+face frontalization in unconstrained images.</b> CoRR,
+abs/1411.7964, 2014.</li>
+<li><a id="ref9"></a> Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick,
+S. Guadarrama, and T. Darrell. <b>Caffe: Convolutional
+architecture for fast feature embedding.</b> arXiv preprint
+arXiv:1408.5093, 2014.</li>
+<li><a id="ref10"></a> M. Kosinski, D. Stillwell, and T. Graepel. <b>Private traits and
+attributes are predictable from digital records of human behavior.</b>
+Proceedings of the National Academy of Sciences,
+110(15):5802–5805, 2013.</li>
+<li><a id="ref11"></a> S. M. Lajevardi and M. Lech. <b>Facial expression recognition
+using neural networks and log-gabor filters.</b> In Digital
+Image Computing: Techniques and Applications (DICTA),
+2008, pages 77–83. IEEE, 2008.</li>
+<li><a id="ref12"></a> C. Liu and H. Wechsler. <b>Independent component analysis of
+gabor features for face recognition.</b> Neural Networks, IEEE
+Transactions on, 14(4):919–928, 2003.</li>
+<li><a id="ref13"></a> W. Liu and Z. Wang. <b>Facial expression recognition based
+on fusion of multiple gabor features.</b> In Pattern Recognition,
+2006. ICPR 2006. 18th International Conference on,
+volume 3, pages 536–539. IEEE, 2006.</li>
+<li><a id="ref14"></a> A. L. Maas, A. Y. Hannun, and A. Y. Ng. <b>Rectifier nonlinearities
+improve neural network acoustic models.</b> In Proc.
+ICML, volume 30, 2013.</li>
+<li><a id="ref15"></a> V. Nair and G. E. Hinton. <b>Rectified linear units improve
+restricted boltzmann machines.</b> In Proceedings of the 27th
+International Conference on Machine Learning (ICML-10),
+pages 807–814, 2010.</li>
+<li><a id="ref16"></a> F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel,
+B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss,
+V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau,
+M. Brucher, M. Perrot, and E. Duchesnay. <b>Scikit-learn: Machine
+learning in Python</b>. Journal of Machine Learning Research,
+12:2825–2830, 2011.</li>
+<li><a id="ref17"></a> I. S. Penton-Voak, N. Pound, A. C. Little, and D. I. Perrett.
+<b>Personality judgments from natural and composite facial images:
+More evidence for a kernel of truth in social perception.</b>
+Social Cognition, 24(5):607–640, 2006.</li>
+<li><a id="ref18"></a> C. Sagonas, Y. Panagakis, S. Zafeiriou, and M. Pantic. <b>Face
+frontalization for alignment and recognition.</b> CoRR, 2015.</li>
+<li><a id="ref19"></a> A. Savran, B. Sankur, and M. T. Bilge. <b>Comparative evaluation
+of 3d vs. 2d modality for automatic detection of facial
+action units.</b> Pattern recognition, 45(2):767–782, 2012.</li>
+<li><a id="ref20"></a> S. K. Singh, D. S. Chauhan, M. Vatsa, and R. Singh. <b>A robust
+skin color based face detection algorithm.</b> Journal
+of Science and Engineering, 6:227–234, 2003.</li>
+<li><a id="ref21"></a> N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, and
+R. Salakhutdinov. <b>Dropout: A simple way to prevent neural
+networks from overfitting.</b> The Journal of Machine Learning
+Research, 15(1):1929–1958, 2014.</li>
+<li><a id="ref22"></a> Y. Sun, X. Wang, and X. Tang. <b>Deep convolutional network
+cascade for facial point detection.</b> In Computer Vision
+and Pattern Recognition (CVPR), 2013 IEEE Conference on,
+pages 3476–3483. IEEE, 2013.</li>
+<li><a id="ref23"></a> Y. Taigman, M. Yang, M. Ranzato, and L. Wolf. <b>Deepface:
+Closing the gap to human-level performance in face verification.</b>
+In IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR), 2014.</li>
+<li><a id="ref24"></a> L. Teijeiro-Mosquera, J. L. Alba-Castro, and D. Gonzalez-
+Jimenez. <b>Face recognition across pose with automatic estimation
+of pose parameters through aam-based landmarking.</b>
+In Pattern Recognition (ICPR), 2010 20th International Conference
+on, pages 1339–1342. IEEE, 2010.</li>
+<li><a id="ref25"></a> P. Viola and M. Jones. <b>Robust real-time object detection.</b> In
+International Journal of Computer Vision, 2001.</li>
+<li><a id="ref26"></a> L. Wan, M. Zeiler, S. Zhang, Y. L. Cun, and R. Fergus. <b>Regularization
+of neural networks using dropconnect.</b> In Proceedings
+of the 30th International Conference on Machine
+Learning (ICML-13), pages 1058–1066, 2013.</li>
+</ol>
+
+		</div>
+	</div>
+</section>
+
+
+	<section id="footer" class="section footer appear clearfix">
+		<div class="container align-center"> <div class="col-sm-12">	Last Updated: Sun, Mar 08 2015 08:18:10 UTC+0000</div>
+			</div>
+		</div>
+	</section>
+	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+
+	<script src="../js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/main.min.js"></script>
+	<script src="../js/jquery.isotope.min.js"></script>
+	<script src="../js/jquery.nicescroll.min.js"></script>
+	<script src="../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="../js/jquery.parallax-1.1.3.js" type="text/javascript" ></script>
+	<script src="../js/skrollr.min.js"></script>		
+	<script src="../js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="../js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="../js/jquery.appear.js"></script>
+	<script src="../js/validate.js"></script>
+	<script src="../js/grid.js"></script>
+	<script src="../js/parallax.js"></script>
+    <script src="../js/main.js"></script>
+	<script src="../js/wow.min.js"></script>
+	<script>
+	 wow = new WOW(
+	 {
+	
+		}	) 
+		.init();
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-36983866-5', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	</body>
+</html>
