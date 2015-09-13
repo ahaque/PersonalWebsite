@@ -22,6 +22,13 @@
         <link rel="stylesheet" href="./css/style.css">
 		<link rel="stylesheet" href="./css/font-awesome.min.css">
 		<link rel="stylesheet" href="./css/skin.css">
+		<link title="timeline-styles" rel="stylesheet" href="http://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+		<link title="timeline-styles" rel="stylesheet" href="http://cdn.knightlab.com/libs/timeline3/latest/css/fonts/font.ubuntu.css">
+		<style>
+		#timeline-embed {
+		    height: 100%;
+		}
+		</style>
     </head>
 	 
     <body>
@@ -41,8 +48,7 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav" data-0="margin-top:26px;" data-300="margin-top:8px;">
 						<li><a href="#about">About</a></li>
-						<li><a href="#work">Industry</a></li>
-						<li><a href="#education">Education</a></li>
+						<li><a href="#timeline">Timeline</a></li>
 						<li><a href="#projects">Projects</a></li>
 						<li><a href="#research">Research</a></li>
 						<li><a href="#contact">Contact</a></li>
@@ -59,6 +65,7 @@
     	<div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
 			<div class="slides" data-group="slides">
 				<ul>
+					<!--
                     <li>
                         <div class="slide-body" data-group="slide" data-length="400">
                             <img src="./img/faces.jpg" alt="">
@@ -70,6 +77,7 @@
                             </div>
                         </div>
                     </li>
+                    -->
 					<li>
 						<div class="slide-body" data-group="slide" data-length="100">
 							<img src="./img/jumbo_tpp.jpg" alt="">
@@ -106,10 +114,8 @@
 					<div class="col-md-offset-3 col-md-6">
 						<div class="section-header">
 						<div class="wow bounceIn"data-animation-delay="7.8s">
-						
 							<h2 class="section-heading animated">About</h2>
 							<p>Short introduction with some external links.</p>
-						
 						</div>
 						</div>
 					</div>
@@ -123,7 +129,8 @@
 					
 						<div class="col-md-6 ">
 							<div class="company mar-left10">
-								<p><b>I'm a 2nd year MS CS student at Stanford. I graduated from UT Austin in 2014. I currently work on artificial intelligence projects with <a href="http://cs.stanford.edu/people/ang/">Andrew Ng</a> and <a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a>. I currently work at Facebook.</b></p>
+							<br>
+								<p><b>I'm a 2nd year MS CS student at Stanford. I currently work on artificial intelligence projects with <a href="http://cs.stanford.edu/people/ang/">Andrew Ng</a> and <a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a>.</b></p>
 								<p>I do research with the <a href="http://vision.stanford.edu/">Computer Vision Lab</a> (<a href="http://ai.stanford.edu/">SAIL)</a> where my team focuses on <a href="http://vision.stanford.edu/pac/">AI-Assisted Healthcare</a>. I was previously a project advisor for the <a href="http://web.stanford.edu/class/cs194/">CS Senior Project</a>. Some of my technical interests are:</p>
 							</div>
 							<div class="list-style">
@@ -152,85 +159,51 @@
 			
 		</div>
 	</section>
-		
-		<section class="section section-parallax-format" data-speed="5" data-type="background" id="parallax-graph">
-			<div class="container"><div class="row"><div class="col-lg-12"><div class="align-center">
-			<div class="testimonial pad-top40 pad-bot40 clearfix"></div></div></div></div></div>	
-		</section>
-		
-		<section id="work" class="section pad-bot5 bg-white appear clearfix">
-		<div class="container"> 
-				<div class="row mar-bot5">
-					<div class="col-md-offset-3 col-md-6">
-						<div class="section-header">
-						<div class="wow bounceIn"data-animation-delay="7.8s">
-						
-							<h2 class="section-heading animated">Industry Experience</h2>
-							<p>Places I've worked over the years.</p>
-						
-						</div>
-						</div>
-					</div>
-				</div>
-			<div class="row mar-bot40">
-				<div class="col-md-4" >
-					<div class="align-center">
-						<div class="wow bounceIn">
-							<div class="service-col">
-								<div class="service-icon">
-									<figure><i class="fa fa-question-circle"></i></figure>
-								</div>
-									<h2><a href="#">TBA</a></h2>
-									<h5>Starting June 2016</h5>
-									<p>I'm still available for a full time position starting next summer. If your company or team is working on interesting projects, let me know.</p>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<div class="col-md-4" >
-					<div class="wow bounceIn">
-						<div class="align-center">
-							<div class="wow rotateIn">
-								<div class="service-col">
-									<div class="service-icon">
-										<figure><i class="fa fa-facebook-square"></i></figure>
-									</div>
-										<h2><a href="http://www.facebook.com" target="_blank">Facebook</a></h2>
-										<h5>Summer 2015, Menlo Park, CA</h5>
-										<p>I'm a data scientist intern on the ads targeting team. I combine online activity and geospatial movement patterns to improve ad relevance.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+	<script src="./js/timeline-embed-cdn.js"></script>
+	<section class="section section-parallax-format" data-speed="5" data-type="background" id="parallax-graph">
+		<div class="container"><div class="row"><div class="col-lg-12"><div class="align-center">
+		<div class="testimonial pad-top40 pad-bot40 clearfix"></div></div></div></div></div>	
+	</section>
+	
+	<section id="timeline" class="section pad-bot5 bg-white appear clearfix">
+	<div class="container"> 
+		<div class="row mar-bot20">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+				<div class="wow bounceIn"data-animation-delay="7.8s">
+					<h2 class="section-heading animated">Timeline</h2>
+					<p>An overview of my education and work experience.</p>
 				</div>
-					
-				<div class="col-md-4" >
-					<div class="align-center">
-						<div class="wow bounceIn">
-					   
-							<div class="wow rotateIn">
-								<div class="service-col">	
-									<div class="service-icon">
-										<figure><i class="fa fa-windows"></i></figure>
-									</div>
-										<h2><a href="http://www.microsoft.com" target="_blank">Microsoft</a></h2>
-										<h5>Summer 2014, Bellevue, WA</h5>
-										<p>I was an intern on Bing Ads relevance and revenue team. I wrote semi-supervised learning algorithms to detect ad click and conversion fraud.</p>
-								</div>
-							</div>	
-						</div>
-					</div>
 				</div>
-						
-			</div>	
-
+			</div>
 		</div>
-		</section>
-		
-		<section class="section section-parallax-format" id="parallax-company" data-speed="8" data-type="background">
-			<div class="container"><div class="row"><div class="col-lg-12"><div class="align-center"><div class="testimonial pad-top40 pad-bot40 clearfix"></div></div></div></div></div>	
-		</section>
+		<div class="row mar-bot40">
+			<div class="col-md-12" >
+				<script src="http://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+				<div id='timeline-embed' style="width: 100%; height: 600px"></div>
+				<script type="text/javascript">
+				  var additionalOptions = {
+				        start_at_end: true,
+				        default_bg_color: {r:255, g:255, b:255},
+				        timenav_height: 250,
+				        initial_zoom: 0.5,
+				        scale_factor: 0.5
+				      }
+
+				  timeline = new TL.Timeline('timeline-embed', 
+				    	'https://docs.google.com/spreadsheets/d/1N4uc4soDa5SQt18k0ESPQI1x4bOl_ooxxu0V15_UaV0/pubhtml', additionalOptions);
+				</script>
+			</div>
+					
+		</div>	
+
+	</div>
+	</section>
+	
+	<section class="section section-parallax-format" id="parallax-company" data-speed="8" data-type="background">
+		<div class="container"><div class="row"><div class="col-lg-12"><div class="align-center"><div class="testimonial pad-top40 pad-bot40 clearfix"></div></div></div></div></div>	
+	</section>
 			
 
 	<section id="education" class="section appear clearfix">
@@ -522,28 +495,9 @@
 								<br>
 								<center><h3>Application Areas</h3></center>
 								<p align="center">
-									Medical diagnosis, hospital system monitoring, patient readmission prediction, bioinformatics
+									Medical diagnosis, hospital system monitoring, data science, computational advertising
 								</p>
 							</ul>
-						</div>
-					</div>
-					<div class="line-pricing-table">
-						<div class="pricing-table-wrap" data-scrollreveal="enter top over 0.5s after 0.3s">
-						
-							<ul>
-								<li class="line-head-row">
-									<center>Current Project<br><h3>Locating People Using Cameras and Cell Phone Wifi/Bluetooth Signals</h3></center>
-								</li>
-								<li class="line-price-row">
-									<p align="center"><a href="http://vision.stanford.edu/index.html">Stanford Vision Lab</a><br>Computer Science Department</p>
-								</li>
-								<li class="line-btn-row">
-								</li><center>
-								<li>
-									The goal of this project is to accurately locate and track clinicans and staff in hospitals. This can be used to monitor and ensure hygienic policies are being followed thereby reducing medical complications and hospital expenditures.
-								</li></center>
-							</ul>
-
 						</div>
 					</div>
 					<div class="line-pricing-table">
@@ -570,6 +524,11 @@
 								<li class="line-btn-row">
 								</li>
 								<ol align="left">
+<li>
+	<strong>RGB-W: When Vision Meets Wireless.</strong> A. Alahi, A. Haque, L. Fei-Fei. International Conference on Computer Vision (ICCV). 2015. 
+	<a class="btn btn-primary btn-xs" href="#f" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
+</li>
+
 <li>
 	<strong>NoSQL Databases for RDF: An Empirical Evaluation.</strong>
 	P. Cudre-Mauroux, I. Enchev, S. Fundatureanu, P. Groth, A. Haque, A. Harth, F. Keppmann, D. Miranker, J. Sequeda, and M. Wylot. Proceedings of the 12th International Semantic Web Conference (ISWC). LNCS, vol. 8219, pp. 310-325. Springer, 2013. DOI: <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-41338-4_20">10.1007/978-3-642-41338-4_20</a>
@@ -604,13 +563,6 @@
 </li> 
 
 <li>
-    <strong>Interclass Loss: Learning from Class Relationships</strong>.
-    A. Haque. Course Project for Deep Learning (CS 231N), Stanford University. Mar 2015.
-    <a class="btn btn-success btn-xs" href="./dl/interclass_loss_poster.pdf" target="_blank"><i class="fa fa-list-alt fa-lg"></i> &nbsp;Poster &raquo;</a>
-    <a class="btn btn-primary btn-xs" href="./dl/interclass_loss_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
-</li> 
-
-<li>
 	<strong>Unsupervised Context-Aware Anomaly Detection for Identifying Trolls in Streaming Data</strong>.
 	A. Haque. Course Project for Data Mining (CS 363D), University of Texas at Austin. May 2014.
 	<a class="btn btn-warning btn-xs" href="https://github.com/ahaque/twitch-troll-detection" target="_blank"><i class="fa fa-github fa-lg"></i> Code &raquo;</a>
@@ -626,29 +578,11 @@
 </li>
 
 <li>
-	<strong>Selection Coefficients versus Omega for Codon Substitution Rates</strong>.
-	A. Haque. Oct 2013.
-	<a class="btn btn-info btn-xs" href="./dl/omega_presentation.pdf" target="_blank"><i class="fa fa-youtube-play fa-lg"></i> Presentation &raquo;</a>
-</li>
-
-<li>
-	<strong>HaLoop: Efficient Iterative Data Processing on Large Clusters</strong>.
-	Presentation for Cloud Databases (CS 395T). Mar 2013.
-	<a class="btn btn-info btn-xs" href="./dl/haloop_presentation.pdf" target="_blank"><i class="fa fa-youtube-play fa-lg"></i> Presentation &raquo;</a>
-</li>
-
-<li>
 	<strong>Distributed RDF Triple Store Using SPARQL, HBase, and Hive</strong>.
 	A Haque, L Perkins. Dec 2012.
 	<a class="btn btn-primary btn-xs" href="./dl/cloud_rdf_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
 </li>
-<!--
-<li>
-	<strong>An Analysis and Comparison of Processor Scheduling Techniques</strong>.
-	A. Haque. Course Project for Operating Systems (CS 439H), University of Texas at Austin. Dec 2012.
-	<a class="btn btn-primary btn-xs" href="./dl/processor_scheduling_paper.pdf" target="_blank"><i class="fa fa-file-text"></i> &nbsp;Paper &raquo;</a>
-</li>
--->
+
 								</ol>
 							</ul>
 						</div>
