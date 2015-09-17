@@ -1,6 +1,6 @@
 Albert's Website
 =========
 
-Source code for Albert's website written with Bootstrap. All HTML, CSS, images, and PDF downloads are included in this repository.
+Source code for Albert's website. All HTML, CSS, images, and PDF downloads are included in this repository.
 
-Website can be viewed at: www.alberthaque.com
+Live website can be viewed at: http://www.albert.cm
