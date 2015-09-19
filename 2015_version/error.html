@@ -7,7 +7,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta name="robots" content="noindex" />
 
-    <title>Albert | Page Not Found | 404</title>
+    <title>Albert | Page Not Found</title>
     <style type="text/css">
     * { padding:0; margin:0; }
     body, html {
@@ -120,7 +120,7 @@
         line-height: 30px;
         left: 60%;
         margin-left: -275px;
-        width: 550px;
+        width: 600px;
         z-index: 500;
         text-align: center;
     }
@@ -128,7 +128,7 @@
     .bottomLinkList li {
         list-style-type: none;
         float: left;
-        width: 100px;
+        width: 150px;
         color: #FFF;
         height: 30px;
     }
@@ -160,11 +160,32 @@
     <![endif]-->
   <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 </head>
-<body>
+<script language="JavaScript">
+function rotateEvery(sec)
+{
+  var Quotation=new Array()
+
+  // QUOTATIONS
+  Quotation[0] = "Random Fact: Chuck Norris is Jeff Dean's 20% project.";
+  Quotation[1] = "Random Fact: Jeff Dean doesn't exist, he's actually an advanced AI created by Jeff Dean.";
+  Quotation[2] = "Random Fact: Jeff Dean took the bite out of Apple's logo.";
+  Quotation[3] = "Random Fact: Jeff Dean simply walks into Mordor.";
+  Quotation[4] = "Random Fact: Jeff Dean has exactly two keys on his keyboard: 0 and 1.;
+  Quotation[5] = "Random Fact: Errors treat Jeff Dean as a warning.";
+  Quotation[6] = "Random Fact: Google search went down for a few hours in 2002. Jeff Dean started handling queries by hand. Search quality doubled.";
+  Quotation[7] = "Random Fact: Jeff Dean found the needle in the haystack.";
+  Quotation[8] = "Random Fact: Jeff Dean wrote an infinite recursion function. It returned.";
+  var which = Math.round(Math.random()*(Quotation.length - 1));
+  document.getElementById('textrotator').innerHTML = Quotation[which];
+  
+  setTimeout('rotateEvery('+sec+')', sec*1000);
+}
+</script>
+</head>
+<body onload="rotateEvery(10)">
     <div id="text">
-        <h1>Something's wrong here...</h1>
-        <p>Uh oh, we couldn't find what you were looking for.</p>
-        <p>(That usually means a 404 Error)</p>
+        <h1>404 Error: Page Not Found</h1>
+        <p><div id="textrotator"></div></p>
     </div>
     <div id="ripple-control"></div>
     <img id="fish" src="/img/error/fish-404.png" />
@@ -176,7 +197,7 @@
 
     <ul class="bottomLinkList">
         <li><a href="https://bitly.com/">Design by Bitly</a></li>
-        <li><a href="./index.html">Return Home</a></li>
+        <li><a href="./index.html">Return to www.albert.cm</a></li>
     </ul>
 
 
