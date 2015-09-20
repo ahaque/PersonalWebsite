@@ -40,8 +40,18 @@ h1,h2,h3,h4,h5,h6 {
   font-style: normal;
   margin: 0 0 20px 0;
 }
-h1 { font-size: 32px; margin-top: 0px; }
-h2 { font-size: 32px; margin-bottom: 0px}
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 0px;
+    border-bottom: 0px;
+}
+h2 {
+    font-size: 32px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px
+}
 h3 { font-size: 24px; margin-top: 25px;}
 h4 { font-size: 18px; margin-top: 25px;}
 h5 { font-size: 18px; margin-top: 25px;}
@@ -1558,4 +1568,15 @@ a.socialIcon:hover, .socialHoverClass {
 
   display: flex;
   align-items: center;
+}
+
+.thumbs {
+  -webkit-box-shadow: 1px 1px 3px #999;
+  -moz-box-shadow: 1px 1px 3px #999;
+  box-shadow: 1px 1px 3px #999;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #FFFFFF;
+  text-align: center;
 }

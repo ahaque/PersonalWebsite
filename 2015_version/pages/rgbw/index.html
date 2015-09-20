@@ -52,13 +52,13 @@
         </div>
       </div>
   </section>
-  </div>
+</div>
 
 <section class="section appear clearfix">
   <div class="row mar-top5">
     <div class="col-md-offset-3 col-md-6">
       <div class="section-header">
-        <h2 class="section-heading animated"><font color="#000">RGB-W: When Vision Meets Wireless</font></h2>
+        <h1 class="section-heading animated"><font color="#000">RGB-W: When Vision Meets Wireless</font></h1>
         <h4>
           <a href="http://www.ivpe.com">Alex Alahi</a>,
           <a href="http://www.albert.cm">Albert Haque</a>,
@@ -71,22 +71,19 @@
       </div>
       
       <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4"><img src="./sail_logo.png" ></div>
+        <div class="col-md-offset-2 col-md-4"><center><img src="./sail_logo.png"></center></div>
         <div class="col-md-4"><center><img src="./cvf_logo.png"></center></div>
-        <div class="col-md-2"></div>
+      </div>
+
+      <div class="row mar-top30">
+        <div class="col-md-offset-2 col-md-8"><center><iframe width="560" height="315" src="https://www.youtube.com/embed/AH19?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></center></div>
       </div>
     </div>
   </div>
 
-  <div class="container pad-top30">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-      <center><iframe width="560" height="315" src="https://www.youtube.com/embed/AH19?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></center>
-      <br/>
-
+   <div class="container">
       <a name="overview" class="anchor"></a><br/>
-      <h1>Abstract</h1>
+      <h2>Abstract</h2>
       <p>
         Inspired by the recent success of RGB-D cameras, we propose the enrichment of RGB data with an additional ``quasi-free" modality, namely, the wireless signal emitted by individuals' cell phones, referred to as RGB-W. The received signal strength acts as a rough proxy for depth and a reliable cue on a person's identity. Although the measured signals are noisy, we demonstrate that the combination of visual and wireless data significantly improves the localization accuracy. 
       </p>
@@ -94,14 +91,22 @@
         We introduce a novel image-driven representation of wireless data which embeds all received signals onto a single image. We then evaluate the ability of this additional data to (i) locate persons within a sparsity-driven framework and to (ii) track individuals with a new confidence measure on the data association problem. Our solution outperforms existing localization methods. It can be applied to the millions of currently installed RGB cameras to better analyze human behavior and offer the next generation of high-accuracy location-based services. 
       </p>
     </div>
-  </div>
 
-  <div class="container pad-top30">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-
+    <div class="container">
       <a name="paper" class="anchor"></a><br/>
-      <h1>ICCV 2015 Paper</h1>
+      <h2>ICCV 2015 Paper</h2>
+        <div class="thumbs">
+          <a href="#"><img src="pdf_thumb1.png"></a>
+          <a href="#"><img src="pdf_thumb2.png"></a>
+          <a href="#"><img src="pdf_thumb3.png"></a>
+          <a href="#"><img src="pdf_thumb4.png"></a>
+          <a href="#"><img src="pdf_thumb5.png"></a>
+          <a href="#"><img src="pdf_thumb6.png"></a>
+          <a href="#"><img src="pdf_thumb7.png"></a>
+          <a href="#"><img src="pdf_thumb8.png"></a>
+          <a href="#"><img src="pdf_thumb9.png"></a>
+        </div>
+
       <pre class="citation">
 @inproceedings{alahi2015rgbw,
   title         = {RGB-W: When Vision Meets Wireless},
@@ -109,9 +114,11 @@
   booktitle     = {ICCV},
   year          = {2015}
 }</pre>
+      </div>
 
+    <div class="container">
       <a name="dataset" class="anchor"></a>
-      <br/><h1>Dataset</h1>
+      <br/><h2>Dataset</h2>
       <b>Data Collection</b>
       <p>
       We collected a new dataset of RGB-W data from both indoor and outdoor scenes where up to 15 individuals are simultaneously observed within the field of view of a single camera at a density of 1 person/m^2 leading to high level of self occlusions. The observed foreground silhouettes are noisy and highly ambiguous for occluded individuals. The \W modality is measured with Beacon technology using one to four Beacons (antennas).
@@ -142,13 +149,13 @@
       <a name="code" class="anchor"></a>
       <h3>Code</h3>
       <p>
-        Code is available on Github and as a zip file here. Python, C++, and Matlab were used. Code is split into four parts: (i) central server, (ii) mobile apps, (iii) localization, and (iv) optimization.
+        Code is available on <a href="https://github.com/ahaque/rgbw">Github</a> and as a <a href="#">zip file here</a>. Python, C++, and Matlab were used. Code is split into four parts: (i) central server, (ii) mobile apps, (iii) localization, and (iv) optimization. For full documentation, refer to the included README file.
       </p>
-      <br/><b>Central Server</b>
-      <p>Code description.</p>
+    </div>
 
+    <div class="container">
       <a name="contact" class="anchor"></a>
-      <br/><h1>Contact</h1>
+      <br/><h2>Contact</h2>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -171,9 +178,7 @@
           </tr>
         </tbody>
       </table>
-
       </p>
-    </div>
   </div>
 </section>
 
