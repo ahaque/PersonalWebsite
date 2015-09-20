@@ -111,7 +111,13 @@ grid .tick {
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="../index.html">Blog</a></li>
+						<li><a href="../../#about">About</a></li>
+						<li><a href="../../#work">Industry</a></li>
+						<li><a href="../../#education">Education</a></li>
+						<li><a href="../../#projects">Projects</a></li>
+						<li><a href="../../#research">Research</a></li>
+						<li><a href="../../#contact">Contact</a></li>
+						<li><a href="../">Blog</a></li>
 					</ul>
 				</div>
 			</div>
@@ -563,7 +569,7 @@ grid .tick {
 			    .append("g")
 			      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			  d3.csv("./data/gre_quant.csv", function (error, data) {
+			  d3.csv("./gre_quant.csv", function (error, data) {
 
 			    var labelVar = 'score';
 			    var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
@@ -683,7 +689,7 @@ grid .tick {
 			        .append("g")
 			          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			      d3.csv("./data/gre_verbal.csv", function (error, data) {
+			      d3.csv("./gre_verbal.csv", function (error, data) {
 
 			        var labelVar = 'score';
 			        var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
@@ -828,7 +834,7 @@ grid .tick {
 			        .append("g")
 			          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			      d3.csv("./data/gre_writing.csv", function (error, data) {
+			      d3.csv("./gre_writing.csv", function (error, data) {
 
 			        var labelVar = 'score';
 			        var varNames = d3.keys(data[0]).filter(function (key) { return key !== labelVar;});
