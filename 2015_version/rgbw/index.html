@@ -54,8 +54,7 @@
 
 <section class="section appear clearfix">
   <div class="row mar-top5">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="section-header">
         <h1 class="section-heading animated"><font color="#000">RGB-W: When Vision Meets Wireless</font></h1>
         <h4>
@@ -73,7 +72,7 @@
 
   <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-6"><center><img src="./logos.png"></center></div>
+    <div class="col-md-6"><center><img src="./img/logos.png"></center></div>
   </div>
 
   <div class="row mar-top30">
@@ -87,7 +86,7 @@
       <a name="overview" class="anchor"></a><br/>
       <h2>Abstract</h2>
       <p>
-        Inspired by the recent success of RGB-D cameras, we propose the enrichment of RGB data with an additional ``quasi-free" modality, namely, the wireless signal emitted by individuals' cell phones, referred to as RGB-W. The received signal strength acts as a rough proxy for depth and a reliable cue on a person's identity. Although the measured signals are noisy, we demonstrate that the combination of visual and wireless data significantly improves the localization accuracy. 
+        Inspired by the recent success of RGB-D cameras, we propose the enrichment of RGB data with an additional <b><i>quasi-free</i></b> modality, namely, the wireless signal emitted by individuals' cell phones, referred to as RGB-W. The received signal strength acts as a rough proxy for depth and a reliable cue on a person's identity. Although the measured signals are noisy, we demonstrate that the combination of visual and wireless data significantly improves the localization accuracy. 
       </p>
       <p>
         We introduce a novel image-driven representation of wireless data which embeds all received signals onto a single image. We then evaluate the ability of this additional data to (i) locate persons within a sparsity-driven framework and to (ii) track individuals with a new confidence measure on the data association problem. Our solution outperforms existing localization methods. It can be applied to the millions of currently installed RGB cameras to better analyze human behavior and offer the next generation of high-accuracy location-based services. 
@@ -98,15 +97,15 @@
       <a name="paper" class="anchor"></a><br/>
       <h2>ICCV 2015 Paper</h2>
         <div class="thumbs">
-          <a href="#"><img src="pdf_thumb1.PNG"></a>
-          <a href="#"><img src="pdf_thumb2.PNG"></a>
-          <a href="#"><img src="pdf_thumb3.PNG"></a>
-          <a href="#"><img src="pdf_thumb4.PNG"></a>
-          <a href="#"><img src="pdf_thumb5.PNG"></a>
-          <a href="#"><img src="pdf_thumb6.PNG"></a>
-          <a href="#"><img src="pdf_thumb7.PNG"></a>
-          <a href="#"><img src="pdf_thumb8.PNG"></a>
-          <a href="#"><img src="pdf_thumb9.PNG"></a>
+          <a href="#"><img src="./img/1.PNG"></a>
+          <a href="#"><img src="./img/2.PNG"></a>
+          <a href="#"><img src="./img/3.PNG"></a>
+          <a href="#"><img src="./img/4.PNG"></a>
+          <a href="#"><img src="./img/5.PNG"></a>
+          <a href="#"><img src="./img/6.PNG"></a>
+          <a href="#"><img src="./img/7.PNG"></a>
+          <a href="#"><img src="./img/8.PNG"></a>
+          <a href="#"><img src="./img/9.PNG"></a>
         </div>
 
       <pre class="citation">
@@ -121,34 +120,91 @@
     <div class="container">
       <a name="dataset" class="anchor"></a>
       <br/><h2>Dataset</h2>
-      <b>Data Collection</b>
-      <p>
-      We collected a new dataset of RGB-W data from both indoor and outdoor scenes where up to 15 individuals are simultaneously observed within the field of view of a single camera at a density of 1 person/m^2 leading to high level of self occlusions. The observed foreground silhouettes are noisy and highly ambiguous for occluded individuals. The \W modality is measured with Beacon technology using one to four Beacons (antennas).
-      </p>
-
-      <br/><b>RGB Image Specifications</b>
-      <p>
-        Each dataset includes images collected with a XX camera.
-        <ul>
-        <li>320x240 resolution</li>
-        <li>JPEG ISO/IEC 10918-6:2013 image format (.jpg)</li>
-        </ul>
-      </p>
-
-      <br/><b>Phone Specifications</b>
-      <p>
-        A total of 16 phones were used during data collection (5 Android, 11 iPhone). Not all phones may be active at once.
-        <ul>
-        <li>1x Moto X</li>
-        <li>3x Nexus 5</li>
-        <li>2x iPhone 4</li>
-        <li>1x iPhone 5c</li>
-        <li>4x iPhone 5s</li>
-        <li>5x iPhone 6s</li>
-        </ul>
-      </p>
-
-      <a name="code" class="anchor"></a>
+      <div class="row mar-bot20">
+        <div class="col-md-3">
+          <img class="img-responsive img-thumbnail" src="./img/conference-1-rgb.jpg">
+          <p align="center"><b>conference-1</b></p>
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive img-thumbnail" src="./img/conference-2-rgb.jpg">
+          <p align="center"><b>conference-2</b></p>
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive img-thumbnail" src="./img/outdoor-1-rgb.jpg">
+          <p align="center"><b>patio-1</b></p>
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive img-thumbnail" src="./img/outdoor-2-rgb.jpg">
+          <p align="center"><b>patio-2</b></p>
+        </div>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Sequence Name</th>
+            <th>Length</th>
+            <th># Frames</th>
+            <th># People</th>
+            <th># W Devices</th>
+            <th>Modalities</th>
+            <th>Download</th>
+            <th>Metadata</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>conference-1</td>
+            <td>00:01:53</td>
+            <td>1697</td>
+            <td>5</td>
+            <td>5</td>
+            <td>rgb, depth, W</td>
+            <td><a href="#">zip (105 MiB)</a></td>
+            <td><a href="#">json</a></td>
+          </tr>
+          <tr>
+            <td>conference-2</td>
+            <td>00:05:18</td>
+            <td>4782</td>
+            <td>12</td>
+            <td>12</td>
+            <td>rgb, depth, W</td>
+            <td><a href="#">zip (302 MiB)</a></td>
+            <td><a href="#">json</a></td>
+          </tr>
+          <tr>
+            <td>conference-3</td>
+            <td>00:23:31</td>
+            <td>21165</td>
+            <td>1</td>
+            <td>2</td>
+            <td>rgb, depth, W</td>
+            <td><a href="#">zip (1.2 GiB)</a></td>
+            <td><a href="#">json</a></td>
+          </tr>
+          <tr>
+            <td>patio-1</td>
+            <td>00:07:22</td>
+            <td>6636</td>
+            <td>4</td>
+            <td>4</td>
+            <td>rgb, depth, W</td>
+            <td><a href="#">zip (420 MiB)</a></td>
+            <td><a href="#">json</a></td>
+          </tr>
+          <tr>
+            <td>patio-2</td>
+            <td>00:04:36</td>
+            <td>4144</td>
+            <td>2</td>
+            <td>2</td>
+            <td>rgb, depth, W</td>
+            <td><a href="#">zip (246 MiB)</a></td>
+            <td><a href="#">json</a></td>
+          </tr>
+        </tbody>
+      </table>
+            <a name="code" class="anchor"></a>
       <h2>Code</h2>
       <p>
         Code is available on <a href="https://github.com/ahaque/rgbw">Github</a> and as a <a href="#">zip file here</a>. Python, C++, and Matlab were used. Code is split into four parts: (i) central server, (ii) mobile apps, (iii) localization, and (iv) optimization. For full documentation, refer to the included README file.
@@ -161,6 +217,7 @@
       <table class="table table-hover">
         <thead>
           <tr>
+            <th>#</th>
             <th>Name</th>
             <th>Email</th>
           </tr>
@@ -168,7 +225,7 @@
         <tbody>
           <tr>
             <td><a href="http://www.ivpe.com">Alex Alahi</a></td>
-            <td>alahi {at} stanford.edu</td>
+            <td>alahi@stanford.edu</td>
           </tr>
           <tr>
             <td><a href="http://www.albert.cm">Albert Haque</a></td>
