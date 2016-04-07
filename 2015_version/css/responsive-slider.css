@@ -29,11 +29,13 @@
   position: relative;
   width: 100%;
   font-size: 14px;
+  background-color:transparent !important;
 }
 .responsive-slider .slides ul li .slide-body img {
   width: 100%;
   min-height: 350px;
 }
+
 .responsive-slider .slides ul li .slide-body .caption {
   position: absolute;
   color: #fff;
@@ -50,19 +52,27 @@
 #jumbotron-twitch {
   width: 100%;
 }
+#jumbotron-pose {
+  width: 100%;
+  background: transparent;
+}
+#video-background {
+  z-index: -1;
+  width:100%;
+}
 .caption.header1 {
   top: 27%;
-} 
+}
 
 @media (max-width: 767px) {
   .responsive-slider .slides ul li .slide-body .caption.header {
   top: 38%;
-  } 
+  }
 }
 @media (min-width: 768px) {
   .responsive-slider .slides ul li .slide-body .caption.header {
   top: 42%;
-  } 
+  }
 }
 
 .responsive-slider .slides ul li .slide-body .caption.header h1 {
