@@ -70,6 +70,11 @@
     </section>
 </div>
 
+<div class="myAlert-bottom alert alert-danger">
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	<strong>Notice</strong><br> This website is no longer updated. To learn about my current activities or ventures, please contact me <a href="#contact">directly</a>.<br> <small><b>Website last updated in 2016.</b></small>
+</div>
+
 <section class="featured">
     <div id="index">
         <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
